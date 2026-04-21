@@ -1,0 +1,185 @@
+<!--
+    ARQUIVO: index.html (MODIFICADO)
+    DESCRIÇÃO: Página principal do projeto "Suite" com redirecionamento para splash no PWA.
+    ESTRUTURA: Contém o avatar, switch de tema, card do Santo do Dia, links e widget de clima.
+    VERSÃO: 4.1.0 - Correção de Lógica de Redirecionamento PWA
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#1a1a1a">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Suite">
+    <meta name="application-name" content="Suite">
+    
+    <!-- Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <link rel="shortcut icon" href="database/assets/dev/favicon/Favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="database/assets/dev/favicon/icon-192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="database/assets/dev/favicon/icon-512.png" sizes="512x512">
+    <link rel="apple-touch-icon" href="database/assets/dev/favicon/icon-192.png">
+    
+    <!-- Script para redirecionar para splash no PWA (Executado IMEDIATAMENTE no head) -->
+    <script>
+        (function() {
+            /**
+             * Detecta se está rodando como PWA instalado (standalone)
+             */
+            function isStandalone() {
+                // Verificação 1: display-mode: browser (navegador web comum) - NEGA PWA
+                if (window.matchMedia && window.matchMedia('(display-mode: browser)').matches) {
+                    return false;
+                }
+
+                // Verificação 2: display-mode: standalone (padrão W3C - Android Chrome) - CONFIRMA PWA
+                if (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches) {
+                    return true;
+                }
+
+                // Verificação 3: navigator.standalone (iOS Safari) - CONFIRMA PWA
+                if (window.navigator.standalone === true) {
+                    return true;
+                }
+
+                // Verificação 4: referrer de app Android - CONFIRMA PWA
+                if (document.referrer && document.referrer.includes('android-app://')) {
+                    return true;
+                }
+
+                return false;
+            }
+
+            // Verifica se é a primeira carga nesta sessão
+            const hasVisited = sessionStorage.getItem('suite_visited');
+            
+            if (!hasVisited && isStandalone()) {
+                console.log('[PWA] 🎨 PWA Detectado - Redirecionando para splash-pwa.html...');
+                sessionStorage.setItem('suite_visited', 'true');
+                // Usa replace para não deixar o index.html vazio no histórico
+                window.location.replace('splash-pwa.html');
+            } else {
+                sessionStorage.setItem('suite_visited', 'true');
+                console.log('[PWA] 🌐 Modo normal ou volta ao app - Mantendo index.html');
+            }
+        })();
+    </script>
+
+    <!-- SISTEMA DE FÁBRICA: Metadados e Configurações Offline -->
+    <script src="src/js/main/env-loader.js"></script>
+    <script src="src/js/main/factory.js"></script>
+    
+    <title>Suite</title>
+    
+    <!-- Estilos da página -->
+    <link rel="stylesheet" href="src/styles/modes.css">
+    <link rel="stylesheet" href="pages/suite/suite.css">
+    <link rel="stylesheet" href="pages/suite/weather/weather.css">
+    <link rel="stylesheet" href="src/app/update.css">
+    <script src="src/app/update.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- SEÇÃO DO AVATAR -->
+        <div class="avatar">
+            <div class="avatar-img">
+                <img src="database/assets/dev/avatar/avatar.jpg" alt="Avatar" referrerpolicy="no-referrer">
+            </div>
+            <div class="avatar-name link-item">@kendricknicoleti</div>
+        </div>
+
+        <!-- SEÇÃO DO SWITCH DE TEMA -->
+        <div class="switch">
+            <div class="switch-bg"></div>
+            <div class="switch-toggle">
+                <div class="switch-icon">
+                    <span class="icon-sun">☀️</span>
+                    <span class="icon-moon">🌙</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- SEÇÃO SANTO DO DIA -->
+        <div class="santo-do-dia">
+            <div class="santo-header">
+                <span class="santo-name">Carregando...</span>
+                <span class="santo-ribbon"></span>
+            </div>
+            <div class="santo-type">--</div>
+            <div class="santo-description">Aguarde...</div>
+        </div>
+
+        <!-- SEÇÃO DE LINKS -->
+        <div class="links">
+            <a href="/database" style="text-decoration: none; color: inherit; width: 100%;">
+                <div class="link-item">Database</div>
+            </a>
+            <div class="link-item">Arquivos para Missas</div>
+            
+            <!-- Menu da Liturgia das Horas -->
+            <div class="liturgy-card">
+                <div class="liturgy-menu">
+                    <div class="liturgy-title">
+                        <span>Liturgia das Horas</span>
+                        <a href="/pages/calendar" class="calendar-link-small">Calendário</a>
+                    </div>
+                    <div class="liturgy-prayers">
+                        <button class="prayer-item" data-prayer="laudes">
+                            <span class="prayer-name">Laudes</span>
+                        </button>
+                        <button class="prayer-item" data-prayer="hora-media">
+                            <span class="prayer-name">Hora Média</span>
+                        </button>
+                        <button class="prayer-item" data-prayer="vesperas">
+                            <span class="prayer-name">Vésperas</span>
+                        </button>
+                        <button class="prayer-item" data-prayer="completas">
+                            <span class="prayer-name">Completas</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECAO DE CLIMA -->
+        <div class="weather-footer">
+            <div class="weather-loading">
+                <span>Carregando informações de clima...</span>
+            </div>
+        </div>
+
+    </div>
+    
+    <!-- Proteção contra Ataques de Negação de Serviço -->
+    <script src="/src/js/main/rate-limiter.js"></script>
+    
+    <!-- Firebase Core e Configuração -->
+    <script src="src/js/main/firebase-config.js"></script>
+    <script src="src/js/main/firebase-sync.js"></script>
+    
+    <!-- Scripts da Aplicação -->
+    <script src="pages/suite/suite.js"></script>
+    <script src="pages/suite/santo-do-dia.js"></script>
+    <script src="pages/suite/weather/weather.js"></script>
+    <script src="pages/suite/liturgy.js"></script>
+    
+    <script>
+        // Atalho de teclado para acessar admin: Ctrl+Shift+A
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && e.shiftKey && e.key === 'A') {
+                window.location.href = '/pages/login';
+            }
+        });
+
+        // O registro do Service Worker agora é centralizado em factory.js
+    </script>
+</body>
+</html>

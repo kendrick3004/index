@@ -1,0 +1,25 @@
+{
+  "name": "Suite Católica",
+  "short_name": "Suite",
+  "description": "Dashboard pessoal com informações de clima, calendário litúrgico e links úteis. Desenvolvido com foco em precisão e tecnologia.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#1a1a1a",
+  "theme_color": "#1a1a1a",
+  "icons": [
+    {
+      "src": "database/assets/dev/favicon/Favicon_R.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "database/assets/dev/favicon/Favicon_R.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

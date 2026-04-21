@@ -1,0 +1,408 @@
+/* ═══════════════════════════════════════════════════════════════════════════════ */
+/* SPLASH SCREEN CSS - DESIGN ORIGINAL SAGRADO CONTEMPORÂNEO v5.0 */
+/* ═══════════════════════════════════════════════════════════════════════════════ */
+/* 
+ * DESIGN PHILOSOPHY: Minimalismo Sagrado com Efeitos Luminosos
+ * - Animação de entrada suave e elegante
+ * - Efeito de brilho e aura na cruz
+ * - Sincronização perfeita com tema claro/escuro
+ * - Apenas PWA instalado (standalone)
+ * - Tipografia premium (Playfair Display)
+ * - Paleta monocromática com acentos em ouro
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Lato:wght@300;400;700&display=swap');
+
+/* ═══════════════════════════════════════════════════════════════════════════════ */
+/* REGRA CRÍTICA: Oculta splash no navegador web comum (não-PWA) */
+/* ═══════════════════════════════════════════════════════════════════════════════ */
+
+@media (display-mode: browser) {
+    #custom-splash,
+    .splash-container,
+    .splash-content,
+    .splash-logo,
+    .splash-loader,
+    .splash-text,
+    .splash-loading,
+    .splash-glow,
+    .splash-rays {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+        width: 0 !important;
+        height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        border: none !important;
+        background: none !important;
+    }
+}
+
+/* FALLBACK: Oculta splash por padrão (sem PWA) */
+#custom-splash,
+.splash-container {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════ */
+/* SPLASH CONTAINER - Elemento Principal (Apenas PWA) */
+/* ═══════════════════════════════════════════════════════════════════════════════ */
+
+.splash-container.active {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.6s ease-out, visibility 0.6s ease-out;
+    /* Padrão: Modo Claro */
+    background: linear-gradient(135deg, #ffffff 0%, #f8f8f8 100%);
+    overflow: hidden;
+}
+
+.splash-container.active.fade-out {
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════ */
+/* SPLASH CONTAINER - MODO ESCURO (Dark Mode) */
+/* ═══════════════════════════════════════════════════════════════════════════════ */
+
+body.dark-mode .splash-container.active {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%) !important;
+}
+
+@media (prefers-color-scheme: dark) {
+    .splash-container.active {
+        background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════ */
+/* SPLASH CONTENT - Container do Conteúdo */
+/* ═══════════════════════════════════════════════════════════════════════════════ */
+
+.splash-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    text-align: center;
+    width: 100%;
+    max-width: 320px;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 10;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════ */
+/* LOGO WRAPPER - Centro fixo para os raios */
+/* ═══════════════════════════════════════════════════════════════════════════════ */
+
+.splash-logo-wrapper {
+    position: relative;
+    width: 160px; /* Aumentado conforme demo do usuário */
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: logoWrapperFadeIn 0.8s ease-out 0.1s both;
+}
+
+/* Aura/Glow ao redor do logo */
+.splash-glow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(184, 134, 11, 0.15) 0%, transparent 70%);
+    animation: glowPulse 3s ease-in-out infinite;
+    filter: blur(8px);
+}
+
+body.dark-mode .splash-glow {
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.25) 0%, transparent 70%) !important;
+}
+
+@media (prefers-color-scheme: dark) {
+    .splash-glow {
+        background: radial-gradient(circle, rgba(212, 175, 55, 0.25) 0%, transparent 70%);
+    }
+}
+
+/* Raios de luz ao redor */
+.splash-rays {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: raysRotate 8s linear infinite;
+}
+
+.splash-ray {
+    position: absolute;
+    width: 2px;
+    height: 60px; /* Raios mais longos conforme demo do usuário */
+    background: linear-gradient(to bottom, rgba(184, 134, 11, 0.5), transparent);
+    left: 50%;
+    top: 0;
+    transform-origin: 0 80px; /* Ajustado para o novo tamanho do wrapper */
+    margin-left: -1px;
+}
+
+body.dark-mode .splash-ray {
+    background: linear-gradient(to bottom, rgba(212, 175, 55, 0.5), transparent) !important;
+}
+
+@media (prefers-color-scheme: dark) {
+    .splash-ray {
+        background: linear-gradient(to bottom, rgba(212, 175, 55, 0.5), transparent);
+    }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════ */
+/* LOGO - Favicon_R.png com ajustes do usuário */
+/* ═══════════════════════════════════════════════════════════════════════════════ */
+
+.splash-logo {
+    width: 250px; /* Tamanho customizado pelo usuário */
+    height: 250px;
+    object-fit: contain;
+    filter: drop-shadow(0 8px 24px rgba(184, 134, 11, 0.4));
+    animation: logoFadeInScale 1s ease-out 0.3s both, logoFloat 4s ease-in-out infinite 1.3s;
+    position: relative;
+    z-index: 2;
+    display: block;
+    margin: 0 auto;
+    margin-top: 60px; /* Margem customizada pelo usuário */
+}
+
+body.dark-mode .splash-logo {
+    filter: drop-shadow(0 8px 24px rgba(212, 175, 55, 0.4)) !important;
+}
+
+@media (prefers-color-scheme: dark) {
+    .splash-logo {
+        filter: drop-shadow(0 8px 24px rgba(212, 175, 55, 0.4));
+    }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════ */
+/* LOADER - Linha Divisória Elegante com cor customizada */
+/* ═══════════════════════════════════════════════════════════════════════════════ */
+
+.splash-loader {
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #edb939 30%, #edb939 70%, transparent); /* Cor customizada pelo usuário */
+    box-shadow: 0 0 12px rgba(184, 134, 11, 0.5);
+    animation: drawLine 1.2s ease-out 1s both, loaderGlow 2s ease-in-out infinite 2.2s;
+    display: block !important;
+    visibility: visible !important;
+    margin: 8px 0;
+    border-radius: 2px;
+    margin-top: 50px; /* Margem customizada pelo usuário */
+}
+
+body.dark-mode .splash-loader {
+    background: linear-gradient(90deg, transparent, #d4af37 30%, #d4af37 70%, transparent) !important;
+    box-shadow: 0 0 12px rgba(212, 175, 55, 0.6) !important;
+}
+
+@media (prefers-color-scheme: dark) {
+    .splash-loader {
+        background: linear-gradient(90deg, transparent, #d4af37 30%, #d4af37 70%, transparent);
+        box-shadow: 0 0 12px rgba(212, 175, 55, 0.6);
+    }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════ */
+/* SPLASH TEXT - "Suite" em Playfair Display */
+/* ═══════════════════════════════════════════════════════════════════════════════ */
+
+.splash-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #1a1a1a;
+    margin: 0;
+    padding: 0;
+    animation: textFadeIn 1s ease-out 1.2s both;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+body.dark-mode .splash-text {
+    color: #f8f8f8 !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+}
+
+@media (prefers-color-scheme: dark) {
+    .splash-text {
+        color: #f8f8f8;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════ */
+/* SPLASH LOADING - "Carregando..." em Lato */
+/* ═══════════════════════════════════════════════════════════════════════════════ */
+
+.splash-loading {
+    font-family: 'Lato', sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: #999999;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    animation: textFadeIn 1s ease-out 1.4s both, loadingBlink 1.5s ease-in-out infinite 1.4s;
+}
+
+body.dark-mode .splash-loading {
+    color: #888888 !important;
+}
+
+@media (prefers-color-scheme: dark) {
+    .splash-loading {
+        color: #888888;
+    }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════ */
+/* ANIMAÇÕES - Definições */
+/* ═══════════════════════════════════════════════════════════════════════════════ */
+
+@keyframes logoWrapperFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes logoFadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes logoFloat {
+    0%, 100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-12px);
+        opacity: 0.95;
+    }
+}
+
+@keyframes glowPulse {
+    0%, 100% {
+        opacity: 0.8;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+}
+
+@keyframes raysRotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes drawLine {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+    to {
+        width: 100px;
+        opacity: 1;
+    }
+}
+
+@keyframes loaderGlow {
+    0%, 100% {
+        box-shadow: 0 0 12px rgba(184, 134, 11, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(184, 134, 11, 0.8);
+    }
+}
+
+@keyframes textFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes loadingBlink {
+    0%, 100% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════ */
+/* RESPONSIVIDADE - Telas Pequenas (Standalone) */
+/* ═══════════════════════════════════════════════════════════════════════════════ */
+
+@media (max-width: 480px) {
+    .splash-logo {
+        width: 180px; /* Ajuste para mobile mantendo proporção maior */
+        height: 180px;
+        margin-top: 40px;
+    }
+
+    .splash-content {
+        gap: 24px;
+    }
+
+    .splash-text {
+        font-size: 44px;
+        letter-spacing: 2px;
+    }
+
+    .splash-loader {
+        width: 80px;
+        margin-top: 30px;
+    }
+}
