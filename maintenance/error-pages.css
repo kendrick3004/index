@@ -1,0 +1,149 @@
+/*
+ * ARQUIVO: error-pages.css
+ * DESCRIÇÃO: Estilos CSS específicos para a página de erro 404 com efeitos 3D.
+ * VERSÃO: 1.8.3 - Adicionados efeitos 3D da página inicial
+ */
+
+/* Estilos para o contêiner principal da mensagem de erro */
+.error-container {
+    text-align: center; /* Centraliza o texto dentro do contêiner */
+    padding: 40px; /* Espaçamento interno do contêiner */
+    background: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente */
+    border-radius: 16px; /* Borda arredondada */
+    border: 1px solid rgba(0, 0, 0, 0.5); /* Borda sólida semi-transparente */
+    backdrop-filter: blur(12px); /* Aplica um efeito de desfoque ao fundo (aumentado para 12px) */
+    max-width: 500px; /* Largura máxima do contêiner */
+    margin: 0 auto; /* Centraliza o contêiner horizontalmente na página */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Efeito 3D de profundidade */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave para hover */
+}
+
+.error-container:hover {
+    transform: translateY(-3px); /* Efeito de levitação no hover */
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4); /* Sombra mais profunda no hover */
+}
+
+/* Estilos para o título de erro (404) */
+.error-title {
+    font-family: var(--font-righteous), cursive;
+    font-size: 6em; /* Diminuído de 8em */
+    font-weight: 400;
+    margin-bottom: 10px;
+    background: linear-gradient(135deg, #fff, #666);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5));
+    animation: float 3s ease-in-out infinite; /* Animação de flutuação divertida */
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Estilos para a mensagem de erro principal */
+.error-message {
+    font-family: var(--font-poppins), sans-serif;
+    font-size: 1.5em; /* Diminuído de 1.8em */
+    margin-bottom: 15px;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+/* Estilos para a descrição adicional do erro */
+.error-description {
+    font-family: var(--font-inter), sans-serif;
+    font-size: 1.1em;
+    margin-bottom: 40px;
+    color: rgba(255,255,255,0.8);
+    line-height: 1.6;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Estilos para o link de retorno à página inicial */
+.return-link {
+    font-family: var(--font-poppins), sans-serif;
+    display: inline-block;
+    padding: 14px 32px; /* Diminuído de 18px 40px */
+    background: #fff;
+    color: #000 !important;
+    border-radius: 50px; /* Botão arredondado estilo pílula */
+    text-decoration: none;
+    font-size: 14px; /* Diminuído de 16px */
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.return-link:hover {
+    transform: scale(1.1) rotate(-2deg); /* Toque divertido no hover */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+    background: #f0f0f0;
+}
+
+/* Estilos para o link de retorno quando o mouse passa por cima */
+
+
+/* Estilos para modo escuro */
+body.dark-mode .error-container {
+    background: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente para o contêiner no modo escuro */
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Borda branca semi-transparente no modo escuro */
+}
+
+body.dark-mode .return-link {
+    background: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente para o link no modo escuro */
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Borda branca semi-transparente para o link no modo escuro */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Efeito 3D no botão */
+}
+
+body.dark-mode .return-link:hover {
+    background: rgba(255, 255, 255, 0.2); /* Altera o fundo do link no hover para um tom mais escuro no modo escuro */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Sombra mais intensa no hover */
+}
+
+/* Responsividade para telas menores que 600px */
+@media (max-width: 600px) {
+    .error-container {
+        padding: 30px 20px; /* Reduz o espaçamento interno */
+        margin: 20px; /* Adiciona margem para telas menores */
+    }
+    
+    .error-title {
+        font-size: 4em; /* Reduz o tamanho da fonte do título */
+    }
+    
+    .error-message {
+        font-size: 1.2em; /* Reduz o tamanho da fonte da mensagem */
+    }
+    
+    .error-description {
+        font-size: 0.9em; /* Reduz o tamanho da fonte da descrição */
+    }
+    
+    .return-link {
+        padding: 14px 24px; /* Reduz o espaçamento interno do link */
+        font-size: 14px; /* Reduz o tamanho da fonte do link */
+    }
+}
+
+/* Centraliza o contêiner na tela */
+body, html {
+    height: 100%; /* Garante que body e html ocupem 100% da altura da viewport */
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove preenchimentos padrão */
+}
+
+body {
+    font-family: var(--font-inter), sans-serif;
+    min-height: 100vh; /* Garante que o body tenha pelo menos 100% da altura da viewport */
+    display: flex; /* Usa flexbox para centralizar o conteúdo */
+    align-items: center; /* Centraliza verticalmente os itens flexíveis */
+    justify-content: center; /* Centraliza horizontalmente os itens flexíveis */
+    background: #222; /* Cor de fundo padrão (ajuste conforme o design) */
+}
+
