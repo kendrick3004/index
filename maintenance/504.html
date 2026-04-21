@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>504 - Tempo de Resposta Excedido</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <script src="rate-limiter.js"></script>
+    <script src="factory.js"></script>
+    <script src="config.js"></script>
+    <link rel="stylesheet" href="suite.css">
+    <link rel="stylesheet" href="error-pages.css">
+    <style>
+        :root {
+            --font-inter: 'Inter', sans-serif;
+            --font-righteous: 'Righteous', display;
+            --font-poppins: 'Poppins', sans-serif;
+            --font-montserrat: 'Montserrat', sans-serif;
+            --font-dancing: 'Dancing Script', cursive;
+            --font-lora: 'Lora', serif;
+        }
+
+        body {
+            background-image: url('background.jpg') !important;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .error-icon { font-size: 64px; margin-bottom: 20px; }
+        
+        .return-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 24px;
+            background: rgba(255, 215, 0, 0.1);
+            border: 1px solid #fbbf24;
+            color: #fbbf24 !important;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .return-link:hover { 
+            background: rgba(255, 215, 0, 0.2); 
+            transform: translateY(-2px); 
+        }
+
+        /* Ajuste para garantir que o background apareça no mobile */
+        @media screen and (max-width: 1024px) {
+            body {
+                background-attachment: scroll !important;
+            }
+        }
+    </style>
+</head>
+<body class="dark-mode">
+    <div class="container">
+        <div class="error-container">
+            <div class="error-icon">⏳</div>
+            <h1 class="error-title">504</h1>
+            <p class="error-message">Tempo de Resposta Excedido</p>
+            <p class="error-description">O servidor demorou muito para responder. Isso pode ser devido a uma sobrecarga temporária. Tente novamente em instantes.</p>
+            <a href="/" class="link-item return-link">Tentar Novamente</a>
+        </div>
+    </div>
+</body>
+</html>

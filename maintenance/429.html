@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>429 - Acesso Temporariamente Bloqueado</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+        /* CSS TOTALMENTE ISOLADO - SEM DEPENDÊNCIAS EXTERNAS */
+        :root {
+            --font-righteous: 'Righteous', cursive;
+            --font-poppins: 'Poppins', sans-serif;
+            --font-inter: 'Inter', sans-serif;
+        }
+
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* Imagem de fundo configurada para cobrir tudo */
+            background: #111 url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Camada escura para dar contraste ao texto sobre a imagem */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 0;
+        }
+
+        .container {
+            width: 100%;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .error-container {
+            text-align: center;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            max-width: 500px;
+            width: 100%;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .error-container:hover {
+            transform: translateY(-5px);
+        }
+
+        .error-icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+            display: block;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+
+        .error-title {
+            font-size: 5em;
+            font-weight: 700;
+            margin: 0 0 10px 0;
+            background: linear-gradient(135deg, #fff, #666);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3));
+        }
+
+        .error-message {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #fff;
+            font-weight: 700;
+        }
+
+        .error-description {
+            font-size: 1em;
+            margin-bottom: 20px;
+            color: rgba(255,255,255,0.7);
+            line-height: 1.6;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .countdown-timer {
+            font-size: 32px;
+            font-weight: bold;
+            color: #fbbf24;
+            margin: 25px 0;
+            font-family: monospace;
+            letter-spacing: 2px;
+            background: rgba(251, 191, 36, 0.1);
+            padding: 10px;
+            border-radius: 8px;
+            display: inline-block;
+        }
+
+        .support-email {
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .support-email a {
+            color: #fbbf24;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .support-email a:hover {
+            color: #fcd34d;
+            text-decoration: underline;
+        }
+
+        .return-link {
+            display: none; /* Começa escondido e aparece após o tempo */
+            margin-top: 30px;
+            padding: 14px 32px;
+            background: #fff;
+            color: #000 !important;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+        }
+
+        .return-link:hover {
+            transform: scale(1.05);
+            background: #f0f0f0;
+        }
+
+        @media (max-width: 600px) {
+            .error-container { padding: 30px 20px; margin: 20px; }
+            .error-title { font-size: 3.5em; }
+            .error-message { font-size: 1.2em; }
+            .countdown-timer { font-size: 24px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="error-container">
+            <div class="error-icon">🛡️</div>
+            <h1 class="error-title">429</h1>
+            <p class="error-message">Acesso Temporariamente Bloqueado</p>
+            <p class="error-description">Detectamos atividade suspeita em sua sessão. Por questões de segurança, seu acesso foi temporariamente suspenso.</p>
+            <p class="error-description">Você poderá tentar novamente em:</p>
+            <div class="countdown-timer" id="countdown">T-10</div>
+            <div class="support-email">
+                <p class="error-description">Se você acredita que isso é um erro, entre em contato com o suporte:</p>
+                <a href="mailto:kendricknicoleti@gmail.com">kendricknicoleti@gmail.com</a>
+            </div>
+            <a href="/" class="return-link" id="returnLink">Voltar para a Página Inicial</a>
+        </div>
+    </div>
+    <script>
+        let timeRemaining = 10;
+        const countdownEl = document.getElementById("countdown");
+        const returnLink = document.getElementById("returnLink");
+
+        const formatTime = (seconds) => `T-${String(seconds).padStart(2, "0")}`;
+        countdownEl.textContent = formatTime(timeRemaining);
+
+        const interval = setInterval(() => {
+            timeRemaining--;
+            countdownEl.textContent = formatTime(timeRemaining);
+
+            if (timeRemaining <= 0) {
+                clearInterval(interval);
+                countdownEl.style.display = "none";
+                returnLink.style.display = "inline-block";
+                setTimeout(() => {
+                    window.location.href = "/";
+                }, 3500);
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
