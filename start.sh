@@ -58,37 +58,22 @@ while [ $RETRY_COUNT -lt $MAX_RETRIES ] && [ "$CLONE_SUCCESS" = false ]; do
     if [ $RETRY_COUNT -gt 1 ]; then
         log "🔄 Tentativa $RETRY_COUNT de $MAX_RETRIES..."
         sleep 5
+        rm -rf .git
     fi
     
-    # Clone com barra de progresso personalizada
-    git_output=$(timeout 300 bash -c 'git clone --depth=1 --single-branch --branch main https://github.com/kendrick3004/index.git . 2>&1' 2>&1)
-    git_status=$?
+    log "📊 Iniciando clonagem..."
     
-    # Processa output linha por linha
-    while IFS= read -r line; do
-        echo "$line" >> "$GIT_LOG"
-        
-        # Processa linhas com progresso
-        if echo "$line" | grep -qE "Receiving objects:"; then
-            percent=$(echo "$line" | grep -oE '[0-9]+%' | tr -d '%')
-            speed=$(echo "$line" | grep -oE '[0-9]+\.[0-9]+ [KMG]iB/s' || echo "")
-            
-            filled=$((percent / 2))
-            empty=$((50 - filled))
-            bar=""
-            for ((i=0; i<filled; i++)); do bar="${bar}█"; done
-            for ((i=0; i<empty; i++)); do bar="${bar}░"; done
-            
-            printf "\r📥 Baixando: [${bar}] %3d%% - %s" "$percent" "$speed"
-        elif echo "$line" | grep -qE "remote:|Enumerating|Counting|Compressing"; then
-            echo ""
-            echo "$line"
+    # Clone direto sem bash -c (mais simples e confiável)
+    if timeout 600 git clone --depth=1 --single-branch --branch main --progress https://github.com/kendrick3004/index.git . 2>&1 | tee -a "$GIT_LOG"; then
+        log "✓ Clone concluído, checando integridade..."
+        if [ -f "site/index.html" ]; then
+            log "✓ Arquivos do site encontrados"
+            CLONE_SUCCESS=true
+        else
+            log "⚠️  Site não encontrado, tentando novamente..."
         fi
-    done <<< "$git_output"
-    
-    if [ $git_status -eq 0 ]; then
-        echo ""
-        CLONE_SUCCESS=true
+    else
+        log "⚠️  Git clone falhou ou timeout"
     fi
 done
 
