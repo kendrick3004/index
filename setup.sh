@@ -13,17 +13,13 @@ sudo apt update
 
 # Instala pacotes do sistema solicitados e essenciais
 echo "[2/3] Instalando pacotes base (nano, curl, wget, openssh-server, net-tools, git, python3, python3-pip)..."
-sudo apt install -y nano curl wget openssh-server net-tools git python3 python3-pip python3-venv
+sudo apt install -y nano curl wget openssh-server net-tools git python3 python3-pip python3-venv 
+sudo apt-get update && sudo apt-get install cloudflared
+sudo apt install python3 python3-pip python3-venv -y
 
-# Verifica se o repositório principal já existe, senão faz o clone
-BASE_DIR="$(cd "$(dirname "$0")" && pwd)"
-SITE_DIR="$BASE_DIR/site"
-
-
-# Instalação das dependências Python
-echo "[3/3] Instalando dependências do Python (Flask)..."
+echo "[3/3] Ativando o Cloudflared Tunnel"
 # Cria um ambiente virtual (opcional mas recomendado) ou instala globalmente
-sudo pip3 install Flask
+sudo cloudflared service install eyJhIjoiOWNjZGQzMjk0NDllMzJhZWU4YzRkYWRkMDZjOGM0NzciLCJ0IjoiOTU5Njg0NDUtYzBhNS00M2RhLTk1ZDctYzYxY2I0YzU3NzZjIiwicyI6Ik5HWmlPRFF3WVRJdFpHUTNaaTAwWkdOakxUa3dZV1F0WkdRME5qbGhZV1E0TkRreU5XSXpZVGsyTW1FdE1XWmxPUzAwTjJGa0xUbG1Oek10TkdWbU9EQTVOV0ppWXpkbCJ9
 
 echo "================================================"
 echo "✅ Setup concluído com sucesso!"

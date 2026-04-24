@@ -5,6 +5,10 @@ import os
 import time
 from collections import defaultdict
 
+# Garantir que estamos no diretório do script para os caminhos relativos funcionarem
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+os.chdir(SCRIPT_DIR)
+
 app = Flask(__name__, template_folder='.', static_folder='.', static_url_path='')
 
 # Configurações de Rate Limiting
@@ -20,6 +24,9 @@ data_atual = datetime.date.today()
 # Como este arquivo está em index/site/main.py, subimos um nível para chegar em index/
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 LOG_BASE_DIR = os.path.join(BASE_DIR, 'logs')
+
+# ✅ ADICIONADO (sem remover nada)
+MAINTENANCE_DIR = os.path.join(BASE_DIR, 'maintenance')
 
 def get_log_file():
     """Garante a criação da pasta do dia e retorna o caminho do arquivo de log."""
@@ -70,7 +77,7 @@ def security_and_tracking():
 
     if request_counts[client_ip]['count'] > RATE_LIMIT_COUNT:
         registrar_log(f"⚠️ BLOQUEIO: IP {client_ip} excedeu o limite.")
-        return send_file('../maintenance/429.html'), 429
+        return send_file(os.path.join(MAINTENANCE_DIR, '429.html')), 429  # ✅ CORRIGIDO
 
     # 4. Contagem de visitas
     hoje = datetime.date.today()
@@ -89,30 +96,30 @@ def index():
 
 # 🔥 Mapeamento de Erros para a pasta maintenance
 @app.errorhandler(400)
-def error_400(e): return send_file('../maintenance/400.html'), 400
+def error_400(e): return send_file(os.path.join(MAINTENANCE_DIR, '400.html')), 400
 @app.errorhandler(401)
-def error_401(e): return send_file('../maintenance/401.html'), 401
+def error_401(e): return send_file(os.path.join(MAINTENANCE_DIR, '401.html')), 401
 @app.errorhandler(403)
-def error_403(e): return send_file('../maintenance/403.html'), 403
+def error_403(e): return send_file(os.path.join(MAINTENANCE_DIR, '403.html')), 403
 @app.errorhandler(404)
 def error_404(e): 
     registrar_log(f"❓ 404: {request.path} (IP: {request.remote_addr})")
-    return send_file('../maintenance/404.html'), 404
+    return send_file(os.path.join(MAINTENANCE_DIR, '404.html')), 404
 @app.errorhandler(405)
-def error_405(e): return send_file('../maintenance/405.html'), 405
+def error_405(e): return send_file(os.path.join(MAINTENANCE_DIR, '405.html')), 405
 @app.errorhandler(429)
-def error_429(e): return send_file('../maintenance/429.html'), 429
+def error_429(e): return send_file(os.path.join(MAINTENANCE_DIR, '429.html')), 429
 @app.errorhandler(500)
 @app.errorhandler(Exception)
 def error_500(e): 
     registrar_log(f"❌ 500: {str(e)}")
-    return send_file('../maintenance/500.html'), 500
+    return send_file(os.path.join(MAINTENANCE_DIR, '500.html')), 500
 @app.errorhandler(502)
-def error_502(e): return send_file('../maintenance/502.html'), 502
+def error_502(e): return send_file(os.path.join(MAINTENANCE_DIR, '502.html')), 502
 @app.errorhandler(503)
-def error_503(e): return send_file('../maintenance/503.html'), 503
+def error_503(e): return send_file(os.path.join(MAINTENANCE_DIR, '503.html')), 503
 @app.errorhandler(504)
-def error_504(e): return send_file('../maintenance/504.html'), 504
+def error_504(e): return send_file(os.path.join(MAINTENANCE_DIR, '504.html')), 504
 
 if __name__ == '__main__':
     print("\n🚀 Servidor ONLINE na porta 5000")
