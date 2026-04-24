@@ -17,6 +17,9 @@ log() {
     echo "[$(date '+%H:%M:%S')] $1"
 }
 
+# Evita problema de locale no parsing do git
+export LC_ALL=C
+
 log "🛑 Parando servidores..."
 pkill -f main.py 2>/dev/null || true
 sleep 2
@@ -37,7 +40,7 @@ rm -rf "$BASE_DIR/site"
 
 # ------------------ DOWNLOAD ------------------
 log "📥 Baixando atualização..."
-log "🔗 Clonando repositório com Sparse Checkout..."
+log "🔗 Clonando repositório..."
 
 mkdir -p "$BASE_DIR/site"
 cd "$BASE_DIR/site" || exit 1
@@ -45,7 +48,6 @@ cd "$BASE_DIR/site" || exit 1
 log "⏳ Puxando dados do repositório..."
 log "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 
-# Configurações de timeout e retry para git
 export GIT_CONNECT_TIMEOUT=120
 export GIT_HTTP_CONNECT_TIMEOUT=120
 
@@ -55,17 +57,41 @@ CLONE_SUCCESS=false
 
 while [ $RETRY_COUNT -lt $MAX_RETRIES ] && [ "$CLONE_SUCCESS" = false ]; do
     RETRY_COUNT=$((RETRY_COUNT + 1))
+
     if [ $RETRY_COUNT -gt 1 ]; then
         log "🔄 Tentativa $RETRY_COUNT de $MAX_RETRIES..."
         sleep 5
         rm -rf .git
     fi
-    
+
     log "📊 Iniciando clonagem..."
-    
-    # Clone direto sem bash -c (mais simples e confiável)
-    if timeout 600 git clone --depth=1 --single-branch --branch main --progress https://github.com/kendrick3004/index.git . 2>&1 | tee -a "$GIT_LOG"; then
+
+    if timeout 600 git clone --depth=1 --single-branch --branch main --progress https://github.com/kendrick3004/index.git . 2>&1 | tee -a "$GIT_LOG" | while IFS= read -r line; do
+
+        # Barra de progresso
+        if [[ "$line" == *"Receiving objects:"* ]]; then
+            percent=$(echo "$line" | grep -oE '[0-9]+%' | tr -d '%')
+            speed=$(echo "$line" | grep -oE '[0-9]+\.[0-9]+ [KMG]iB/s' || echo "")
+
+            if [[ -n "$percent" ]]; then
+                filled=$((percent / 2))
+                empty=$((50 - filled))
+
+                bar=$(printf "%${filled}s" | tr ' ' '█')
+                bar+=$(printf "%${empty}s" | tr ' ' '░')
+
+                printf "\r📥 Baixando: [%-50s] %3d%% %s" "$bar" "$percent" "$speed"
+            fi
+
+        elif [[ "$line" == remote:* || "$line" == Enumerating* || "$line" == Counting* || "$line" == Compressing* ]]; then
+            echo ""
+            log "$line"
+        fi
+
+    done; then
+        echo ""
         log "✓ Clone concluído, checando integridade..."
+
         if [ -f "site/index.html" ]; then
             log "✓ Arquivos do site encontrados"
             CLONE_SUCCESS=true
@@ -79,15 +105,15 @@ done
 
 if [ "$CLONE_SUCCESS" = true ]; then
     log "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-    
+
     log "📂 Configurando sparse checkout (apenas /site)..."
-    if bash -c 'stdbuf -oL -eL git sparse-checkout init --cone 2>&1' | tee -a "$GIT_LOG"; then
-        bash -c 'stdbuf -oL -eL git sparse-checkout set site 2>&1' | tee -a "$GIT_LOG"
+    if git sparse-checkout init --cone >> "$GIT_LOG" 2>&1; then
+        git sparse-checkout set site >> "$GIT_LOG" 2>&1
         log "✓ Sparse Checkout configurado"
     else
         log "⚠️  Sparse checkout não disponível, usando clone completo"
     fi
-    
+
     log "✅ Download concluído com sucesso"
 else
     log "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
@@ -99,7 +125,7 @@ fi
 log "🗄️ Verificando estrutura do database..."
 if [ -d "$BASE_DIR/site/database/assets" ]; then
     log "🔎 Gerando database..."
-    log "⏳ Processando estrutura de assets (PROGRESS)..."
+    log "⏳ Processando estrutura de assets..."
 
     cd "$BASE_DIR/site/database" || exit 1
 
