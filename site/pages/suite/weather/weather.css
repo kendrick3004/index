@@ -21,7 +21,7 @@
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     color: #ffffff;
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
-    margin: 0 auto; /* CENTRALIZAÇÃO HORIZONTAL */
+    margin: 20px auto 0; /* Centralizado com margem superior */
     box-sizing: border-box;
 }
 

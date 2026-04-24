@@ -1,89 +1,10 @@
 /**
  * ARQUIVO: fonts-manager.css
- * DESCRIÇÃO: Gerenciador Centralizado de Fontes Locais.
- * FUNCIONALIDADES: Importa todas as famílias tipográficas do projeto e define variáveis globais.
- * VERSÃO: 2.0.0 - RESTAURADA FIELMENTE
+ * DESCRIÇÃO: Gerenciador Centralizado de Fontes (Variáveis e Classes).
+ * FUNCIONALIDADES: Define variáveis globais e classes utilitárias. 
+ * OBSERVAÇÃO: As fontes são carregadas via <link> no index.html para melhor performance.
+ * VERSÃO: 3.1.0 - Variáveis mantidas, importação movida para HTML
  */
-
-/* ========================================
-   IMPORTAÇÃO DE FONTES PRINCIPAIS
-   ======================================== */
-
-/* Oswald - Fonte display moderna, condensada e impactante */
-@import url('../../database/assets/dev/fonts/oswald/oswald.css');
-
-/* Ysabeau SC - Fonte elegante com estilo Small Caps (letras maiúsculas pequenas) */
-@import url('../../database/assets/dev/fonts/ysabeau_sc/ysabeau_sc.css');
-
-/* ========================================
-   IMPORTAÇÃO DE FONTES SANS-SERIF (Sem serifa)
-   ======================================== */
-
-/* Roboto - Fonte padrão do Android, extremamente versátil */
-@import url('../../database/assets/dev/fonts/roboto/roboto.css');
-
-/* Open Sans - Fonte humanista com excelente legibilidade */
-@import url('../../database/assets/dev/fonts/open_sans/open_sans.css');
-
-/* Montserrat - Fonte geométrica moderna e elegante */
-@import url('../../database/assets/dev/fonts/montserrat/montserrat.css');
-
-/* Lato - Fonte humanista com traços elegantes e amigáveis */
-@import url('../../database/assets/dev/fonts/lato/lato.css');
-
-/* Poppins - Fonte geométrica popular com design equilibrado */
-@import url('../../database/assets/dev/fonts/poppins/poppins.css');
-
-/* Inter - Fonte otimizada especificamente para interfaces de usuário digitais */
-@import url('../../database/assets/dev/fonts/inter/inter.css');
-
-/* Nunito - Fonte com terminações arredondadas, transmitindo suavidade */
-@import url('../../database/assets/dev/fonts/nunito/nunito.css');
-
-/* ========================================
-   IMPORTAÇÃO DE FONTES SERIF (Com serifa)
-   ======================================== */
-
-/* Playfair Display - Fonte serif de alto contraste para títulos sofisticados */
-@import url('../../database/assets/dev/fonts/playfair_display/playfair_display.css');
-
-/* Merriweather - Fonte serif projetada para ser lida confortavelmente em telas */
-@import url('../../database/assets/dev/fonts/merriweather/merriweather.css');
-
-/* Lora - Fonte serif contemporânea com raízes caligráficas */
-@import url('../../database/assets/dev/fonts/lora/lora.css');
-
-/* PT Serif - Fonte serif funcional e universal */
-@import url('../../database/assets/dev/fonts/pt_serif/pt_serif.css');
-
-/* ========================================
-   IMPORTAÇÃO DE FONTES MONOESPAÇADAS (Código)
-   ======================================== */
-
-/* Roboto Mono - Versão monoespaçada da família Roboto */
-@import url('../../database/assets/dev/fonts/roboto_mono/roboto_mono.css');
-
-/* Source Code Pro - Fonte profissional para ambientes de programação */
-@import url('../../database/assets/dev/fonts/source_code_pro/source_code_pro.css');
-
-/* Fira Code - Fonte monoespaçada famosa por suas ligaduras de programação */
-@import url('../../database/assets/dev/fonts/fira_code/fira_code.css');
-
-/* ========================================
-   IMPORTAÇÃO DE FONTES DISPLAY E DECORATIVAS
-   ======================================== */
-
-/* Dancing Script - Fonte cursiva fluida e elegante */
-@import url('../../database/assets/dev/fonts/dancing_script/dancing_script.css');
-
-/* Pacifico - Fonte script inspirada na cultura do surf dos anos 50 */
-@import url('../../database/assets/dev/fonts/pacifico/pacifico.css');
-
-/* Bebas Neue - Fonte display condensada, ideal para chamadas e cabeçalhos */
-@import url('../../database/assets/dev/fonts/bebas_neue/bebas_neue.css');
-
-/* Righteous - Fonte display geométrica inspirada na Art Déco */
-@import url('../../database/assets/dev/fonts/righteous/righteous.css');
 
 /* ========================================
    VARIÁVEIS CSS PARA FACILITAR O USO

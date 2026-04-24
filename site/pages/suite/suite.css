@@ -365,6 +365,7 @@ body.dark-mode .link-item, body.dark-mode .santo-do-dia {
     backdrop-filter: blur(12px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     transition: transform 0.3s ease;
+    font-family: 'Dancing Script', cursive !important;
 }
 
 .liturgy-card:hover {
@@ -397,11 +398,11 @@ body.dark-mode .liturgy-card {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: var(--font-dancing), cursive;
-    font-size: 19px;  /* Aumentado de 16px para 19px (+3px) */
+    font-family: 'Dancing Script', cursive !important;
+    font-size: 19px;
     font-weight: 600;
     font-style: italic;
-    color: var(--accent-gold, #ffd700);
+    color: #ffd700 !important; /* Dourado fixo para garantir visibilidade */
     padding: 0 !important;
     background: none !important;
     border: none !important;
@@ -441,10 +442,10 @@ body.dark-mode .liturgy-card {
 .prayer-item {
     padding: 12px 8px;
     background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 215, 0, 0.05));
-    border: 1px solid var(--accent-gold, #ffd700);
+    border: 1px solid #ffd700;
     border-radius: 12px;
-    color: var(--accent-gold, #ffd700);
-    font-family: var(--font-dancing), cursive;
+    color: #ffd700 !important;
+    font-family: 'Dancing Script', cursive !important;
     font-size: 14px;
     font-weight: 600;
     font-style: italic;

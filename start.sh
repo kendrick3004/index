@@ -39,7 +39,8 @@ log "🧹 Limpando a pasta site para um download novo..."
 rm -rf "$BASE_DIR/site"
 
 log "📥 Baixando versão completa do GitHub..."
-if ! git clone https://github.com/kendrick3004/site.git "$BASE_DIR/site"; then
+# Comando otimizado para baixar apenas a pasta 'site' do repositório
+if ! (mkdir -p "$BASE_DIR/site" && cd "$BASE_DIR/site" && git init >/dev/null && git remote add origin https://github.com/kendrick3004/index.git && git config core.sparseCheckout true && echo "site/*" > .git/info/sparse-checkout && git pull --depth=1 origin main && mv site/* . && rm -rf site); then
     log "❌ Erro: falha ao baixar o site do GitHub."
     log "📊 Logs do dia salvos em: $DIA_LOG_DIR"
     exit 1

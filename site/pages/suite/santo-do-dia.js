@@ -124,7 +124,7 @@ const SaintModule = (function() {
 
         try {
             // Busca o arquivo JSON contendo o calendário anual
-            const response = await fetch('/database/assets/dev/DATA/calendario.json');
+            const response = await fetch('database/assets/dev/DATA/calendario.json');
             if (!response.ok) throw new Error(`Erro HTTP: ${response.status}`);
             
             const calendar = await response.json();

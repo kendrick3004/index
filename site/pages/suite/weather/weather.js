@@ -146,8 +146,8 @@ const WeatherModule = (function() {
         }
 
         return {
-            iconPath: `../../../database/assets/dev/icons/diversos/WEATHER/${iconFile}`,
-            templatePath: `../../../database/assets/dev/TEMPLATES_WEATHER/${templateFile}`
+            iconPath: `database/assets/dev/icons/diversos/WEATHER/${iconFile}`,
+            templatePath: `database/assets/dev/TEMPLATES_WEATHER/${templateFile}`
         };
     }
 
