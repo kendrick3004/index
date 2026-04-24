@@ -61,9 +61,8 @@ while [ $RETRY_COUNT -lt $MAX_RETRIES ] && [ "$CLONE_SUCCESS" = false ]; do
     fi
     
     # Clone com barra de progresso personalizada
-    local git_output
     git_output=$(timeout 300 bash -c 'git clone --depth=1 --single-branch --branch main https://github.com/kendrick3004/index.git . 2>&1' 2>&1)
-    local git_status=$?
+    git_status=$?
     
     # Processa output linha por linha
     while IFS= read -r line; do
