@@ -1,0 +1,743 @@
+/*
+ * ARQUIVO: suite.css
+ * DESCRIÇÃO: Estilos visuais restaurados com fidelidade absoluta e efeitos 3D sutis.
+ * FUNCIONALIDADES: Gerencia o layout da página principal, avatar, links e widget do santo do dia.
+ * VERSÃO: 2.2.1 - Ajuste Cirúrgico de Margens para Eliminar Rolagem
+ */
+
+/* Configurações básicas de altura e largura para garantir que o conteúdo ocupe a tela toda */
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilização do corpo da página */
+body {
+    /* Cores puxadas do banco de dados local via ColorSystem */
+    /* background-color: var(--text-primary, #ffffff);  <- Removido para não sobrepor a imagem */
+    color: var(--bg-dark, #000000);
+    font-family: var(--font-inter), sans-serif; /* Fonte principal do sistema */
+    display: flex;                              /* Flexbox para centralização */
+    justify-content: center;                    /* Centraliza horizontalmente */
+    align-items: center;                        /* Centraliza verticalmente (Desktop) */
+    min-height: 100vh;                          /* Altura mínima de 100% da viewport */
+    background-color: transparent;              /* Garante que a imagem de fundo em modes.css apareça */
+}
+
+/* Container principal que agrupa todos os elementos da página */
+.container {
+    display: flex;
+    flex-direction: column;                     /* Organiza elementos em coluna vertical */
+    align-items: center;                        /* Centraliza elementos horizontalmente */
+    width: 100%;                                /* Ocupa toda a largura disponível */
+    max-width: 600px;                           /* Limita a largura para manter a elegância */
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 
+   SEÇÃO DO AVATAR 
+   Agrupa a imagem de perfil e o nome do usuário.
+*/
+.avatar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+                               /* Reduzido de 50px para 30px */
+    margin-bottom: 15px;                        /* Reduzido de 20px para 15px */
+}
+
+/* Estilização da imagem do avatar */
+.avatar-img img {
+    width: 112px;                               /* Largura fixa */
+    height: 140px;                              /* Altura fixa (proporção 4:5) */
+    border-radius: 16px;                        /* Bordas arredondadas uniformes */
+    border: 1px solid rgba(0, 0, 0, 0.3);       /* Borda translúcida refinada */
+    object-fit: cover;                          /* Garante que a imagem preencha o espaço sem distorcer */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);    /* Sombra 3D sutil para profundidade */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave para hover */
+}
+
+/* Efeito ao passar o mouse sobre a imagem do avatar */
+.avatar-img img:hover {
+    transform: translateY(-5px) scale(1.02);    /* Eleva e aumenta levemente a imagem */
+    box-shadow: 0 12px 24px rgba(0,0,0,0.2);    /* Intensifica a sombra */
+}
+
+/* Estilização do nome abaixo do avatar (estilo pílula) */
+.avatar-name.link-item {
+    font-family: var(--font-righteous), cursive; /* Fonte display moderna */
+    margin-top: 10px;                           /* Reduzido de 12px para 10px */
+    padding: 6px 20px;                          /* Espaçamento interno horizontal e vertical */
+    font-size: 15px;                            /* Tamanho da fonte ajustado */
+    font-weight: 400;                           /* Peso normal para Righteous */
+    letter-spacing: 1px;                        /* Espaçamento entre letras */
+    color: var(--text-primary, #fff);           /* Texto sempre branco neste elemento */
+    background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05)); /* Fundo gradiente sutil */
+    border-radius: 10px;                        /* Bordas arredondadas estilo pílula */
+    border: 1px solid #141414;       /* Borda translúcida refinada */
+    backdrop-filter: blur(10px);                /* Efeito Glassmorphism */
+    text-align: center;                         /* Centraliza o texto */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);     /* Sombra para destaque */
+    transition: all 0.3s ease;                  /* Transição suave */
+}
+
+/* Efeito hover no nome do avatar */
+.avatar-name.link-item:hover {
+    transform: scale(1.05);                     /* Aumenta levemente o tamanho */
+    background: rgba(255,255,255,0.2);          /* Fundo fica mais opaco */
+    border-color: rgba(255,255,255,0.4);        /* Borda fica mais visível */
+}
+
+/* 
+   SWITCH DE TEMA (DARK/LIGHT)
+   Componente personalizado para alternar entre os modos.
+*/
+.switch {
+    width: 64px;                                /* Largura total do switch */
+    height: 32px;                               /* Altura total do switch */
+    position: relative;                         /* Necessário para posicionamento absoluto interno */
+    margin: 8px 0;                              /* Reduzido de 10px para 8px */
+    cursor: pointer;                            /* Cursor de mão */
+    display: flex;
+    align-items: center;
+}
+
+/* Fundo do trilho do switch */
+.switch-bg {
+    width: 64px;
+    height: 24px;
+    background: rgba(0, 0, 0, 0.1);             /* Fundo escuro translúcido */
+    border-radius: 999px;                       /* Formato de pílula perfeito */
+    border: 1px solid #141414;       /* Borda translúcida refinada */
+    backdrop-filter: blur(8px);                 /* Desfoque no trilho */
+    position: absolute;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.1); /* Sombra interna para profundidade */
+}
+
+/* O botão deslizante do switch */
+.switch-toggle {
+    width: 32px;
+    height: 32px;
+    background: var(--bg-dark, #000000);        /* Cor do botão (Preto no Light Mode) */
+    border-radius: 50%;                         /* Círculo perfeito */
+    position: absolute;
+    left: -5px;                                 /* Posição inicial (Esquerda) */
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Movimento suave com curva de aceleração */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;                                 /* Garante que o botão fique sobre o trilho */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);      /* Sombra 3D no botão */
+}
+
+/* Classe aplicada via JS para mover o switch para a direita */
+.switch-toggle-right {
+    transform: translateX(45px);                /* Move o botão para a posição de ativado */
+}
+
+/* Ícones dentro do switch */
+.switch-icon {
+    font-size: 16px;
+}
+
+/* Lógica de exibição de ícones baseada na classe do body */
+.icon-sun, .icon-moon { display: none; }        /* Esconde ambos por padrão */
+body:not(.dark-mode) .icon-sun { display: block; } /* Mostra sol se NÃO for dark-mode */
+body.dark-mode .icon-moon { display: block; }      /* Mostra lua se FOR dark-mode */
+
+/* 
+ /* WIDGET SANTO DO DIA 
+   Exibe informações religiosas diárias.
+*/
+.santo-do-dia {
+    width: 85%;                                 /* Largura responsiva */
+    max-width: 500px;                           /* Limite de largura */
+    padding: 14px 18px;                         /* Reduzido de 16px 20px para 14px 18px */
+    margin: 12px 2px;                           /* Reduzido de 15px para 12px */
+    background: rgba(0, 0, 0, 0.1);             /* Fundo translúcido */
+    border-radius: 16px;                        /* Bordas arredondadas uniformes */
+    border: 1px solid #141414;       /* Borda translúcida refinada */
+    backdrop-filter: blur(12px);                /* Efeito de vidro */
+    color: var(--text-primary, #fff);           /* Texto branco para contraste */
+    display: flex;
+    flex-direction: column;
+    gap: 6px;                                   /* Reduzido de 8px para 6px */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);    /* Profundidade 3D */
+    transition: transform 0.3s ease;            /* Transição para hover */
+}
+
+/* Efeito hover no widget do santo */
+.santo-do-dia:hover {
+    transform: translateY(-3px);                /* Elevação sutil */
+    box-shadow: 0 12px 28px rgba(0,0,0,0.2);    /* Sombra mais profunda */
+}
+
+/* Cabeçalho do widget do santo */
+.santo-header {
+    display: flex;
+    justify-content: space-between;             /* Nome à esquerda, fita à direita */
+    align-items: center;
+    gap: 10px;
+}
+
+/* Estilização do nome do santo */
+.santo-name {
+    font-family: var(--font-montserrat), sans-serif;
+    font-size: 14px;                            /* Reduzido de 15px para 14px */
+    font-weight: 800;                           /* Negrito extra para destaque */
+    text-transform: uppercase;                  /* Maiúsculas */
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.4);     /* Sombra no texto para legibilidade */
+}
+
+/* Estilização do tipo de celebração */
+.santo-type {
+    font-family: var(--font-dancing), cursive;  /* Fonte cursiva elegante */
+    font-size: 15px;                            /* Reduzido de 16px para 15px */
+    color: var(--accent-gold, #ffd700);         /* Cor dourada para destaque */
+    margin-top: -4px;                           /* Ajuste de posição vertical */
+}
+
+/**
+ * Fita colorida indicando o tempo litúrgico ("Lencinho")
+ * Aumentada para 15px de espessura (v2.4.0)
+ */
+.santo-ribbon {
+    width: 15px;  /* Aumentado para 15px */
+    height: 24px;
+    border-radius: 2px;
+    background: var(--accent-purple, #9370DB);  /* Cor padrão (Roxo) */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);      /* Sombra na fita */
+}
+
+/* Descrição do Santo - Fonte Elegante */
+.santo-description {
+    font-family: var(--font-lora, 'Lora'), var(--font-dancing, 'Dancing Script'), serif; /* Fonte serifada elegante */
+    font-size: 13px;                            /* Tamanho legível */
+    font-weight: 400;                           /* Peso normal para elegância */
+    font-style: italic;                         /* Itálico para sofisticação */
+    line-height: 1.5;                           /* Espaçamento entre linhas para legibilidade */
+    color: var(--text-primary, #fff);           /* Cor do texto */
+    opacity: 0.9;                               /* Levemente transparente para efeito */
+    letter-spacing: 0.3px;                      /* Espaçamento delicado entre letras */
+    text-align: left;                           /* Alinhado à esquerda para harmonizar com os outros elementos */
+}
+
+/* 
+   SEÇÃO DE LINKS 
+   Lista de botões de navegação.
+*/
+.links {
+    width: 90%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;                                  /* Reduzido de 12px para 10px */
+    margin-bottom: 20px;                        /* Reduzido de 30px para 20px */
+}
+
+/* Estilização individual de cada botão de link */
+.link-item {
+    font-family: var(--font-poppins), sans-serif; /* Fonte moderna e amigável */
+    width: 100%;
+    padding: 12px;                              /* Reduzido de 14px para 12px */
+    background: rgba(255, 255, 255, 0.05);      /* Fundo quase transparente */
+    border-radius: 16px;                        /* Bordas arredondadas uniformes */
+    border: 1px solid #141414;       /* Borda translúcida refinada */
+    backdrop-filter: blur(12px);                /* Efeito Glassmorphism */
+    color: var(--text-primary, #fff) !important; /* Força a cor branca no texto */
+    text-align: center;                         /* Centraliza o texto */
+    font-size: 13px;                            /* Reduzido de 14px para 13px */
+    font-weight: 600;                           /* Semi-negrito */
+    letter-spacing: 0.5px;
+    text-decoration: none;                      /* Remove sublinhado de links */
+    box-sizing: border-box;                     /* Inclui padding na largura total */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);    /* Sombra para profundidade */
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Animação elástica moderna */
+}
+
+/* Efeito hover nos botões de link */
+.link-item:hover {
+    transform: translateY(-5px) scale(1.02);    /* Eleva e aumenta levemente o botão */
+    background: rgba(255, 255, 255, 0.15);      /* Fundo fica mais claro */
+    border-color: rgba(255, 255, 255, 0.3);     /* Borda fica mais visível */
+    box-shadow: 0 12px 25px rgba(0,0,0,0.3);    /* Sombra mais intensa */
+}
+
+/* 
+   MODO ESCURO (DARK MODE)
+   Sobrescreve cores para o tema escuro.
+*/
+body.dark-mode {
+    background-color: var(--bg-dark, #1a1a1a);
+    color: var(--text-primary, #ffffff);
+}
+
+/* Ajustes de cores para elementos específicos no Modo Escuro */
+body.dark-mode .avatar-img img { border-color: rgba(255, 255, 255, 0.5); }
+body.dark-mode .switch-bg { background: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.5); }
+body.dark-mode .switch-toggle { background: var(--text-primary, #ffffff); } /* Botão do switch fica branco */
+body.dark-mode .link-item, body.dark-mode .santo-do-dia {
+    background: rgba(255, 255, 255, 0.1);       /* Fundo mais claro para contraste */
+    border-color: rgba(255, 255, 255, 0.5);     /* Borda branca translúcida */
+}
+
+/* 
+   RESPONSIVIDADE MOBILE 
+   Ajustes para telas menores.
+*/
+@media (max-width: 600px) {
+    body {
+        align-items: flex-start;                /* Alinha ao topo para permitir rolagem natural */
+    }
+
+    .container {
+        margin-top: 20%;
+
+    }
+
+    .weather-content {
+        gap: 15px;
+    }
+    
+    .avatar {
+        margin-top: 15px;                       /* Reduzido ainda mais no mobile */
+        margin-bottom: 10px;
+    }
+    
+    .links {
+        gap: 8px;
+        margin-bottom: 15px;
+    }
+    
+    .link-item {
+        padding: 13px;
+        font-size: 12px;
+        border: 1px solid rgba(0, 0, 0, 0.5);
+    }
+}
+
+
+/* 
+   ESTILO ESPECIAL PARA O LINK DO EXPLORER COM LITURGIA DAS HORAS
+   Exibe o título principal e um subtítulo com informações adicionais.
+*/
+.explorer-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;                                   /* Espaço entre título e subtítulo */
+    padding: 10px !important;
+}
+
+.link-title {
+    font-family: var(--font-poppins), sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+.link-subtitle {
+    font-family: var(--font-dancing), cursive;  /* Fonte cursiva elegante como o santo-type */
+    font-size: 17px;                            /* Reduzido de 18px para 17px */
+    color: var(--accent-gold, #ffd700);         /* Cor dourada como o santo-type */
+    font-weight: 400;                           /* Peso normal */
+    letter-spacing: 0.3px;
+    text-align: center;
+}
+
+
+/* 
+   CARD DA LITURGIA DAS HORAS
+   Container principal com estilo de card padronizado.
+*/
+.liturgy-card {
+    padding: 14px 18px;
+    margin: 0;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    border: 1px solid #141414;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.liturgy-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.2);
+}
+
+body.dark-mode .liturgy-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* 
+   MENU DA LITURGIA DAS HORAS - DESIGN HORIZONTAL
+   Layout horizontal com as 4 orações lado a lado.
+*/
+.liturgy-menu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/**
+ * Título do menu da Liturgia das Horas
+ * Aumentado de 16px para 19px (v2.4.0)
+ * Fonte elegante cursiva com cor dourada
+ */
+.liturgy-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font-dancing), cursive;
+    font-size: 19px;  /* Aumentado de 16px para 19px (+3px) */
+    font-weight: 600;
+    font-style: italic;
+    color: var(--accent-gold, #ffd700);
+    padding: 0 !important;
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+}
+
+/* Link do calendário pequeno - SEM COR */
+.calendar-link-small {
+    font-size: 11px;
+    font-family: var(--font-poppins), sans-serif;
+    font-style: normal;
+    color: var(--text-primary, #fff);
+    text-decoration: none;
+    padding: 6px 12px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.calendar-link-small:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: scale(1.05);
+}
+
+/* Container das orações em linha */
+.liturgy-prayers {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    width: 100%;
+}
+
+/* Estilo de cada oração */
+.prayer-item {
+    padding: 12px 8px;
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 215, 0, 0.05));
+    border: 1px solid var(--accent-gold, #ffd700);
+    border-radius: 12px;
+    color: var(--accent-gold, #ffd700);
+    font-family: var(--font-dancing), cursive;
+    font-size: 14px;
+    font-weight: 600;
+    font-style: italic;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.1);
+    text-align: center;
+}
+
+/* Hover nas orações */
+.prayer-item:hover {
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.25), rgba(255, 215, 0, 0.1));
+    border-color: var(--accent-gold, #ffd700);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.2);
+}
+
+/**
+ * Quando a oração foi feita - Borda VERDE (v2.4.0)
+ * Exibe borda verde com fundo gradiente e sombra
+ */
+.prayer-item.completed {
+    background: linear-gradient(135deg, rgba(46, 204, 113, 0.3), rgba(46, 204, 113, 0.1));
+    border: 2px solid #22c55e;  /* Borda verde mais espessa */
+    color: #22c55e;
+    box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+}
+
+.prayer-item.completed:hover {
+    background: linear-gradient(135deg, rgba(46, 204, 113, 0.4), rgba(46, 204, 113, 0.2));
+    border-color: #16a34a;  /* Verde mais escuro ao hover */
+    box-shadow: 0 8px 20px rgba(34, 197, 94, 0.4);
+    transform: translateY(-3px) scale(1.02);
+}
+
+/* Removido ::after para evitar duplicidade com o ícone inserido via JS */
+
+/* Modo escuro */
+body.dark-mode .prayer-item {
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 215, 0, 0.02));
+    border-color: var(--accent-gold, #ffd700);
+}
+
+body.dark-mode .prayer-item:hover {
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 215, 0, 0.05));
+}
+
+/* Responsivo para mobile */
+@media (max-width: 600px) {
+    .container {
+        margin-top: 5%;                         /* Margem original para mobile */
+    }
+    
+    .liturgy-card {
+        width: 90%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    
+    .liturgy-prayers {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+    
+    .prayer-item {
+        padding: 10px 6px;
+        font-size: 12px;
+    }
+    
+    .liturgy-title {
+        font-size: 14px;
+    }
+}
+
+
+/**
+ * SINCRONIZACAO COM GOOGLE DRIVE (v2.4.0)
+ * Componentes de UI para sincronizacao de dados
+ */
+
+.sync-container {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+    padding: 12px;
+    background: rgba(102, 126, 234, 0.1);
+    border-radius: 12px;
+    border: 1px solid rgba(102, 126, 234, 0.3);
+}
+
+body.dark-mode .sync-container {
+    background: rgba(102, 126, 234, 0.05);
+    border-color: rgba(102, 126, 234, 0.2);
+}
+
+.sync-button {
+    flex: 1;
+    padding: 10px 16px;
+    border: 1px solid rgba(102, 126, 234, 0.5);
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+    color: #667eea;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    flex-direction: column;
+}
+
+body.dark-mode .sync-button {
+    color: #a5b4fc;
+    border-color: rgba(165, 180, 252, 0.3);
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05));
+}
+
+.sync-button:hover {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.2), rgba(118, 75, 162, 0.2));
+    border-color: rgba(102, 126, 234, 0.8);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+}
+
+body.dark-mode .sync-button:hover {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.15), rgba(118, 75, 162, 0.15));
+}
+
+.sync-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.sync-button.loading {
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+.sync-status {
+    font-size: 11px;
+    color: #667eea;
+    text-align: center;
+    margin-top: 8px;
+    padding: 6px;
+    border-radius: 6px;
+    background: rgba(102, 126, 234, 0.05);
+}
+
+body.dark-mode .sync-status {
+    color: #a5b4fc;
+    background: rgba(102, 126, 234, 0.1);
+}
+
+.sync-status.success {
+    color: #22c55e;
+    background: rgba(34, 197, 94, 0.1);
+}
+
+.sync-status.error {
+    color: #ef4444;
+    background: rgba(239, 68, 68, 0.1);
+}
+
+.sync-notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    z-index: 10000;
+    animation: slideIn 0.3s ease;
+}
+
+.sync-notification.sync-success {
+    background: #22c55e;
+    color: white;
+}
+
+.sync-notification.sync-error {
+    background: #ef4444;
+    color: white;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+    .sync-container {
+        flex-direction: row;
+        gap: 8px;
+        margin-top: 12px;
+        padding: 10px;
+    }
+
+    .sync-button {
+        padding: 8px 12px;
+        font-size: 10px;
+    }
+
+    .sync-notification {
+        bottom: 10px;
+        right: 10px;
+        left: 10px;
+        padding: 10px 16px;
+        font-size: 12px;
+    }
+}
+
+/* ========================================
+   BARRA DE ROLAGEM PERSONALIZADA
+   Tons de cinza escuro e claro - Aplicação Global
+   ======================================== */
+
+/* Webkit (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a1a; /* Cinza muito escuro */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4a4a4a; /* Cinza claro */
+    border-radius: 10px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #6a6a6a; /* Cinza ainda mais claro no hover */
+    box-shadow: 0 0 8px rgba(100, 100, 100, 0.4);
+}
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #4a4a4a #1a1a1a;
+}
+
+body.dark-mode ::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+body.dark-mode ::-webkit-scrollbar-thumb {
+    background: #4a4a4a;
+}
+
+body.dark-mode ::-webkit-scrollbar-thumb:hover {
+    background: #6a6a6a;
+    box-shadow: 0 0 8px rgba(100, 100, 100, 0.4);
+}
+
+body.light-mode ::-webkit-scrollbar-track {
+    background: #e8e8e8; /* Cinza claro para modo light */
+}
+
+body.light-mode ::-webkit-scrollbar-thumb {
+    background: #999999; /* Cinza médio */
+}
+
+body.light-mode ::-webkit-scrollbar-thumb:hover {
+    background: #777777; /* Cinza mais escuro no hover */
+    box-shadow: 0 0 8px rgba(100, 100, 100, 0.3);
+}
