@@ -60,8 +60,35 @@ while [ $RETRY_COUNT -lt $MAX_RETRIES ] && [ "$CLONE_SUCCESS" = false ]; do
         sleep 5
     fi
     
-    # Clone com sparse checkout otimizado
-    if timeout 300 git clone --depth=1 --single-branch --branch main https://github.com/kendrick3004/index.git . 2>&1 | tee -a "$GIT_LOG"; then
+    # Clone com barra de progresso personalizada
+    local git_output
+    git_output=$(timeout 300 bash -c 'git clone --depth=1 --single-branch --branch main https://github.com/kendrick3004/index.git . 2>&1' 2>&1)
+    local git_status=$?
+    
+    # Processa output linha por linha
+    while IFS= read -r line; do
+        echo "$line" >> "$GIT_LOG"
+        
+        # Processa linhas com progresso
+        if echo "$line" | grep -qE "Receiving objects:"; then
+            percent=$(echo "$line" | grep -oE '[0-9]+%' | tr -d '%')
+            speed=$(echo "$line" | grep -oE '[0-9]+\.[0-9]+ [KMG]iB/s' || echo "")
+            
+            filled=$((percent / 2))
+            empty=$((50 - filled))
+            bar=""
+            for ((i=0; i<filled; i++)); do bar="${bar}█"; done
+            for ((i=0; i<empty; i++)); do bar="${bar}░"; done
+            
+            printf "\r📥 Baixando: [${bar}] %3d%% - %s" "$percent" "$speed"
+        elif echo "$line" | grep -qE "remote:|Enumerating|Counting|Compressing"; then
+            echo ""
+            echo "$line"
+        fi
+    done <<< "$git_output"
+    
+    if [ $git_status -eq 0 ]; then
+        echo ""
         CLONE_SUCCESS=true
     fi
 done
@@ -70,8 +97,8 @@ if [ "$CLONE_SUCCESS" = true ]; then
     log "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
     
     log "📂 Configurando sparse checkout (apenas /site)..."
-    if git sparse-checkout init --cone 2>&1 | tee -a "$GIT_LOG"; then
-        git sparse-checkout set site 2>&1 | tee -a "$GIT_LOG"
+    if bash -c 'stdbuf -oL -eL git sparse-checkout init --cone 2>&1' | tee -a "$GIT_LOG"; then
+        bash -c 'stdbuf -oL -eL git sparse-checkout set site 2>&1' | tee -a "$GIT_LOG"
         log "✓ Sparse Checkout configurado"
     else
         log "⚠️  Sparse checkout não disponível, usando clone completo"
