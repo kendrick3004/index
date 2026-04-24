@@ -26,8 +26,6 @@ sudo apt autoremove -y
 sudo rm -rf /etc/cloudflared
 rm -rf ~/.cloudflared
 sudo apt-get update && sudo apt-get install cloudflared -y
-
-# Cria um ambiente virtual (opcional mas recomendado) ou instala globalmente
 sudo cloudflared service install eyJhIjoiOWNjZGQzMjk0NDllMzJhZWU4YzRkYWRkMDZjOGM0NzciLCJ0IjoiOTU5Njg0NDUtYzBhNS00M2RhLTk1ZDctYzYxY2I0YzU3NzZjIiwicyI6Ik5HWmlPRFF3WVRJdFpHUTNaaTAwWkdOakxUa3dZV1F0WkdRME5qbGhZV1E0TkRreU5XSXpZVGsyTW1FdE1XWmxPUzAwTjJGa0xUbG1Oek10TkdWbU9EQTVOV0ppWXpkbCJ9
 
 echo "================================================"

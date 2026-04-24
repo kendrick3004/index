@@ -34,6 +34,7 @@
     -webkit-text-fill-color: transparent;
     filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5));
     animation: float 3s ease-in-out infinite; /* Animação de flutuação divertida */
+    margin-top: 10px;
 }
 
 @keyframes float {
@@ -46,6 +47,7 @@
     font-family: var(--font-poppins), sans-serif;
     font-size: 1.5em; /* Diminuído de 1.8em */
     margin-bottom: 15px;
+    margin-top: 5px;
     color: #fff;
     font-weight: 700;
     letter-spacing: -0.5px;

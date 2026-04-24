@@ -37,47 +37,58 @@ rm -rf "index/site"
 
 # ------------------ DOWNLOAD ------------------
 log "📥 Baixando atualização..."
+log "🔗 Clonando repositório com Sparse Checkout..."
 
 mkdir -p "index/site"
 cd "index/site" || exit 1
 
-git init -q
-git remote add origin https://github.com/kendrick3004/index.git
-git config core.sparseCheckout true
-echo "site/*" > .git/info/sparse-checkout
+log "⏳ Puxando dados do repositório..."
+log "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 
-if git pull --depth=1 origin main >> "$GIT_LOG" 2>&1; then
-    log "✅ Download concluído"
+# Clone com sparse checkout e mostra progresso natural
+if git clone --sparse --depth=1 https://github.com/kendrick3004/index.git . 2>&1 | tee -a "$GIT_LOG"; then
+    log "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+    
+    log "📂 Configurando sparse checkout (apenas /site)..."
+    git sparse-checkout set site 2>&1 | tee -a "$GIT_LOG"
+    log "✓ Sparse Checkout configurado"
+    
+    log "✅ Download concluído com sucesso"
 else
-    log "❌ Erro no download (ver log)"
+    log "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+    log "❌ Erro no download (ver log em: $GIT_LOG)"
     exit 1
 fi
 
-mv site/* .
-rm -rf site .git
-
 # ------------------ DATABASE ------------------
+log "🗄️ Verificando estrutura do database..."
 if [ -d "index/site/database/assets" ]; then
     log "🔎 Gerando database..."
+    log "⏳ Processando estrutura de assets (PROGRESS)..."
 
     cd "index/site/database" || exit 1
 
-    if python3 generate_assets_structure.py >> "$DATABASE_LOG" 2>&1; then
-        log "✅ Database gerado"
+    if python3 generate_assets_structure.py 2>&1 | tee -a "$DATABASE_LOG"; then
+        log "✅ Database gerado com sucesso"
     else
-        log "❌ Erro no database"
+        log "❌ Erro na geração do database (ver log em: $DATABASE_LOG)"
     fi
 else
-    log "❌ assets não encontrada"
+    log "❌ Pasta assets não encontrada em index/site/database/assets"
 fi
 
 # ------------------ FINALIZA ------------------
-log "🛑 Encerrando manutenção..."
-pkill -f main.py 2>/dev/null || true
+log "🛑 Encerrando servidor de manutenção..."
+pkill -f "index/maintenance/main.py" 2>/dev/null || true
 sleep 2
+log "✓ Servidor de manutenção parado"
 
-log "🚀 Subindo site..."
+log "🚀 Iniciando servidor do site..."
+log "⏳ Aguardando inicialização (porta 5000)..."
 (cd "index/site" && nohup python3 main.py >> "$SITE_LOG" 2>&1 &)
+sleep 3
+log "✓ Servidor do site iniciado"
 
-log "✅ Deploy finalizado"
-log "📊 Logs: $LOG_DIR"
+log "✅ Deploy finalizado com sucesso!"
+log "📊 Logs salvos em: $LOG_DIR"
+log "🌐 Site disponível em: http://localhost:5000"
