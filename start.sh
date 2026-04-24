@@ -32,41 +32,65 @@ else
 fi
 
 # ------------------ LIMPA ------------------
-log "🧹 Limpando site..."
-rm -rf "index/site"
+log "🧹 Limpando site antigo..."
+rm -rf "$BASE_DIR/site"
 
 # ------------------ DOWNLOAD ------------------
 log "📥 Baixando atualização..."
 log "🔗 Clonando repositório com Sparse Checkout..."
 
-mkdir -p "index/site"
-cd "index/site" || exit 1
+mkdir -p "$BASE_DIR/site"
+cd "$BASE_DIR/site" || exit 1
 
 log "⏳ Puxando dados do repositório..."
 log "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 
-# Clone com sparse checkout e mostra progresso natural
-if git clone --sparse --depth=1 https://github.com/kendrick3004/index.git . 2>&1 | tee -a "$GIT_LOG"; then
+# Configurações de timeout e retry para git
+export GIT_CONNECT_TIMEOUT=120
+export GIT_HTTP_CONNECT_TIMEOUT=120
+
+RETRY_COUNT=0
+MAX_RETRIES=3
+CLONE_SUCCESS=false
+
+while [ $RETRY_COUNT -lt $MAX_RETRIES ] && [ "$CLONE_SUCCESS" = false ]; do
+    RETRY_COUNT=$((RETRY_COUNT + 1))
+    if [ $RETRY_COUNT -gt 1 ]; then
+        log "🔄 Tentativa $RETRY_COUNT de $MAX_RETRIES..."
+        sleep 5
+    fi
+    
+    # Clone com sparse checkout otimizado
+    if timeout 300 git clone --depth=1 --single-branch --branch main https://github.com/kendrick3004/index.git . 2>&1 | tee -a "$GIT_LOG"; then
+        CLONE_SUCCESS=true
+    fi
+done
+
+if [ "$CLONE_SUCCESS" = true ]; then
     log "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
     
     log "📂 Configurando sparse checkout (apenas /site)..."
-    git sparse-checkout set site 2>&1 | tee -a "$GIT_LOG"
-    log "✓ Sparse Checkout configurado"
+    if git sparse-checkout init --cone 2>&1 | tee -a "$GIT_LOG"; then
+        git sparse-checkout set site 2>&1 | tee -a "$GIT_LOG"
+        log "✓ Sparse Checkout configurado"
+    else
+        log "⚠️  Sparse checkout não disponível, usando clone completo"
+    fi
     
     log "✅ Download concluído com sucesso"
 else
     log "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-    log "❌ Erro no download (ver log em: $GIT_LOG)"
+    log "❌ Erro no download após $MAX_RETRIES tentativas (ver log em: $GIT_LOG)"
     exit 1
 fi
 
 # ------------------ DATABASE ------------------
 log "🗄️ Verificando estrutura do database..."
-if [ -d "index/site/database/assets" ]; then
+if [ -d "$BASE_DIR/site/database/assets" ]; then
     log "🔎 Gerando database..."
     log "⏳ Processando estrutura de assets (PROGRESS)..."
 
-    cd "index/site/database" || exit 1
+    cd "$BASE_DIR/site/database" || exit 1
 
     if python3 generate_assets_structure.py 2>&1 | tee -a "$DATABASE_LOG"; then
         log "✅ Database gerado com sucesso"
@@ -79,13 +103,13 @@ fi
 
 # ------------------ FINALIZA ------------------
 log "🛑 Encerrando servidor de manutenção..."
-pkill -f "index/maintenance/main.py" 2>/dev/null || true
+pkill -f "maintenance/main.py" 2>/dev/null || true
 sleep 2
 log "✓ Servidor de manutenção parado"
 
 log "🚀 Iniciando servidor do site..."
 log "⏳ Aguardando inicialização (porta 5000)..."
-(cd "index/site" && nohup python3 main.py >> "$SITE_LOG" 2>&1 &)
+(cd "$BASE_DIR/site" && nohup python3 main.py >> "$SITE_LOG" 2>&1 &)
 sleep 3
 log "✓ Servidor do site iniciado"
 

@@ -62,7 +62,7 @@ def maintenance_logic():
 
 @app.route('/')
 def index():
-    return send_from_directory(SCRIPT_DIR, '503.html')
+    return send_from_directory(SCRIPT_DIR, 'index.html')
 
 # Mantém as rotas de API ativas (simulando ou redirecionando)
 @app.route('/api/<path:path>', methods=['GET', 'POST', 'PUT', 'DELETE'])
@@ -87,4 +87,4 @@ def handle_maintenance_errors(e):
 if __name__ == '__main__':
     print("🚧 Modo Manutenção ATIVO na porta 5000")
     registrar_log("--- Modo Manutenção Iniciado ---")
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(host="0.0.0.0", port=5000, debug=False)
