@@ -1,26 +1,21 @@
 @echo off
-echo ================================
-echo 🔧 Corrigindo problema do Git...
-echo ================================
-
 cd /d %~dp0
 
-echo.
-echo 📌 Removendo cache do Git...
-git rm -r --cached . >nul 2>&1
+echo ============================
+echo Atualizando repositorio...
+echo ============================
 
-echo.
-echo 📌 Adicionando tudo novamente...
-git add .
+git add -A
 
-echo.
-echo 📌 Criando commit...
-git commit -m "Fix automatico: reindexa tudo e corrige maintenance"
+git diff --cached --quiet
+IF %ERRORLEVEL%==0 (
+    echo Nada para commitar.
+) ELSE (
+    git commit -m "Auto update"
+    git push
+)
 
-echo.
-echo 📌 Enviando para o GitHub...
-git push
-
-echo.
-echo ✅ FINALIZADO!
+echo ============================
+echo FINALIZADO
+echo ============================
 pause
