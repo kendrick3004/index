@@ -17,9 +17,14 @@ sudo apt install -y nano curl wget openssh-server net-tools git python3 python3-
 sudo apt install python3 python3-pip python3-venv -y
 
 echo "[3/3] Ativando o Cloudflared Tunnel"
+sudo pkill cloudflared
 sudo cloudflared service uninstall
 sudo rm -f /etc/init.d/cloudflared
 sudo rm -rf /etc/cloudflared
+sudo apt remove --purge cloudflared -y
+sudo apt autoremove -y
+sudo rm -rf /etc/cloudflared
+rm -rf ~/.cloudflared
 sudo apt-get update && sudo apt-get install cloudflared -y
 
 # Cria um ambiente virtual (opcional mas recomendado) ou instala globalmente
