@@ -22,9 +22,9 @@ pkill -f main.py 2>/dev/null || true
 sleep 2
 
 # ------------------ MANUTENÇÃO ------------------
-if [ -d "index/maintenance" ]; then
+if [ -d "$BASE_DIR/maintenance" ]; then
     log "🚧 Iniciando modo manutenção..."
-    (nohup python3 "index/maintenance/main.py" >> "$MAINTENANCE_LOG" 2>&1 &)
+    (nohup python3 "$BASE_DIR/maintenance/main.py" >> "$MAINTENANCE_LOG" 2>&1 &)
     sleep 2
     log "✅ Manutenção ativa na porta 5000"
 else

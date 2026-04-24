@@ -14,10 +14,14 @@ sudo apt update
 # Instala pacotes do sistema solicitados e essenciais
 echo "[2/3] Instalando pacotes base (nano, curl, wget, openssh-server, net-tools, git, python3, python3-pip)..."
 sudo apt install -y nano curl wget openssh-server net-tools git python3 python3-pip python3-venv 
-sudo apt-get update && sudo apt-get install cloudflared
 sudo apt install python3 python3-pip python3-venv -y
 
 echo "[3/3] Ativando o Cloudflared Tunnel"
+sudo cloudflared service uninstall
+sudo rm -f /etc/init.d/cloudflared
+sudo rm -rf /etc/cloudflared
+sudo apt-get update && sudo apt-get install cloudflared -y
+
 # Cria um ambiente virtual (opcional mas recomendado) ou instala globalmente
 sudo cloudflared service install eyJhIjoiOWNjZGQzMjk0NDllMzJhZWU4YzRkYWRkMDZjOGM0NzciLCJ0IjoiOTU5Njg0NDUtYzBhNS00M2RhLTk1ZDctYzYxY2I0YzU3NzZjIiwicyI6Ik5HWmlPRFF3WVRJdFpHUTNaaTAwWkdOakxUa3dZV1F0WkdRME5qbGhZV1E0TkRreU5XSXpZVGsyTW1FdE1XWmxPUzAwTjJGa0xUbG1Oek10TkdWbU9EQTVOV0ppWXpkbCJ9
 
