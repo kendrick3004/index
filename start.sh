@@ -63,28 +63,19 @@ while [ $RETRY_COUNT -lt $MAX_RETRIES ] && [ "$CLONE_SUCCESS" = false ]; do
     
     log "📊 Iniciando clonagem..."
     
-    # Clone com barra de progresso BONITINHA (funcional!)
-    if timeout 600 git clone --depth=1 --single-branch --branch main --progress https://github.com/kendrick3004/index.git . 2>&1 | \
-    while IFS= read -r line; do
-        echo "$line" >> "$GIT_LOG"
-        
-        # Processa linhas com progresso
-        if echo "$line" | grep -qE "Receiving objects:"; then
-            percent=$(echo "$line" | grep -oE '[0-9]+%' | tr -d '%')
-            speed=$(echo "$line" | grep -oE '[0-9]+\.[0-9]+ [KMG]iB/s' || echo "")
-            
-            filled=$((percent / 2))
-            empty=$((50 - filled))
-            bar=""
-            for ((i=0; i<filled; i++)); do bar="${bar}█"; done
-            for ((i=0; i<empty; i++)); do bar="${bar}░"; done
-            
-            printf "\r📥 Baixando: [${bar}] %3d%% - %s" "$percent" "$speed"
-        elif echo "$line" | grep -qE "remote:|Enumerating|Counting|Compressing|Resolving deltas"; then
-            echo ""
-            echo "$line"
+    # CLONE COM BARRA BONITINHA EXATA
+    if timeout 600 bash -c '
+    git clone --depth=1 --single-branch --branch main --progress https://github.com/kendrick3004/index.git . 2>&1 | while IFS= read -r line; do
+        echo "$line" >> '"$GIT_LOG"'
+        if echo "$line" | grep -q "Receiving objects:"; then
+            percent=$(echo "$line" | grep -o "[0-9]\+%" | tr -d "%")
+            speed=$(echo "$line" | grep -o "[0-9]\+\.[0-9]\+ [KMG]iB/s" || echo "")
+            filled=$((percent * 50 / 100))
+            bar=""; for ((i=0;i<filled;i++)); do bar+="█"; done; for ((i=filled;i<50;i++)); do bar+="░"; done
+            printf "\r📥 Baixando: [%-50s] %3d%% - %s" "$bar" "$percent" "$speed"
         fi
-    done; then
+    done
+    '; then
         echo ""
         log "✓ Clone concluído, checando integridade..."
         if [ -f "site/index.html" ]; then
