@@ -109,9 +109,9 @@ else
     exit 1
 fi
 
- ------------------ DATABASE ✅ CORRIGIDO ------------------
+# ------------------ DATABASE ✅ CORRIGIDO ------------------
 log "🗄️ Verificando estrutura do database..."
-if [ -d "$BASE_DIR/site/database/assets" ]; then
+if [ -d "$BASE_DIR/index/site/database" ]; then
     log "🔎 Verificando funcionalidades de database..."
     cd "$BASE_DIR/site/database" || exit 1
 
