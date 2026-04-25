@@ -2,6 +2,7 @@
 
 set -u
 
+# Pega o diretório onde o script está localizado
 BASE_DIR="$(cd "$(dirname "$0")" && pwd)"
 
 LOG_DIR="$BASE_DIR/logs/$(date +%Y-%m-%d)"
@@ -16,9 +17,6 @@ log() {
     echo "[$(date '+%H:%M:%S')] $1"
 }
 
-export LC_ALL=C
-export GIT_PROGRESS_DELAY=0
-
 log "🛑 Parando servidores..."
 pkill -f main.py 2>/dev/null || true
 sleep 2
@@ -30,7 +28,7 @@ if [ -d "$BASE_DIR/maintenance" ]; then
     sleep 2
     log "✅ Manutenção ativa na porta 5000"
 else
-    log "❌ Erro: pasta maintenance não encontrada"
+    log "❌ Erro: pasta maintenance não encontrada em $BASE_DIR/maintenance"
 fi
 
 # ------------------ LIMPA ------------------
@@ -39,9 +37,15 @@ rm -rf "$BASE_DIR/site"
 
 # ------------------ DOWNLOAD ------------------
 log "📥 Baixando atualização..."
+log "🔗 Clonando repositório com Sparse Checkout..."
+
 mkdir -p "$BASE_DIR/site"
 cd "$BASE_DIR/site" || exit 1
 
+log "⏳ Puxando dados do repositório..."
+log "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+
+# Configurações de timeout e retry para git
 export GIT_CONNECT_TIMEOUT=120
 export GIT_HTTP_CONNECT_TIMEOUT=120
 
@@ -51,85 +55,97 @@ CLONE_SUCCESS=false
 
 while [ $RETRY_COUNT -lt $MAX_RETRIES ] && [ "$CLONE_SUCCESS" = false ]; do
     RETRY_COUNT=$((RETRY_COUNT + 1))
-
     if [ $RETRY_COUNT -gt 1 ]; then
-        log "🔄 Tentativa $RETRY_COUNT..."
+        log "🔄 Tentativa $RETRY_COUNT de $MAX_RETRIES..."
         sleep 5
         rm -rf .git
     fi
-
+    
     log "📊 Iniciando clonagem..."
-
-    buffer=""
-
-    if timeout 600 git clone --depth=1 --single-branch --branch main --progress https://github.com/kendrick3004/index.git . 2>&1 | tee -a "$GIT_LOG" | \
-    while IFS= read -r -n 1 char; do
-
-        buffer+="$char"
-
-        if [[ "$char" == $'\r' ]]; then
-            line="$buffer"
-            buffer=""
-
-            if [[ "$line" == *"Receiving objects:"* ]]; then
-                percent=$(echo "$line" | grep -oE '[0-9]+%' | tr -d '%')
-
-                if [[ -n "$percent" ]]; then
-                    filled=$((percent / 2))
-                    empty=$((50 - filled))
-
-                    bar=$(printf "%${filled}s" | tr ' ' '█')
-                    bar+=$(printf "%${empty}s" | tr ' ' '░')
-
-                    printf "\r📥 Baixando: [%-50s] %3d%%" "$bar" "$percent"
-                fi
-            fi
+    
+    # Clone com barra de progresso BONITINHA (funcional!)
+    if timeout 600 git clone --depth=1 --single-branch --branch main --progress https://github.com/kendrick3004/index.git . 2>&1 | \
+    while IFS= read -r line; do
+        echo "$line" >> "$GIT_LOG"
+        
+        # Processa linhas com progresso
+        if echo "$line" | grep -qE "Receiving objects:"; then
+            percent=$(echo "$line" | grep -oE '[0-9]+%' | tr -d '%')
+            speed=$(echo "$line" | grep -oE '[0-9]+\.[0-9]+ [KMG]iB/s' || echo "")
+            
+            filled=$((percent / 2))
+            empty=$((50 - filled))
+            bar=""
+            for ((i=0; i<filled; i++)); do bar="${bar}█"; done
+            for ((i=0; i<empty; i++)); do bar="${bar}░"; done
+            
+            printf "\r📥 Baixando: [${bar}] %3d%% - %s" "$percent" "$speed"
+        elif echo "$line" | grep -qE "remote:|Enumerating|Counting|Compressing|Resolving deltas"; then
+            echo ""
+            echo "$line"
         fi
-
     done; then
-
         echo ""
-        log "✓ Clone concluído"
-
+        log "✓ Clone concluído, checando integridade..."
         if [ -f "site/index.html" ]; then
-            log "✓ Arquivos OK"
+            log "✓ Arquivos do site encontrados"
             CLONE_SUCCESS=true
         else
-            log "⚠️ Estrutura inesperada, retry..."
+            log "⚠️  Site não encontrado, tentando novamente..."
         fi
     else
-        log "⚠️ Falha no clone"
+        echo ""
+        log "⚠️  Git clone falhou ou timeout"
     fi
 done
 
-if [ "$CLONE_SUCCESS" != true ]; then
-    log "❌ Falha após $MAX_RETRIES tentativas"
+if [ "$CLONE_SUCCESS" = true ]; then
+    log "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+    
+    log "📂 Configurando sparse checkout (apenas /site)..."
+    if bash -c 'stdbuf -oL -eL git sparse-checkout init --cone 2>&1' | tee -a "$GIT_LOG"; then
+        bash -c 'stdbuf -oL -eL git sparse-checkout set site 2>&1' | tee -a "$GIT_LOG"
+        log "✓ Sparse Checkout configurado"
+    else
+        log "⚠️  Sparse checkout não disponível, usando clone completo"
+    fi
+    
+    log "✅ Download concluído com sucesso"
+else
+    log "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+    log "❌ Erro no download após $MAX_RETRIES tentativas (ver log em: $GIT_LOG)"
     exit 1
 fi
 
 # ------------------ DATABASE ------------------
-log "🗄️ Verificando database..."
+log "🗄️ Verificando estrutura do database..."
 if [ -d "$BASE_DIR/site/database/assets" ]; then
+    log "🔎 Gerando database..."
+    log "⏳ Processando estrutura de assets (PROGRESS)..."
+
     cd "$BASE_DIR/site/database" || exit 1
 
     if python3 generate_assets_structure.py 2>&1 | tee -a "$DATABASE_LOG"; then
-        log "✅ Database OK"
+        log "✅ Database gerado com sucesso"
     else
-        log "❌ Erro database"
+        log "❌ Erro na geração do database (ver log em: $DATABASE_LOG)"
     fi
 else
-    log "❌ Assets não encontrado"
+    log "❌ Pasta assets não encontrada em index/site/database/assets"
 fi
 
 # ------------------ FINALIZA ------------------
-log "🛑 Encerrando manutenção..."
+log "🛑 Encerrando servidor de manutenção..."
 pkill -f "maintenance/main.py" 2>/dev/null || true
 sleep 2
+log "✓ Servidor de manutenção parado"
 
-log "🚀 Iniciando site..."
+log "🚀 Iniciando servidor do site..."
+log "⏳ Aguardando inicialização (porta 5000)..."
 (cd "$BASE_DIR/site" && nohup python3 main.py >> "$SITE_LOG" 2>&1 &)
 sleep 3
+log "✓ Servidor do site iniciado"
 
-log "✅ Deploy finalizado"
-log "📊 Logs: $LOG_DIR"
-log "🌐 http://localhost:5000"
+log "✅ Deploy finalizado com sucesso!"
+log "📊 Logs salvos em: $LOG_DIR"
+log "🌐 Site disponível em: http://localhost:5000"
