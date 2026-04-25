@@ -62,7 +62,7 @@ def maintenance_logic():
 
 @app.route('/')
 def index():
-    return send_from_directory(SCRIPT_DIR, 'index.html')
+    return send_from_directory(SCRIPT_DIR, '503.html')
 
 # Mantém as rotas de API ativas (simulando ou redirecionando)
 @app.route('/api/<path:path>', methods=['GET', 'POST', 'PUT', 'DELETE'])
