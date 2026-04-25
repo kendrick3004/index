@@ -63,20 +63,23 @@ while [ $RETRY_COUNT -lt $MAX_RETRIES ] && [ "$CLONE_SUCCESS" = false ]; do
     
     log "📊 Iniciando clonagem..."
     
-    # ✅ SEM SPAM + Barra PERFEITA
-    if timeout 600 git clone --depth=1 --single-branch --branch main --progress https://github.com/kendrick3004/index.git . 2>&1 | \
-    tee "$GIT_LOG" | \
-    grep -E "(Receiving objects:|MiB/s)" | \
-    while IFS= read -r line; do
-        if echo "$line" | grep -q "Receiving objects:"; then
-            percent=$(echo "$line" | grep -o "[0-9]\+%" | head -1 | tr -d "%")
-            speed=$(echo "$line" | grep -o "[0-9]\+\.[0-9]\+ [KMG]iB/s" || echo "")
-            filled=$((percent * 50 / 100))
-            bar=""; for ((i=0;i<filled;i++)); do bar+="█"; done; for ((i=filled;i<50;i++)); do bar+="░"; done
-            printf "\r📥 Baixando: [%-50s] %3d%% - %s" "$bar" "$percent" "$speed"
-        fi
-    done; then
-        echo ""
+    # 🎯 BARRINHA + % + VELOCIDADE - SÓ UMA LINHA LIMPA!
+    timeout 600 git clone --depth=1 --single-branch --branch main --progress https://github.com/kendrick3004/index.git . >> "$GIT_LOG" 2>&1 &
+    GIT_PID=$!
+    
+    while kill -0 $GIT_PID 2>/dev/null; do
+        percent=$(tail -20 "$GIT_LOG" | grep -o "[0-9]\+%" | tail -1 | tr -d "%" || echo "0")
+        speed=$(tail -5 "$GIT_LOG" | grep -o "[0-9]\+\.[0-9]\+ [KMG]iB/s" | tail -1 || echo "")
+        filled=$((percent * 50 / 100))
+        bar=""; for ((i=0;i<filled;i++)); do bar+="█"; done; for ((i=filled;i<50;i++)); do bar+="░"; done
+        printf "\r📥 Baixando: [%-50s] %3d%% - %s" "$bar" "$percent" "$speed"
+        sleep 0.5
+    done
+    
+    wait $GIT_PID
+    echo ""
+    
+    if [ ${PIPESTATUS[0]} -eq 0 ]; then
         log "✓ Clone concluído, checando integridade..."
         if [ -f "index.html" ] || [ -f "site/index.html" ]; then
             log "✓ Arquivos do site encontrados"
@@ -85,7 +88,6 @@ while [ $RETRY_COUNT -lt $MAX_RETRIES ] && [ "$CLONE_SUCCESS" = false ]; do
             log "⚠️  Site não encontrado, tentando novamente..."
         fi
     else
-        echo ""
         log "⚠️  Git clone falhou ou timeout"
     fi
 done
