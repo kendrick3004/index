@@ -1,21 +1,21 @@
 @echo off
 cd /d %~dp0
 
-echo ============================
-echo Atualizando repositorio...
-echo ============================
+echo ============================================
+echo Atualização de arquivos em andamento...
+echo ============================================
 
 git add -A
 
 git diff --cached --quiet
 IF %ERRORLEVEL%==0 (
-    echo Nada para commitar.
+    echo Tudo atualizado e na ultima versão.
 ) ELSE (
     git commit -m "Auto update"
     git push
 )
 
-echo ============================
-echo FINALIZADO
-echo ============================
+echo ============================================
+echo FINALIZADO - Atualização de arquivos concluída.
+echo ============================================
 pause
