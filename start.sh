@@ -17,7 +17,7 @@ log() {
     echo "[$(date '+%H:%M:%S')] $1"
 }
 
-log "🛑 Parando servidores..."
+log "🛑 Parando servidores de sites..."
 pkill -f main.py 2>/dev/null || true
 sleep 2
 
@@ -32,7 +32,7 @@ else
 fi
 
 # ------------------ LIMPA ------------------
-log "🧹 Limpando site antigo..."
+log "🧹 Limpando arquivos de index/site antigo..."
 rm -rf "$BASE_DIR/site"
 
 # ------------------ DOWNLOAD ------------------
@@ -42,7 +42,7 @@ log "🔗 Clonando repositório com Sparse Checkout..."
 mkdir -p "$BASE_DIR/site"
 cd "$BASE_DIR/site" || exit 1
 
-log "⏳ Puxando dados do repositório..."
+log "⏳ Extraindo dados do repositório..."
 log "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 
 # Configurações de timeout e retry para git
@@ -82,7 +82,7 @@ while [ $RETRY_COUNT -lt $MAX_RETRIES ] && [ "$CLONE_SUCCESS" = false ]; do
     if [ ${PIPESTATUS[0]} -eq 0 ]; then
         log "✓ Clone concluído, checando integridade..."
         if [ -f "index.html" ] || [ -f "site/index.html" ]; then
-            log "✓ Arquivos do site encontrados"
+            log "✓ Arquivos do site intactos, clonagem bem-sucedida"
             CLONE_SUCCESS=true
         else
             log "⚠️  Site não encontrado, tentando novamente..."
@@ -113,30 +113,30 @@ fi
 # ------------------ DATABASE ------------------
 log "🗄️ Verificando estrutura do database..."
 if [ -d "database/assets" ]; then
-    log "🔎 Gerando database..."
+    log "🔎 Verificando funcionalidades de database..."
     cd database || exit 1
 
     if python3 generate_assets_structure.py 2>&1 | tee -a "$DATABASE_LOG"; then
-        log "✅ Database gerado com sucesso"
+        log "✅ Database configurado e estruturado com sucesso"
     else
         log "❌ Erro na geração do database (ver log em: $DATABASE_LOG)"
     fi
 else
-    log "❌ Pasta assets não encontrada"
+    log "❌ Pasta de arquivos não encontrada, verificação do database imediatamente"
 fi
 
 # ------------------ FINALIZA ------------------
 log "🛑 Encerrando servidor de manutenção..."
 pkill -f "maintenance/main.py" 2>/dev/null || true
 sleep 2
-log "✓ Servidor de manutenção parado"
+log "Preparando para alternação de servidor..."
 
 log "🚀 Iniciando servidor do site..."
 log "⏳ Aguardando inicialização (porta 5000)..."
 nohup python3 main.py >> "$SITE_LOG" 2>&1 &
 sleep 3
-log "✓ Servidor do site iniciado"
+log "✓ Servidor do site iniciado com sucesso"
 
 log "✅ Deploy finalizado com sucesso!"
 log "📊 Logs salvos em: $LOG_DIR"
-log "🌐 Site disponível em: http://localhost:5000"
+log "🌐 Site disponível em: http://localhost:5000 http://192.168.0.103:5000/ https://kendricknicoleti.com/"

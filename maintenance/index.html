@@ -3,25 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecionamento </title>
+    <title></title>
     <link rel="icon" type="image/png" href="favicon.png">
     <script src="rate-limiter.js"></script>
     <script src="factory.js"></script>
     <script src="config.js"></script>
     <link rel="stylesheet" href="suite.css">
     <link rel="stylesheet" href="error-pages.css">
-    <meta http-equiv="refresh" content="5;url=503.html">
-
+    <script>
+        window.location.replace('503.html');
+    </script>
 </head>
-<body class="dark-mode">
-    <div class="container">
-        <div class="error-container">
-            <div class="error-icon">🚧</div>
-            <h1 class="error-title">503</h1>
-            <p class="error-message">Serviço em Manutenção</p>
-            <p class="error-description">Estamos realizando melhorias no sistema para melhor atendê-lo. Por favor, tente acessar novamente em alguns minutos.</p>
-            <a href="/" class="link-item return-link">Verificar Novamente</a>
-        </div>
-    </div>
-</body>
+<body></body>
 </html>
