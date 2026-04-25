@@ -44,72 +44,72 @@ cd "$BASE_DIR/site" || exit 1
 log "⏳ Extraindo dados do repositório com Sparse Checkout..."
 log "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 
-# Configurações de timeout e retry para git
-#export GIT_CONNECT_TIMEOUT=120
-#export GIT_HTTP_CONNECT_TIMEOUT=120
+ Configurações de timeout e retry para git
+export GIT_CONNECT_TIMEOUT=120
+export GIT_HTTP_CONNECT_TIMEOUT=120
 
-#RETRY_COUNT=0
-#MAX_RETRIES=3
-#CLONE_SUCCESS=false
+RETRY_COUNT=0
+MAX_RETRIES=3
+CLONE_SUCCESS=false
 
-#while [ $RETRY_COUNT -lt $MAX_RETRIES ] && [ "$CLONE_SUCCESS" = false ]; do
-#    RETRY_COUNT=$((RETRY_COUNT + 1))
-#    if [ $RETRY_COUNT -gt 1 ]; then
-#        log "🔄 Tentativa $RETRY_COUNT de $MAX_RETRIES..."
-#        sleep 5
-#        rm -rf .git
-#    fi
-#    
-#    log "📊 Iniciando clonagem..."
-#    
-#    # 🎯 BARRINHA + % + VELOCIDADE - SÓ UMA LINHA LIMPA!
-#   timeout 600 git clone --depth=1 --single-branch --branch main --progress https://github.com/kendrick3004/index.git . >> "$GIT_LOG" 2>&1 &
-#    GIT_PID=$!
-#    
-#    while kill -0 $GIT_PID 2>/dev/null; do
-#        percent=$(tail -20 "$GIT_LOG" | grep -o "[0-9]\+%" | tail -1 | tr -d "%" || echo "0")
-#        speed=$(tail -5 "$GIT_LOG" | grep -o "[0-9]\+\.[0-9]\+ [KMG]iB/s" | tail -1 || echo "")
-#        filled=$((percent * 50 / 100))
-#        bar=""; for ((i=0;i<filled;i++)); do bar+="█"; done; for ((i=filled;i<50;i++)); do bar+="░"; done
-#        printf "\r📥 Baixando: [%-50s] %3d%% - %s" "$bar" "$percent" "$speed"
-#        sleep 0.5
-#    done
-#   
-#    wait $GIT_PID
-#    echo ""
-#    
-#    if [ ${PIPESTATUS[0]} -eq 0 ]; then
-#        log "✓ Clone concluído, checando integridade..."
-#        if [ -f "index.html" ] || [ -f "site/index.html" ]; then
-#            log "✓ Arquivos do site intactos, clonagem bem-sucedida"
-#            CLONE_SUCCESS=true
-#        else
-#            log "⚠️  Site não encontrado, tentando novamente..."
-#        fi
-#    else
-#        log "⚠️  Git clone falhou ou timeout"
-#    fi
-#done
+while [ $RETRY_COUNT -lt $MAX_RETRIES ] && [ "$CLONE_SUCCESS" = false ]; do
+    RETRY_COUNT=$((RETRY_COUNT + 1))
+    if [ $RETRY_COUNT -gt 1 ]; then
+        log "🔄 Tentativa $RETRY_COUNT de $MAX_RETRIES..."
+        sleep 5
+        rm -rf .git
+    fi
+    
+    log "📊 Iniciando clonagem..."
+    
+    # 🎯 BARRINHA + % + VELOCIDADE - SÓ UMA LINHA LIMPA!
+   timeout 600 git clone --depth=1 --single-branch --branch main --progress https://github.com/kendrick3004/index.git . >> "$GIT_LOG" 2>&1 &
+    GIT_PID=$!
+    
+    while kill -0 $GIT_PID 2>/dev/null; do
+        percent=$(tail -20 "$GIT_LOG" | grep -o "[0-9]\+%" | tail -1 | tr -d "%" || echo "0")
+        speed=$(tail -5 "$GIT_LOG" | grep -o "[0-9]\+\.[0-9]\+ [KMG]iB/s" | tail -1 || echo "")
+        filled=$((percent * 50 / 100))
+        bar=""; for ((i=0;i<filled;i++)); do bar+="█"; done; for ((i=filled;i<50;i++)); do bar+="░"; done
+        printf "\r📥 Baixando: [%-50s] %3d%% - %s" "$bar" "$percent" "$speed"
+        sleep 0.5
+    done
+   
+    wait $GIT_PID
+    echo ""
+    
+    if [ ${PIPESTATUS[0]} -eq 0 ]; then
+        log "✓ Clone concluído, checando integridade..."
+        if [ -f "index.html" ] || [ -f "site/index.html" ]; then
+            log "✓ Arquivos do site intactos, clonagem bem-sucedida"
+            CLONE_SUCCESS=true
+        else
+            log "⚠️  Site não encontrado, tentando novamente..."
+        fi
+    else
+        log "⚠️  Git clone falhou ou timeout"
+    fi
+done
 
-#if [ "$CLONE_SUCCESS" = true ]; then
-##    log "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-#    
-#    log "📂 Configurando sparse checkout (site)..."
-#    if git sparse-checkout init --cone 2>&1 | tee -a "$GIT_LOG"; then
-#        git sparse-checkout set site 2>&1 | tee -a "$GIT_LOG"
-#        log "✓ Sparse Checkout configurado"
-#    else
-#        log "⚠️  Sparse checkout não disponível, usando clone completo"
-#    fi
-#    
-#    log "✅ Download concluído com sucesso"
-#else
-#    log "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-#    log "❌ Erro no download após $MAX_RETRIES tentativas (ver log em: $GIT_LOG)"
-#    exit 1
-#fi
+if [ "$CLONE_SUCCESS" = true ]; then
+    log "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+    
+    log "📂 Configurando sparse checkout (site)..."
+    if git sparse-checkout init --cone 2>&1 | tee -a "$GIT_LOG"; then
+        git sparse-checkout set site 2>&1 | tee -a "$GIT_LOG"
+        log "✓ Sparse Checkout configurado"
+    else
+        log "⚠️  Sparse checkout não disponível, usando clone completo"
+    fi
+    
+    log "✅ Download concluído com sucesso"
+else
+    log "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+    log "❌ Erro no download após $MAX_RETRIES tentativas (ver log em: $GIT_LOG)"
+    exit 1
+fi
 
-# ------------------ DATABASE ✅ CORRIGIDO ------------------
+ ------------------ DATABASE ✅ CORRIGIDO ------------------
 log "🗄️ Verificando estrutura do database..."
 if [ -d "$BASE_DIR/site/database/assets" ]; then
     log "🔎 Verificando funcionalidades de database..."
