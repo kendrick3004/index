@@ -1,0 +1,127 @@
+<!--
+    ARQUIVO: login.html
+    DESCRIÇÃO: Página de login atualizada para usar Firebase Realtime Database.
+    VERSÃO: 4.0.0 - Migração Firebase
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Suite</title>
+    
+    <!-- SISTEMA DE FÁBRICA: Metadados e Configurações Offline -->
+    <script src="/src/js/main/env-loader.js"></script>
+    <script src="/src/js/main/factory.js"></script>
+    
+    <!-- Configurações globais -->
+    <script src="/src/js/main/config.js"></script>
+    
+    <!-- CSS específico da página de login (Design Original) -->
+    <link rel="stylesheet" href="/pages/login/login.css">
+    <link rel="stylesheet" href="/src/app/update.css">
+    <script src="/src/app/update.js"></script>
+    
+    <style>
+        /* Estilo para o divisor e o botão do Google */
+        .login-divider {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .login-divider::before, .login-divider::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .login-divider span {
+            padding: 0 10px;
+        }
+        #googleBtnContainer {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body class="dark-mode">
+    <div class="login-container">
+        <!-- Contêiner principal para o formulário de login com efeito 3D. -->
+        <h1 class="login-title">Acesso Restrito</h1>
+        
+        <form id="loginForm" autocomplete="off">
+            <div class="form-group">
+                <label for="username">Email</label>
+                <input type="email" id="username" name="username" placeholder="Digite seu email" required autofocus>
+            </div>
+            <div class="form-group">
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+            </div>
+            
+            <!-- Botão de submissão com o estilo original -->
+            <button type="submit" id="loginSubmitBtn">Entrar</button>
+            
+            <!-- Divisor visual -->
+            <div class="login-divider">
+                <span>ou conecte com</span>
+            </div>
+            
+            <!-- Container para o botão oficial do Google (Firebase Auth) -->
+            <div id="googleBtnContainer">
+                <button type="button" id="googleLoginBtn" style="background: white; color: #757575; border: none; padding: 10px 20px; border-radius: 4px; display: flex; align-items: center; font-family: Roboto, sans-serif; cursor: pointer; font-weight: 500;">
+                    <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" style="width: 18px; margin-right: 10px;">
+                    Entrar com Google
+                </button>
+            </div>
+            
+            <!-- Div para exibir mensagens de erro ou status de sincronização em tempo real -->
+            <div id="loginError" class="error"></div>
+        </form>
+    </div>
+    
+    <!-- Proteção contra Ataques de Negação de Serviço -->
+    <script src="/src/js/main/rate-limiter.js"></script>
+    
+    <!-- Firebase Core e Configuração -->
+    <script src="/src/js/main/firebase-config.js"></script>
+    
+    <!-- Lógica de Autenticação Firebase -->
+    <script src="/pages/login/login-firebase.js"></script>
+    
+    <script>
+        // Adiciona suporte ao login com Google via Firebase
+        document.getElementById('googleLoginBtn').addEventListener('click', async () => {
+            if (!window.firebaseAuth) return;
+            const provider = new firebase.auth.GoogleAuthProvider();
+            try {
+                const result = await firebaseAuth.signInWithPopup(provider);
+                const user = result.user;
+                
+                // Salva dados básicos no localStorage
+                const userData = JSON.stringify({ 
+                    id: user.uid, 
+                    name: user.displayName, 
+                    email: user.email,
+                    timestamp: Date.now() 
+                });
+                localStorage.setItem('auth_user', userData);
+                localStorage.setItem('auth_timestamp', Date.now().toString());
+                
+                // Redireciona para o calendário de orações (sem .html)
+                window.location.href = "/pages/calendar";
+            } catch (error) {
+                console.error("Erro no login Google:", error);
+                document.getElementById('loginError').textContent = "Erro ao entrar com Google.";
+            }
+        });
+    </script>
+</body>
+</html>
