@@ -2,7 +2,7 @@
 cd /d %~dp0
 
 echo ============================================
-echo Atualização de arquivos em andamento...
+echo Atualizacao de arquivos em andamento...
 echo ============================================
 
 git add -A
@@ -16,6 +16,6 @@ IF %ERRORLEVEL%==0 (
 )
 
 echo ============================================
-echo FINALIZADO - Atualização de arquivos concluída.
+echo FINALIZADO - Atualizacao de arquivos concluida.
 echo ============================================
 pause
