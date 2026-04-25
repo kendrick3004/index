@@ -63,15 +63,15 @@ while [ $RETRY_COUNT -lt $MAX_RETRIES ] && [ "$CLONE_SUCCESS" = false ]; do
     
     log "📊 Iniciando clonagem..."
     
-    # ✅ CORRIGIDO: Funciona SEM ERRO + Barra perfeita
-    if timeout 600 git clone --depth=1 --single-branch --branch main --progress https://github.com/kendrick3004/index.git . 2>&1 | tee "$GIT_LOG" | \
+    # ✅ SEM SPAM + Barra PERFEITA
+    if timeout 600 git clone --depth=1 --single-branch --branch main --progress https://github.com/kendrick3004/index.git . 2>&1 | \
+    tee "$GIT_LOG" | \
+    grep -E "(Receiving objects:|MiB/s)" | \
     while IFS= read -r line; do
         if echo "$line" | grep -q "Receiving objects:"; then
-            percent=$(echo "$line" | grep -o "[0-9]\+%" | head -1 | tr -d "%" | grep -o "[0-9]*" || echo "0")
+            percent=$(echo "$line" | grep -o "[0-9]\+%" | head -1 | tr -d "%")
             speed=$(echo "$line" | grep -o "[0-9]\+\.[0-9]\+ [KMG]iB/s" || echo "")
             filled=$((percent * 50 / 100))
-            [ "$filled" -lt 0 ] && filled=0
-            [ "$filled" -gt 50 ] && filled=50
             bar=""; for ((i=0;i<filled;i++)); do bar+="█"; done; for ((i=filled;i<50;i++)); do bar+="░"; done
             printf "\r📥 Baixando: [%-50s] %3d%% - %s" "$bar" "$percent" "$speed"
         fi
