@@ -36,13 +36,12 @@ log "🧹 Limpando arquivos de index/site antigo..."
 rm -rf "$BASE_DIR/site"
 
 # ------------------ DOWNLOAD ------------------
-log "📥 Baixando atualização..."
-log "🔗 Clonando repositório com Sparse Checkout..."
+log "📥 Acessando repositórios para atualização..."
 
 mkdir -p "$BASE_DIR/site"
 cd "$BASE_DIR/site" || exit 1
 
-log "⏳ Extraindo dados do repositório..."
+log "⏳ Extraindo dados do repositório com Sparse Checkout..."
 log "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 
 # Configurações de timeout e retry para git
@@ -95,7 +94,7 @@ done
 if [ "$CLONE_SUCCESS" = true ]; then
     log "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
     
-    log "📂 Configurando sparse checkout (apenas /site)..."
+    log "📂 Configurando sparse checkout (site)..."
     if git sparse-checkout init --cone 2>&1 | tee -a "$GIT_LOG"; then
         git sparse-checkout set site 2>&1 | tee -a "$GIT_LOG"
         log "✓ Sparse Checkout configurado"
@@ -112,9 +111,9 @@ fi
 
 # ------------------ DATABASE ------------------
 log "🗄️ Verificando estrutura do database..."
-if [ -d "database/assets" ]; then
+if [ -d "$BASE_DIR/site/database/assets" ]; then
     log "🔎 Verificando funcionalidades de database..."
-    cd database || exit 1
+    cd "$BASE_DIR/site/database" || exit 1
 
     if python3 generate_assets_structure.py 2>&1 | tee -a "$DATABASE_LOG"; then
         log "✅ Database configurado e estruturado com sucesso"
