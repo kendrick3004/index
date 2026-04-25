@@ -44,7 +44,7 @@ cd "$BASE_DIR/site" || exit 1
 log "⏳ Extraindo dados do repositório com Sparse Checkout..."
 log "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 
- Configurações de timeout e retry para git
+Configurações de timeout e retry para git
 export GIT_CONNECT_TIMEOUT=120
 export GIT_HTTP_CONNECT_TIMEOUT=120
 
