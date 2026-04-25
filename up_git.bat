@@ -9,7 +9,7 @@ git add -A
 
 git diff --cached --quiet
 IF %ERRORLEVEL%==0 (
-    echo Tudo atualizado e na ultima versão.
+    echo Tudo atualizado e na ultima versao.
 ) ELSE (
     git commit -m "Auto update"
     git push
