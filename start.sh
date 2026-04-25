@@ -63,19 +63,19 @@ while [ $RETRY_COUNT -lt $MAX_RETRIES ] && [ "$CLONE_SUCCESS" = false ]; do
     
     log "📊 Iniciando clonagem..."
     
-    # CLONE COM BARRA BONITINHA EXATA
-    if timeout 600 bash -c '
-    git clone --depth=1 --single-branch --branch main --progress https://github.com/kendrick3004/index.git . 2>&1 | while IFS= read -r line; do
-        echo "$line" >> '"$GIT_LOG"'
+    # ✅ CORRIGIDO: Git clone com barra BONITINHA SEM ERRO
+    if timeout 600 git clone --depth=1 --single-branch --branch main --progress https://github.com/kendrick3004/index.git . 2>&1 | \
+    while IFS= read -r line; do
+        echo "$line" >> "../$GIT_LOG"
+        
         if echo "$line" | grep -q "Receiving objects:"; then
-            percent=$(echo "$line" | grep -o "[0-9]\+%" | tr -d "%")
+            percent=$(echo "$line" | grep -o "[0-9]\+%" | head -1 | tr -d "%")
             speed=$(echo "$line" | grep -o "[0-9]\+\.[0-9]\+ [KMG]iB/s" || echo "")
-            filled=$((percent * 50 / 100))
+            filled=$((percent * 50 / 100 2>/dev/null || 0))
             bar=""; for ((i=0;i<filled;i++)); do bar+="█"; done; for ((i=filled;i<50;i++)); do bar+="░"; done
             printf "\r📥 Baixando: [%-50s] %3d%% - %s" "$bar" "$percent" "$speed"
         fi
-    done
-    '; then
+    done; then
         echo ""
         log "✓ Clone concluído, checando integridade..."
         if [ -f "site/index.html" ]; then
@@ -94,8 +94,8 @@ if [ "$CLONE_SUCCESS" = true ]; then
     log "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
     
     log "📂 Configurando sparse checkout (apenas /site)..."
-    if bash -c 'stdbuf -oL -eL git sparse-checkout init --cone 2>&1' | tee -a "$GIT_LOG"; then
-        bash -c 'stdbuf -oL -eL git sparse-checkout set site 2>&1' | tee -a "$GIT_LOG"
+    if bash -c 'stdbuf -oL -eL git sparse-checkout init --cone 2>&1' | tee -a "../$GIT_LOG"; then
+        bash -c 'stdbuf -oL -eL git sparse-checkout set site 2>&1' | tee -a "../$GIT_LOG"
         log "✓ Sparse Checkout configurado"
     else
         log "⚠️  Sparse checkout não disponível, usando clone completo"
@@ -116,7 +116,7 @@ if [ -d "$BASE_DIR/site/database/assets" ]; then
 
     cd "$BASE_DIR/site/database" || exit 1
 
-    if python3 generate_assets_structure.py 2>&1 | tee -a "$DATABASE_LOG"; then
+    if python3 generate_assets_structure.py 2>&1 | tee -a "../$DATABASE_LOG"; then
         log "✅ Database gerado com sucesso"
     else
         log "❌ Erro na geração do database (ver log em: $DATABASE_LOG)"
@@ -133,7 +133,7 @@ log "✓ Servidor de manutenção parado"
 
 log "🚀 Iniciando servidor do site..."
 log "⏳ Aguardando inicialização (porta 5000)..."
-(cd "$BASE_DIR/site" && nohup python3 main.py >> "$SITE_LOG" 2>&1 &)
+(cd "$BASE_DIR/site" && nohup python3 main.py >> "../$SITE_LOG" 2>&1 &)
 sleep 3
 log "✓ Servidor do site iniciado"
 
