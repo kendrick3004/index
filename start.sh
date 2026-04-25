@@ -109,7 +109,7 @@ else
     exit 1
 fi
 
-# ------------------ DATABASE ------------------
+# ------------------ DATABASE ✅ CORRIGIDO ------------------
 log "🗄️ Verificando estrutura do database..."
 if [ -d "$BASE_DIR/site/database/assets" ]; then
     log "🔎 Verificando funcionalidades de database..."
@@ -121,7 +121,7 @@ if [ -d "$BASE_DIR/site/database/assets" ]; then
         log "❌ Erro na geração do database (ver log em: $DATABASE_LOG)"
     fi
 else
-    log "❌ Pasta de arquivos não encontrada, verificação do database imediatamente"
+    log "❌ Pasta assets não encontrada em $BASE_DIR/site/database/assets"
 fi
 
 # ------------------ FINALIZA ------------------
