@@ -111,9 +111,9 @@ fi
 
 # ------------------ DATABASE ✅ CORRIGIDO ------------------
 log "🗄️ Verificando estrutura do database..."
-if [ -d "$BASE_DIR/index/site/database" ]; then
+if [ -d "$BASE_DIR/site/site/database" ]; then
     log "🔎 Verificando funcionalidades de database..."
-    cd "$BASE_DIR/site/database" || exit 1
+    cd "$BASE_DIR/site/site/database" || exit 1
 
     if python3 generate_assets_structure.py 2>&1 | tee -a "$DATABASE_LOG"; then
         log "✅ Database configurado e estruturado com sucesso"
@@ -132,7 +132,7 @@ log "Preparando para alternação de servidor..."
 
 log "🚀 Iniciando servidor do site..."
 log "⏳ Aguardando inicialização (porta 5000)..."
-nohup python3 main.py >> "$SITE_LOG" 2>&1 &
+cd "$BASE_DIR/site/site" && nohup python3 main.py >> "$SITE_LOG" 2>&1 &
 sleep 3
 log "✓ Servidor do site iniciado com sucesso"
 
