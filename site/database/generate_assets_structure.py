@@ -103,7 +103,6 @@ if __name__ == "__main__":
     if not os.path.isdir(assets_path):
         sys.exit(1)
 
-    print(f"Escaneando arquivos em: {assets_path}...")
     start_time = time.time()
 
     try:
