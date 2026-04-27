@@ -24,5 +24,4 @@ echo "================================================"
 echo "✅ Setup concluído com sucesso!"
 echo "Executando: ./start.sh"
 cd /index
-bash start.sh
 echo "================================================"
