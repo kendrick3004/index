@@ -111,7 +111,7 @@ fi
 
 # ------------------ DATABASE ✅ CORRIGIDO ------------------
 log "🗄️ Verificando estrutura do database..."
-if [ -d "$BASE_DIR/site/site/database" ]; then
+if [ -d "$BASE_DIR/index/site/database" ]; then
     log "🔎 Verificando funcionalidades de database..."
     cd "$BASE_DIR/site/site/database" || exit 1
 
