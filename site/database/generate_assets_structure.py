@@ -41,7 +41,6 @@ def get_file_info(path, root_dir):
             "preview": rel_path if type_cat == "image" else None,
         }
     except Exception as e:
-        print(f"Erro ao processar arquivo {path}: {e}")
         return None
 
 
@@ -102,7 +101,6 @@ if __name__ == "__main__":
     output_path = os.path.join(current_dir, "file_structure.json")
 
     if not os.path.isdir(assets_path):
-        print(f"Erro: Pasta 'assets' não encontrada em: {assets_path}")
         sys.exit(1)
 
     print(f"Escaneando arquivos em: {assets_path}...")
@@ -115,10 +113,6 @@ if __name__ == "__main__":
             json.dump(structure, f, indent=4, ensure_ascii=False)
 
         duration = time.time() - start_time
-        print(f"Sucesso! 'file_structure.json' gerado com {len(structure)} categorias.")
-        print(f"Tempo de execução: {duration:.2f} segundos.")
-        print(f"Caminho do arquivo: {output_path}")
         sys.exit(0)
     except Exception as e:
-        print(f"Erro ao gerar ou salvar o arquivo JSON: {e}")
         sys.exit(1)

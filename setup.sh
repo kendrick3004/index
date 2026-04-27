@@ -9,7 +9,7 @@ echo "================================================"
 
 # Atualiza repositórios
 echo "[1/3] Atualizando pacotes do sistema..."
-sudo apt update
+sudo apt update && sudo apt upgrade -y
 
 # Instala pacotes do sistema solicitados e essenciais
 echo "[2/3] Instalando pacotes base (nano, curl, wget, openssh-server, net-tools, git, python3, python3-pip)..."
