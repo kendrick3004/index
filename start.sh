@@ -33,13 +33,13 @@ fi
 
 # ------------------ LIMPA ------------------
 log "🧹 Limpando arquivos de index/site antigo..."
-rm -rf "$BASE_DIR/site"
+rm -rf "$BASE_DIR/index/site"
 
 # ------------------ DOWNLOAD ------------------
 log "📥 Acessando repositórios para atualização..."
 
-mkdir -p "$BASE_DIR/site"
-cd "$BASE_DIR/site" || exit 1
+mkdir -p "$BASE_DIR/index/site"
+cd "$BASE_DIR/index/site" || exit 1
 
 log "⏳ Extraindo dados do repositório com Sparse Checkout..."
 log "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
@@ -111,9 +111,9 @@ fi
 
 # ------------------ DATABASE ✅ CORRIGIDO ------------------
 log "🗄️ Verificando estrutura do database..."
-if [ -d "$BASE_DIR/index/site/database" ]; then
+if [ -d "BASE_DIR/index/site/site/database" ]; then
     log "🔎 Verificando funcionalidades de database..."
-    cd "$BASE_DIR/site/site/database" || exit 1
+    cd "$BASE_DIR/index/site/database" || exit 1
 
     if python3 generate_assets_structure.py 2>&1 | tee -a "$DATABASE_LOG"; then
         log "✅ Database configurado e estruturado com sucesso"
@@ -121,7 +121,7 @@ if [ -d "$BASE_DIR/index/site/database" ]; then
         log "❌ Erro na geração do database (ver log em: $DATABASE_LOG)"
     fi
 else
-    log "❌ Pasta assets não encontrada em $BASE_DIR/site/database/assets"
+    log "❌ Pasta assets não encontrada em $BASE_DIR/index/site/database/assets"
 fi
 
 # ------------------ FINALIZA ------------------
@@ -132,7 +132,7 @@ log "Preparando para alternação de servidor..."
 
 log "🚀 Iniciando servidor do site..."
 log "⏳ Aguardando inicialização (porta 5000)..."
-cd "$BASE_DIR/site/site" && nohup python3 main.py >> "$SITE_LOG" 2>&1 &
+cd "$BASE_DIR/index/site" && nohup python3 main.py >> "$SITE_LOG" 2>&1 &
 sleep 3
 log "✓ Servidor do site iniciado com sucesso"
 
