@@ -29,6 +29,7 @@ sudo apt install python3 python3-pip python3-venv -y
 
 echo "================================================"
 echo "✅ Setup concluído com sucesso!"
-echo "Para iniciar o site em modo normal, execute: ./start.sh"
-echo "Para iniciar em modo manutenção, execute: ./start_maintenance.sh"
+echo "Executando: ./start.sh"
+cd /index
+bash start.sh
 echo "================================================"
