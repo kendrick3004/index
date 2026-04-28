@@ -8,7 +8,7 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 app = Flask(__name__, static_folder=SCRIPT_DIR, static_url_path='')
 
-RATE_LIMIT_COUNT = 10
+RATE_LIMIT_COUNT = 100
 RATE_LIMIT_PERIOD = 10
 request_counts = defaultdict(lambda: {'count': 0, 'timestamp': 0})
 
@@ -39,7 +39,7 @@ def maintenance_logic():
     if request.path.endswith(('.css', '.js', '.png', '.jpg')):
         return
 
-    client_ip = request.remote_addr
+    client_ip = request.headers.get('CF-Connecting-IP', request.remote_addr)
     current_time = time.time()
 
     if current_time - request_counts[client_ip]['timestamp'] > RATE_LIMIT_PERIOD:
