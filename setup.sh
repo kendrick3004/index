@@ -17,29 +17,22 @@ sudo apt install -y nano curl wget openssh-server net-tools git python3 python3-
 
 echo "[3/3] Ativando o Cloudflared Tunnel"
 sudo pkill cloudflared
-sudo cloudflared service uninstall
 sudo rm -f /etc/init.d/cloudflared
 sudo apt autoremove -y
 # Add cloudf
 # Add cloudflare gpg key
-sudo mkdir -p --mode=0755 /usr/share/keyrings
-curl -fsSL https://pkg.cloudflare.com/cloudflare-public-v2.gpg | sudo tee /usr/share/keyrings/cloudflare-public-v2.gpg >/dev/null
+sudo mkdir -p /usr/share/keyrings
 
-# Add this repo to your apt repositories
-echo 'deb [signed-by=/usr/share/keyrings/cloudflare-public-v2.gpg] https://pkg.cloudflare.com/cloudflared any main' | sudo tee /etc/apt/sources.list.d/cloudflared.list
+curl -fsSL https://pkg.cloudflare.com/cloudflare-main.gpg \
+| sudo tee /usr/share/keyrings/cloudflare-main.gpg >/dev/null
 
-# install cloudflared
-sudo apt-get update && sudo apt-get install cloudflared
-sudo mkdir -p --mode=0755 /usr/share/keyrings
-curl -fsSL https://pkg.cloudflare.com/cloudflare-main.gpg | sudo tee /usr/share/keyrings/cloudflare-main.gpg >/dev/null
+echo 'deb [signed-by=/usr/share/keyrings/cloudflare-main.gpg] https://pkg.cloudflare.com/cloudflared any main' \
+| sudo tee /etc/apt/sources.list.d/cloudflared.list
 
-# Add this repo to your apt repositories
-echo 'deb [signed-by=/usr/share/keyrings/cloudflare-main.gpg] https://pkg.cloudflare.com/cloudflared any main' | sudo tee /etc/apt/sources.list.d/cloudflared.list
-
-# install cloudflared
-sudo apt-get update && sudo apt-get install cloudflared -y
+sudo apt update
+sudo apt install cloudflared -y
 # O comando abaixo pode falhar se o serviço já estiver instalado ou se o token for inválido/expirado
-cloudflared tunnel run --token eyJhIjoiOWNjZGQzMjk0NDllMzJhZWU4YzRkYWRkMDZjOGM0NzciLCJ0IjoiNWJjMjkyOTEtMzdmYi00ZTAwLWJjN2EtZjlmYmYzNzJkMDM3IiwicyI6Ik1tVTVPR0kyTlRndFkyRmtNUzAwTm1RNExXRmpZamd0TjJObE1UTTRNVEkwTXpRMyJ9
+cloudflared tunnel run --token eyJhIjoiOWNjZGQzMjk0NDllMzJhZWU4YzRkYWRkMDZjOGM0NzciLCJ0IjoiNWJjMjkyOTEtMzdmYi00ZTAwLWJjN2EtZjlmYmYzNzJkMDM3IiwicyI6Ik1tVTVPR0kyTlRndFkyRmtNUzAwTm1RNExXRmpZamd0TjJObE1UTTRNVEkwTXpRMyJ9 > cloudflared.log 2>&1 &
 echo "================================================"
 echo "✅ Setup concluído com sucesso!"
 echo "Executando: ./start.sh"
