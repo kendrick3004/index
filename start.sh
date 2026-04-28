@@ -140,6 +140,8 @@ log "⏳ Aguardando inicialização (porta 5000)..."
 cd "$BASE_DIR/site" && nohup python3 main.py >> "$SITE_LOG" 2>&1 &
 sleep 3
 
+cd '$BASE_DIR' || exit 1
+
 # Verifica se o processo está rodando
 if pgrep -f "python3 main.py" > /dev/null; then
     log "✓ Servidor do site iniciado com sucesso"
@@ -150,3 +152,4 @@ fi
 log "✅ Deploy finalizado com sucesso!"
 log "📊 Logs salvos em: $LOG_DIR"
 log "🌐 Site disponível em: http://localhost:5000 http://192.168.0.103:5000/ https://kendricknicoleti.com/"
+
