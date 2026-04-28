@@ -16,6 +16,13 @@ echo "[2/3] Instalando pacotes base (nano, curl, wget, openssh-server, net-tools
 sudo apt install -y nano curl wget openssh-server net-tools git python3 python3-pip python3-venv 
 
 echo "[3/3] Ativando o Cloudflared Tunnel"
+sudo pkill cloudflared
+sudo cloudflared service uninstall
+sudo rm -f /etc/init.d/cloudflared
+sudo rm -rf /etc/cloudflared
+sudo apt remove --purge cloudflared -y
+sudo apt autoremove -y
+rm -rf ~/.cloudflared
 # Add cloudf
 # Add cloudflare gpg key
 sudo mkdir -p --mode=0755 /usr/share/keyrings
