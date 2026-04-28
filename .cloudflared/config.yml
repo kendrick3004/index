@@ -1,4 +1,5 @@
 tunnel: 5bc29291-37fb-4e00-bc7a-f9fbf372d037
+credentials-file: /home/kendrick/.cloudflared/xxxxx.json
 
 ingress:
   - hostname: kendricknicoleti.com
