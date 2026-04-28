@@ -61,8 +61,8 @@ def maintenance_logic():
     registrar_log(f"🚧 Acesso em Manutenção: {client_ip} -> {request.path}")
 
 @app.route('/')
-def index():
-    return send_from_directory(SCRIPT_DIR, '503.html')
+def safe_maintenance():
+    maintenance_file = os.path.join(SCRIPT_DIR, '503.html')
 
 # Mantém as rotas de API ativas (simulando ou redirecionando)
 @app.route('/api/<path:path>', methods=['GET', 'POST', 'PUT', 'DELETE'])
@@ -75,9 +75,11 @@ def api_proxy(path):
 @app.route('/<path:path>')
 def static_files(path):
     file_path = os.path.join(SCRIPT_DIR, path)
-    if os.path.exists(file_path):
-        return send_from_directory(SCRIPT_DIR, path)
-    return send_from_directory(SCRIPT_DIR, '503.html')
+if os.path.exists(maintenance_file):
+        try:
+            return send_from_directory(SCRIPT_DIR, '503.html')
+        except Exception:
+            pass
 
 @app.errorhandler(404)
 @app.errorhandler(500)
