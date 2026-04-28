@@ -19,10 +19,7 @@ echo "[3/3] Ativando o Cloudflared Tunnel"
 sudo pkill cloudflared
 sudo cloudflared service uninstall
 sudo rm -f /etc/init.d/cloudflared
-sudo rm -rf /etc/cloudflared
-sudo apt remove --purge cloudflared -y
 sudo apt autoremove -y
-rm -rf ~/.cloudflared
 # Add cloudf
 # Add cloudflare gpg key
 sudo mkdir -p --mode=0755 /usr/share/keyrings
