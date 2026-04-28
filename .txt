@@ -1,0 +1,95 @@
+# Create a comprehensive TXT file with the instructions in Portuguese (Brazil)
+
+content = """GUIA COMPLETO - CORREÇÃO APT + SCRIPT GIT (RESET DE CACHE)
+
+==============================
+PARTE 1 - ERRO NO UBUNTU (APT)
+==============================
+
+Problema:
+- Erro: Failed to fetch ... 404 Not Found
+- Causa: Repositórios desatualizados ou versão antiga do Ubuntu
+
+1. Limpeza básica:
+sudo apt clean
+sudo apt update --fix-missing
+sudo apt upgrade -y
+
+2. Se continuar com erro 404:
+sudo sed -i 's|archive.ubuntu.com|old-releases.ubuntu.com|g' /etc/apt/sources.list
+sudo sed -i 's|security.ubuntu.com|old-releases.ubuntu.com|g' /etc/apt/sources.list
+
+Depois:
+sudo apt clean
+sudo rm -rf /var/lib/apt/lists/*
+sudo apt update
+sudo apt upgrade -y
+
+3. Verificar versão do Ubuntu:
+lsb_release -a
+
+4. Testar internet:
+ping google.com
+
+Se não funcionar:
+sudo nano /etc/resolv.conf
+
+Adicionar:
+nameserver 8.8.8.8
+
+==============================
+PARTE 2 - SCRIPT GIT (.BAT)
+==============================
+
+Objetivo:
+- NÃO apagar histórico
+- Limpar cache do Git
+- Reenviar todos os arquivos
+
+Script correto:
+
+@echo off
+cd /d %~dp0
+
+echo ============================================
+echo RESET DE CACHE - REENVIANDO TUDO...
+echo ============================================
+
+if not exist ".git" (
+    echo ERRO: Pasta nao e um repositorio Git.
+    pause
+    exit /b
+)
+
+git rm -r --cached . >nul 2>&1
+git add -A
+git commit -m "Rebuild completo dos arquivos"
+git push
+
+echo ============================================
+echo FINALIZADO - CACHE LIMPO E ARQUIVOS REENVIADOS
+echo ============================================
+pause
+
+==============================
+RESUMO
+==============================
+
+APT:
+- apt clean
+- apt update
+- corrigir sources.list se der 404
+
+GIT:
+- git rm --cached
+- git add -A
+- git commit
+- git push
+
+"""
+
+file_path = "/mnt/data/guia_git_apt.txt"
+with open(file_path, "w", encoding="utf-8") as f:
+    f.write(content)
+
+file_path
