@@ -1,0 +1,7 @@
+tunnel: 5bc29291-37fb-4e00-bc7a-f9fbf372d037
+
+ingress:
+  - hostname: kendricknicoleti.com
+    service: http://localhost:5000
+
+  - service: http_status:404
