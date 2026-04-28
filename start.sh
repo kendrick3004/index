@@ -18,7 +18,7 @@ log() {
 }
 
 log "🛑 Parando servidores de sites..."
-pkill -f main.py 2>/dev/null || true
+pkill -f "python3 main.py" 2>/dev/null || true
 sleep 2
 
 # ------------------ MANUTENÇÃO ------------------
