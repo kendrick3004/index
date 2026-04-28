@@ -42,8 +42,7 @@ echo 'deb [signed-by=/usr/share/keyrings/cloudflare-main.gpg] https://pkg.cloudf
 # install cloudflared
 sudo apt-get update && sudo apt-get install cloudflared -y
 # O comando abaixo pode falhar se o serviço já estiver instalado ou se o token for inválido/expirado
-sudo cloudflared service install sudo cloudflared service install eyJhIjoiOWNjZGQzMjk0NDllMzJhZWU4YzRkYWRkMDZjOGM0NzciLCJ0IjoiNWJjMjkyOTEtMzdmYi00ZTAwLWJjN2EtZjlmYmYzNzJkMDM3IiwicyI6Ik1tVTVPR0kyTlRndFkyRmtNUzAwTm1RNExXRmpZamd0TjJObE1UTTRNVEkwTXpRMyJ9 || true
-
+cloudflared tunnel run --token eyJhIjoiOWNjZGQzMjk0NDllMzJhZWU4YzRkYWRkMDZjOGM0NzciLCJ0IjoiNWJjMjkyOTEtMzdmYi00ZTAwLWJjN2EtZjlmYmYzNzJkMDM3IiwicyI6Ik1tVTVPR0kyTlRndFkyRmtNUzAwTm1RNExXRmpZamd0TjJObE1UTTRNVEkwTXpRMyJ9
 echo "================================================"
 echo "✅ Setup concluído com sucesso!"
 echo "Executando: ./start.sh"
