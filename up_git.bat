@@ -12,9 +12,6 @@ if not exist ".git" (
     exit /b
 )
 
-:: Remove tudo do cache (index)
-git rm -r --cached . >nul 2>&1
-
 :: Adiciona tudo novamente
 git add -A
 
