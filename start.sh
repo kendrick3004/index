@@ -33,13 +33,14 @@ fi
 
 # ------------------ LIMPA ------------------
 log "🧹 Limpando arquivos de index/site antigo..."
-rm -rf "$BASE_DIR/index/site"
+# Corrigido: Limpando a pasta correta onde o site será baixado
+rm -rf "$BASE_DIR/temp_site"
 
 # ------------------ DOWNLOAD ------------------
 log "📥 Acessando repositórios para atualização..."
 
-mkdir -p "$BASE_DIR/index/site"
-cd "$BASE_DIR/index/site" || exit 1
+mkdir -p "$BASE_DIR/temp_site"
+cd "$BASE_DIR/temp_site" || exit 1
 
 log "⏳ Extraindo dados do repositório com Sparse Checkout..."
 log "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
@@ -63,7 +64,7 @@ while [ $RETRY_COUNT -lt $MAX_RETRIES ] && [ "$CLONE_SUCCESS" = false ]; do
     log "📊 Iniciando clonagem..."
     
     # 🎯 BARRINHA + % + VELOCIDADE - SÓ UMA LINHA LIMPA!
-   timeout 600 git clone --depth=1 --single-branch --branch main --progress https://github.com/kendrick3004/index.git . >> "$GIT_LOG" 2>&1 &
+    timeout 600 git clone --depth=1 --single-branch --branch main --progress https://github.com/kendrick3004/index.git . >> "$GIT_LOG" 2>&1 &
     GIT_PID=$!
     
     while kill -0 $GIT_PID 2>/dev/null; do
@@ -78,13 +79,14 @@ while [ $RETRY_COUNT -lt $MAX_RETRIES ] && [ "$CLONE_SUCCESS" = false ]; do
     wait $GIT_PID
     echo ""
     
-    if [ ${PIPESTATUS[0]} -eq 0 ]; then
+    if [ $? -eq 0 ]; then
         log "✓ Clone concluído, checando integridade..."
-        if [ -f "index.html" ] || [ -f "site/index.html" ]; then
+        # Corrigido: Verificando se main.py existe na pasta site do repositório clonado
+        if [ -f "site/main.py" ]; then
             log "✓ Arquivos do site intactos, clonagem bem-sucedida"
             CLONE_SUCCESS=true
         else
-            log "⚠️  Site não encontrado, tentando novamente..."
+            log "⚠️  Site não encontrado no repositório, tentando novamente..."
         fi
     else
         log "⚠️  Git clone falhou ou timeout"
@@ -94,13 +96,10 @@ done
 if [ "$CLONE_SUCCESS" = true ]; then
     log "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
     
-    log "📂 Configurando sparse checkout (site)..."
-    if git sparse-checkout init --cone 2>&1 | tee -a "$GIT_LOG"; then
-        git sparse-checkout set site 2>&1 | tee -a "$GIT_LOG"
-        log "✓ Sparse Checkout configurado"
-    else
-        log "⚠️  Sparse checkout não disponível, usando clone completo"
-    fi
+    log "📂 Sincronizando arquivos do site..."
+    # Copia o conteúdo da pasta site do clone para a pasta site da raiz
+    cp -r site/* "$BASE_DIR/site/"
+    log "✓ Arquivos sincronizados"
     
     log "✅ Download concluído com sucesso"
 else
@@ -109,19 +108,24 @@ else
     exit 1
 fi
 
-# ------------------ DATABASE ✅ CORRIGIDO ------------------
+# ------------------ DATABASE ------------------
 log "🗄️ Verificando estrutura do database..."
-if [ -d "BASE_DIR/index/site/site/database" ]; then
+# Corrigido: Caminho correto para a pasta database
+if [ -d "$BASE_DIR/site/database" ]; then
     log "🔎 Verificando funcionalidades de database..."
-    cd "$BASE_DIR/index/site/database" || exit 1
+    cd "$BASE_DIR/site/database" || exit 1
 
-    if python3 generate_assets_structure.py 2>&1 | tee -a "$DATABASE_LOG"; then
-        log "✅ Database configurado e estruturado com sucesso"
+    if [ -f "generate_assets_structure.py" ]; then
+        if python3 generate_assets_structure.py 2>&1 | tee -a "$DATABASE_LOG"; then
+            log "✅ Database configurado e estruturado com sucesso"
+        else
+            log "❌ Erro na geração do database (ver log em: $DATABASE_LOG)"
+        fi
     else
-        log "❌ Erro na geração do database (ver log em: $DATABASE_LOG)"
+        log "⚠️ Script generate_assets_structure.py não encontrado"
     fi
 else
-    log "❌ Pasta assets não encontrada em $BASE_DIR/index/site/database/assets"
+    log "❌ Pasta database não encontrada em $BASE_DIR/site/database"
 fi
 
 # ------------------ FINALIZA ------------------
@@ -132,9 +136,16 @@ log "Preparando para alternação de servidor..."
 
 log "🚀 Iniciando servidor do site..."
 log "⏳ Aguardando inicialização (porta 5000)..."
-cd "$BASE_DIR/index/site" && nohup python3 main.py >> "$SITE_LOG" 2>&1 &
+# Corrigido: Caminho correto para o main.py do site
+cd "$BASE_DIR/site" && nohup python3 main.py >> "$SITE_LOG" 2>&1 &
 sleep 3
-log "✓ Servidor do site iniciado com sucesso"
+
+# Verifica se o processo está rodando
+if pgrep -f "python3 main.py" > /dev/null; then
+    log "✓ Servidor do site iniciado com sucesso"
+else
+    log "❌ Falha ao iniciar o servidor do site. Verifique $SITE_LOG"
+fi
 
 log "✅ Deploy finalizado com sucesso!"
 log "📊 Logs salvos em: $LOG_DIR"

@@ -1,0 +1,184 @@
+<!--
+    ARQUIVO: calendar.html
+    DESCRIÇÃO: Página de calendário que exibe o progresso das orações dos últimos 12 meses.
+    VERSÃO: 4.1.0 - Correção do Botão de Conexão Firebase
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    
+    <title>Calendário de Orações - Suite</title>
+    
+    <!-- Favicon e Recursos Padrão -->
+    <link rel="icon" href="/database/assets/dev/dev/favicon/icon-192.png" type="image/x-icon">
+    
+    <!-- Arquivos Padrão da Pasta SRC -->
+    <link rel="stylesheet" href="/src/styles/modes.css">
+    <link rel="stylesheet" href="/src/styles/fonts-manager.css">
+    <script src="/src/js/main/env-loader.js"></script>
+    <script src="/src/js/main/config.js"></script>
+    
+    <!-- Estilos do Calendário -->
+    <link rel="stylesheet" href="/pages/calendar/calendar.css">
+    <link rel="stylesheet" href="/src/app/update.css">
+    <script src="/src/app/update.js"></script>
+    
+    <style>
+        /* Fundo fixo no desktop */
+        body {
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        /* CORREÇÃO MOBILE: background-attachment fixed não funciona em iOS/Android */
+        @media screen and (max-width: 1024px) {
+            body { background-attachment: scroll !important; }
+        }
+        @media (pointer: coarse) {
+            body { background-attachment: scroll !important; }
+        }
+        @supports (-webkit-touch-callout: none) {
+            body {
+                background-attachment: scroll !important;
+                min-height: -webkit-fill-available;
+            }
+        }
+        /* Garantir que o botão seja clicável e visível */
+        #firebaseLoginBtn {
+            cursor: pointer;
+            z-index: 100;
+        }
+    </style>
+</head>
+<body>
+    <div class="calendar-container">
+        <!-- Cabeçalho -->
+        <div class="calendar-header">
+            <a href="/" class="back-button">←
+            </a>
+            <h1>Calendário de Orações</h1>
+            <div class="header-spacer"></div>
+        </div>
+
+        <!-- Resumo do Progresso -->
+        <div class="progress-summary">
+            <div class="summary-card">
+                <span class="summary-label">Completas</span>
+                <span class="summary-value" id="completedCount">0</span>
+            </div>
+            <div class="summary-card">
+                <span class="summary-label">Parciais</span>
+                <span class="summary-value" id="partialCount">0</span>
+            </div>
+            <div class="summary-card">
+                <span class="summary-label">Vazias</span>
+                <span class="summary-value" id="emptyCount">0</span>
+            </div>
+        </div>
+
+        <!-- Calendários dos 12 Meses -->
+        <div class="months-container" id="monthsContainer">
+            <!-- Será preenchido via JavaScript -->
+        </div>
+
+        <!-- Legenda -->
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color laudes"></div>
+                <span>Laudes</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color hora-media"></div>
+                <span>Hora Média</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color vesperas"></div>
+                <span>Vésperas</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color completas"></div>
+                <span>Completas</span>
+            </div>
+        </div>
+
+        <!-- Botões de Ação -->
+        <div class="action-buttons">
+            <button id="exportBtn" class="action-btn">Exportar</button>
+            
+            <!-- Sincronização Firebase -->
+            <div class="sync-actions" id="syncContainer">
+                <button id="firebaseLoginBtn" class="action-btn sync-btn-auth">Conectar</button>
+                <button id="firebaseLogoutBtn" class="action-btn sync-btn-logout" style="display: none;">Sair</button>
+            </div>
+
+            <button id="importBtn" class="action-btn">Importar</button>
+            <input type="file" id="importFile" style="display: none;" accept=".json">
+        </div>
+        <div id="syncStatus" class="sync-status-text"></div>
+    </div>
+
+    <!-- Proteção contra Ataques de Negação de Serviço -->
+    <script src="/src/js/main/rate-limiter.js"></script>
+    
+    <!-- Firebase Core e Configuração -->
+    <script src="/src/js/main/firebase-config.js"></script>
+    <script src="/src/js/main/firebase-sync.js"></script>
+    
+    <!-- Scripts da Aplicação -->
+    <script src="/pages/suite/suite.js"></script>
+    <script src="/pages/calendar/calendar.js"></script>
+    <script src="/pages/suite/liturgy.js"></script>
+    
+    <script>
+        // Lógica de UI para o Firebase no Calendário
+        (function() {
+            const loginBtn = document.getElementById('firebaseLoginBtn');
+            const logoutBtn = document.getElementById('firebaseLogoutBtn');
+            const statusText = document.getElementById('syncStatus');
+
+            // Atualiza UI baseada no estado de autenticação
+            const updateUI = (user) => {
+                if (user) {
+                    loginBtn.style.display = 'none';
+                    logoutBtn.style.display = 'inline-block';
+                    statusText.textContent = `Sincronizado como ${user.email}`;
+                    statusText.style.color = '#4caf50';
+                } else {
+                    loginBtn.style.display = 'inline-block';
+                    logoutBtn.style.display = 'none';
+                    statusText.textContent = 'Não conectado';
+                    statusText.style.color = 'rgba(255,255,255,0.5)';
+                }
+            };
+
+            // Monitora estado do Firebase
+            const checkAuthInterval = setInterval(() => {
+                if (window.firebaseAuth) {
+                    clearInterval(checkAuthInterval);
+                    firebaseAuth.onAuthStateChanged(updateUI);
+                }
+            }, 500);
+
+            // Clique direto para garantir que funcione
+            loginBtn.onclick = function() {
+                console.log("Botão Conectar clicado!");
+                // Redireciona para login sem .html, com redirect para o calendário
+                window.location.href = '/pages/login?redirect=' + encodeURIComponent('/pages/calendar');
+            };
+
+            logoutBtn.onclick = async function() {
+                if (window.firebaseAuth) {
+                    await firebaseAuth.signOut();
+                    localStorage.removeItem('auth_user');
+                    localStorage.removeItem('auth_timestamp');
+                    window.location.reload();
+                }
+            };
+        })();
+    </script>
+</body>
+</html>

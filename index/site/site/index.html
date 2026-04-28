@@ -1,0 +1,134 @@
+<!--
+    ARQUIVO: index.html (MODIFICADO)
+    DESCRIÇÃO: Página principal do projeto "Suite".
+    ESTRUTURA: Contém o avatar, switch de tema, card do Santo do Dia, links e widget de clima.
+    VERSÃO: 5.0.0 - PWA e Splash Removidos
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    
+    <link rel="shortcut icon" href="database/assets/dev/favicon/Favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="database/assets/dev/favicon/Favicon.png">
+
+    <!-- SISTEMA DE FÁBRICA: Metadados e Configurações Offline -->
+    <script src="src/js/main/env-loader.js"></script>
+    <script src="src/js/main/factory.js"></script>
+    
+    <title>Suite</title>
+    
+    <!-- Fontes do Google (Hiperlinks Diretos) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@400..700&family=Fira+Code:wght@300..700&family=Inter:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Pacifico&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Ysabeau+SC:wght@1..1000&display=swap" rel="stylesheet">
+    
+    <!-- Estilos da página -->
+    <link rel="stylesheet" href="src/styles/fonts-manager.css">
+    <link rel="stylesheet" href="src/styles/modes.css">
+    <link rel="stylesheet" href="pages/suite/suite.css">
+    <link rel="stylesheet" href="pages/suite/weather/weather.css">
+    <link rel="stylesheet" href="src/app/update.css">
+    <script src="src/app/update.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- SEÇÃO DO AVATAR -->
+        <div class="avatar">
+            <div class="avatar-img">
+                <img src="database/assets/dev/avatar/avatar.jpg" alt="Avatar" referrerpolicy="no-referrer">
+            </div>
+            <div class="avatar-name link-item">@kendricknicoleti</div>
+        </div>
+
+        <!-- SEÇÃO DO SWITCH DE TEMA -->
+        <div class="switch">
+            <div class="switch-bg"></div>
+            <div class="switch-toggle">
+                <div class="switch-icon">
+                    <span class="icon-sun">☀️</span>
+                    <span class="icon-moon">🌙</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- SEÇÃO SANTO DO DIA -->
+        <div class="santo-do-dia">
+            <div class="santo-header">
+                <span class="santo-name">Carregando...</span>
+                <span class="santo-ribbon"></span>
+            </div>
+            <div class="santo-type">--</div>
+            <div class="santo-description">Aguarde...</div>
+        </div>
+
+        <!-- SEÇÃO DE LINKS -->
+        <div class="links">
+            <a href="/database/index.html" style="text-decoration: none; color: inherit; width: 100%;">
+                <div class="link-item">Database</div>
+            </a>
+            <div class="link-item">Arquivos para Missas</div>
+            
+            <!-- Menu da Liturgia das Horas -->
+            <div class="liturgy-card">
+                <div class="liturgy-menu">
+                    <div class="liturgy-title">
+                        <span>Liturgia das Horas</span>
+                        <a href="/pages/calendar" class="calendar-link-small">Calendário</a>
+                    </div>
+                    <div class="liturgy-prayers">
+                        <button class="prayer-item" data-prayer="laudes">
+                            <span class="prayer-name">Laudes</span>
+                        </button>
+                        <button class="prayer-item" data-prayer="hora-media">
+                            <span class="prayer-name">Hora Média</span>
+                        </button>
+                        <button class="prayer-item" data-prayer="vesperas">
+                            <span class="prayer-name">Vésperas</span>
+                        </button>
+                        <button class="prayer-item" data-prayer="completas">
+                            <span class="prayer-name">Completas</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECAO DE CLIMA -->
+        <div class="weather-footer">
+            <div class="weather-loading">
+                <span>Carregando informações de clima...</span>
+            </div>
+        </div>
+
+    </div>
+    
+    <!-- Proteção contra Ataques de Negação de Serviço -->
+    <script src="/src/js/main/rate-limiter.js"></script>
+    
+    <!-- Firebase Core e Configuração -->
+    <script src="src/js/main/firebase-config.js"></script>
+    <script src="src/js/main/firebase-sync.js"></script>
+    
+    <!-- Scripts da Aplicação -->
+    <script src="pages/suite/suite.js"></script>
+    <script src="pages/suite/santo-do-dia.js"></script>
+    <script src="pages/suite/weather/weather.js"></script>
+    <script src="pages/suite/liturgy.js"></script>
+    
+    <script>
+        // Atalho de teclado para acessar admin: Ctrl+Shift+A
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && e.shiftKey && e.key === 'A') {
+                window.location.href = '/pages/login';
+            }
+        });
+
+        // Sistema limpo - PWA e Splash removidos
+    </script>
+</body>
+</html>

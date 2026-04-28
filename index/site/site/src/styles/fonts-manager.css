@@ -1,0 +1,66 @@
+/**
+ * ARQUIVO: fonts-manager.css
+ * DESCRIÇÃO: Gerenciador Centralizado de Fontes (Variáveis e Classes).
+ * FUNCIONALIDADES: Define variáveis globais e classes utilitárias. 
+ * OBSERVAÇÃO: As fontes são carregadas via <link> no index.html para melhor performance.
+ * VERSÃO: 3.1.0 - Variáveis mantidas, importação movida para HTML
+ */
+
+/* ========================================
+   VARIÁVEIS CSS PARA FACILITAR O USO
+   ======================================== */
+
+:root {
+    /* Fontes Sans-Serif */
+    --font-oswald: 'Oswald', sans-serif;
+    --font-ysabeau: 'Ysabeau SC', sans-serif;
+    --font-roboto: 'Roboto', sans-serif;
+    --font-open-sans: 'Open Sans', sans-serif;
+    --font-montserrat: 'Montserrat', sans-serif;
+    --font-lato: 'Lato', sans-serif;
+    --font-poppins: 'Poppins', sans-serif;
+    --font-inter: 'Inter', sans-serif;
+    --font-nunito: 'Nunito', sans-serif;
+    
+    /* Fontes Serif */
+    --font-playfair: 'Playfair Display', serif;
+    --font-merriweather: 'Merriweather', serif;
+    --font-lora: 'Lora', serif;
+    --font-pt-serif: 'PT Serif', serif;
+    
+    /* Fontes Monoespaçadas */
+    --font-roboto-mono: 'Roboto Mono', monospace;
+    --font-source-code: 'Source Code Pro', monospace;
+    --font-fira-code: 'Fira Code', monospace;
+    
+    /* Fontes Display */
+    --font-dancing: 'Dancing Script', cursive;
+    --font-pacifico: 'Pacifico', cursive;
+    --font-bebas: 'Bebas Neue', display;
+    --font-righteous: 'Righteous', display;
+}
+
+/* ========================================
+   CLASSES UTILITÁRIAS PARA APLICAÇÃO RÁPIDA
+   ======================================== */
+
+.font-oswald { font-family: var(--font-oswald); }
+.font-ysabeau { font-family: var(--font-ysabeau); }
+.font-roboto { font-family: var(--font-roboto); }
+.font-open-sans { font-family: var(--font-open-sans); }
+.font-montserrat { font-family: var(--font-montserrat); }
+.font-lato { font-family: var(--font-lato); }
+.font-poppins { font-family: var(--font-poppins); }
+.font-inter { font-family: var(--font-inter); }
+.font-nunito { font-family: var(--font-nunito); }
+.font-playfair { font-family: var(--font-playfair); }
+.font-merriweather { font-family: var(--font-merriweather); }
+.font-lora { font-family: var(--font-lora); }
+.font-pt-serif { font-family: var(--font-pt-serif); }
+.font-roboto-mono { font-family: var(--font-roboto-mono); }
+.font-source-code { font-family: var(--font-source-code); }
+.font-fira-code { font-family: var(--font-fira-code); }
+.font-dancing { font-family: var(--font-dancing); }
+.font-pacifico { font-family: var(--font-pacifico); }
+.font-bebas { font-family: var(--font-bebas); }
+.font-righteous { font-family: var(--font-righteous); }
