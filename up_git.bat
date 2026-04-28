@@ -2,7 +2,7 @@
 cd /d %~dp0
 
 echo ============================================
-echo RESET DE CACHE - REENVIANDO TUDO...
+echo RESET DE ARQUIVOS - REENVIANDO MODIFICADOS
 echo ============================================
 
 :: Verifica se existe repo
@@ -22,6 +22,6 @@ git commit -m "Rebuild completo dos arquivos"
 git push
 
 echo ============================================
-echo FINALIZADO - CACHE LIMPO E ARQUIVOS REENVIADOS
+echo FINALIZADO - ARQUIVOS LIMPOS E ATUALIZADOS
 echo ============================================
 pause
