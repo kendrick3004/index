@@ -101,7 +101,7 @@ def error_403(e): return send_file('../maintenance/403.html'), 403
 @app.errorhandler(404)
 def error_404(e): 
     registrar_log(f"❓ 404: {request.path} (IP: {request.remote_addr})")
-    return send_file('../maintenance/404.html'), 404
+    return render_template('../maintenance/404.html'), 404
 @app.errorhandler(405)
 def error_405(e): return send_file('../maintenance/405.html'), 405
 @app.errorhandler(429)
