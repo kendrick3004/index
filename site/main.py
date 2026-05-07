@@ -83,9 +83,13 @@ def security_and_tracking():
     registrar_log(f"👤 Acesso: {client_ip} -> {request.path}")
     atualizar_linha()
 
-@app.route('/')
+@app.route('/')      
 def index():
     return render_template('index.html')
+
+@app.route('/calendar')      
+def calendar():
+    return render_template('/pages/calendar.html')
 
 # 🔥 Mapeamento de Erros para a pasta maintenance
 @app.errorhandler(400)
