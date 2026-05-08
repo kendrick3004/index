@@ -16,7 +16,7 @@
     
     const iconDefault = document.createElement("link");
     iconDefault.rel = "icon";
-    iconDefault.href = basePath + "database/assets/dev/favicon/Favicon.png";
+    iconDefault.href = basePath + "assets/dev/favicon/Favicon.png";
     iconDefault.type = "image/png";
     document.head.appendChild(iconDefault);
 
@@ -24,20 +24,20 @@
     icon32.rel = "icon";
     icon32.type = "image/png";
     icon32.sizes = "32x32";
-    icon32.href = basePath + "database/assets/dev/favicon/Favicon.png";
+    icon32.href = basePath + "assets/dev/favicon/Favicon.png";
     document.head.appendChild(icon32);
 
     const icon16 = document.createElement("link");
     icon16.rel = "icon";
     icon16.type = "image/png";
     icon16.sizes = "16x16";
-    icon16.href = basePath + "database/assets/dev/favicon/Favicon.png";
+    icon16.href = basePath + "assets/dev/favicon/Favicon.png";
     document.head.appendChild(icon16);
 
     const appleIcon = document.createElement("link");
     appleIcon.rel = "apple-touch-icon";
     appleIcon.sizes = "180x180";
-    appleIcon.href = basePath + "database/assets/dev/favicon/Favicon.png";
+    appleIcon.href = basePath + "assets/dev/favicon/Favicon.png";
     document.head.appendChild(appleIcon);
 
     // ========================================

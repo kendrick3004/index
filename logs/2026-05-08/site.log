@@ -1,0 +1,299 @@
+
+🚀 Servidor ONLINE na porta 5000
+📊 Visitas Total: 0 | Hoje: 0 * Serving Flask app 'main'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://169.254.0.21:5000
+[33mPress CTRL+C to quit[0m
+📊 Visitas Total: 1 | Hoje: 110.138.117.1 - - [08/May/2026 11:52:57] "HEAD / HTTP/1.1" 200 -
+📊 Visitas Total: 2 | Hoje: 210.138.117.1 - - [08/May/2026 11:52:57] "GET / HTTP/1.1" 200 -
+📊 Visitas Total: 3 | Hoje: 310.138.117.1 - - [08/May/2026 11:52:57] "GET / HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:52:57] "GET /src/styles/fonts-manager.css HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:52:57] "GET /src/js/main/factory.js HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:52:57] "GET /pages/suite/suite.css HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:52:57] "GET /src/js/main/env-loader.js HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:52:57] "GET /pages/suite/weather/weather.css HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:52:57] "GET /src/styles/modes.css HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:52:57] "GET /src/app/update.css HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:52:57] "GET /src/app/update.js HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:52:57] "GET /assets/dev/avatar/avatar.jpg HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:52:57] "GET /src/js/main/rate-limiter.js HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:52:57] "GET /src/js/main/firebase-config.js HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:52:58] "GET /src/js/main/firebase-sync.js HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:52:58] "GET /pages/suite/santo-do-dia.js HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:52:58] "GET /pages/suite/suite.js HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:52:58] "GET /pages/suite/weather/weather.js HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:52:58] "GET /pages/suite/liturgy.js HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:52:58] "GET /src/js/main/colors.js HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:52:58] "GET /assets/dev/templates/light_mode.jpg HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:52:58] "GET /database/assets/dev/DATA/calendario.json HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:52:58] "GET /assets/dev/templates/dark_mode.jpg HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:52:58] "GET /assets/dev/icons/diversos/WEATHER/sun%20clouds-1.svg HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:52:58] "GET /assets/dev/TEMPLATES_WEATHER/Weather=Cloudy,%20Moment=Day.svg HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:52:58] "GET /assets/dev/favicon/Favicon.png HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:52:58] "GET /assets/dev/favicon/Favicon.ico HTTP/1.1" 200 -
+📊 Visitas Total: 4 | Hoje: 410.138.117.1 - - [08/May/2026 11:53:00] "GET / HTTP/1.1" 200 -
+📊 Visitas Total: 5 | Hoje: 510.138.117.1 - - [08/May/2026 11:53:00] "GET / HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:53:00] "GET /src/js/main/factory.js HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:53:00] "GET /src/js/main/env-loader.js HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:53:00] "[36mGET /src/js/main/env-loader.js HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:53:00] "GET /src/styles/modes.css HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:53:00] "GET /pages/suite/suite.css HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:53:00] "[36mGET /src/js/main/factory.js HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:53:00] "GET /src/app/update.js HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:53:00] "GET /pages/suite/weather/weather.css HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:53:00] "GET /assets/dev/avatar/avatar.jpg HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:53:00] "GET /src/styles/fonts-manager.css HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:53:00] "GET /src/js/main/rate-limiter.js HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:53:00] "GET /src/app/update.css HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:53:00] "[36mGET /src/styles/modes.css HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:53:00] "[36mGET /pages/suite/suite.css HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:53:00] "[36mGET /src/styles/fonts-manager.css HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:53:00] "GET /pages/suite/santo-do-dia.js HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:53:00] "GET /src/js/main/firebase-config.js HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:53:00] "GET /src/js/main/firebase-sync.js HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:53:00] "GET /pages/suite/suite.js HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:53:00] "GET /src/js/main/colors.js HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:53:00] "GET /pages/suite/weather/weather.js HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:53:00] "GET /pages/suite/liturgy.js HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:53:00] "GET /assets/dev/templates/light_mode.jpg HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:53:01] "[36mGET /src/app/update.js HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:53:01] "[36mGET /assets/dev/avatar/avatar.jpg HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:53:01] "[36mGET /src/app/update.css HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:53:01] "[36mGET /src/js/main/rate-limiter.js HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:53:01] "[36mGET /pages/suite/weather/weather.css HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:53:01] "[36mGET /src/js/main/firebase-sync.js HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:53:01] "[36mGET /src/js/main/firebase-config.js HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:53:01] "[36mGET /pages/suite/weather/weather.js HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:53:01] "[36mGET /pages/suite/suite.js HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:53:01] "[36mGET /src/js/main/colors.js HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:53:01] "[36mGET /pages/suite/santo-do-dia.js HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:53:01] "[36mGET /pages/suite/liturgy.js HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:53:01] "GET /database/assets/dev/DATA/calendario.json HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:53:01] "[36mGET /assets/dev/templates/light_mode.jpg HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:53:01] "GET /assets/dev/templates/dark_mode.jpg HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:53:01] "[36mGET /database/assets/dev/DATA/calendario.json HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:53:01] "[36mGET /assets/dev/templates/dark_mode.jpg HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:53:01] "GET /assets/dev/icons/diversos/WEATHER/sun%20clouds-1.svg HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:53:01] "GET /assets/dev/TEMPLATES_WEATHER/Weather=Cloudy,%20Moment=Day.svg HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:53:01] "[36mGET /assets/dev/icons/diversos/WEATHER/sun%20clouds-1.svg HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:53:02] "[36mGET /assets/dev/TEMPLATES_WEATHER/Weather=Cloudy,%20Moment=Day.svg HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:53:02] "GET /assets/dev/favicon/Favicon.png HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:53:02] "[36mGET /assets/dev/favicon/Favicon.png HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:53:02] "GET /assets/dev/favicon/Favicon.ico HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:53:02] "[36mGET /assets/dev/favicon/Favicon.ico HTTP/1.1[0m" 304 -
+📊 Visitas Total: 6 | Hoje: 610.138.117.1 - - [08/May/2026 11:53:02] "GET /database/index.html HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:53:02] "GET /database/app.js HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:53:02] "[36mGET /src/js/main/rate-limiter.js HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:53:02] "GET /database/styles.css HTTP/1.1" 200 -
+📊 Visitas Total: 7 | Hoje: 710.138.117.1 - - [08/May/2026 11:53:03] "GET /file_structure.json HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:53:03] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+10.138.117.1 - - [08/May/2026 11:53:06] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+10.138.117.1 - - [08/May/2026 11:53:07] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+10.138.117.1 - - [08/May/2026 11:53:07] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+10.138.117.1 - - [08/May/2026 11:53:08] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+10.138.117.1 - - [08/May/2026 11:53:08] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+10.138.117.1 - - [08/May/2026 11:53:08] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+10.138.117.1 - - [08/May/2026 11:53:09] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+10.138.117.1 - - [08/May/2026 11:53:09] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+10.138.117.1 - - [08/May/2026 11:53:09] "[36mGET /assets/dev/favicon/Favicon.png HTTP/1.1[0m" 304 -
+📊 Visitas Total: 8 | Hoje: 810.138.117.1 - - [08/May/2026 11:53:10] "[36mGET /database/index.html HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:53:10] "[36mGET /database/styles.css HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:53:10] "[36mGET /database/app.js HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:53:10] "[36mGET /src/js/main/rate-limiter.js HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:53:10] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+📊 Visitas Total: 9 | Hoje: 910.138.117.1 - - [08/May/2026 11:53:10] "[36mGET /file_structure.json HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:53:18] "[36mGET /assets/dev/favicon/Favicon.png HTTP/1.1[0m" 304 -
+📊 Visitas Total: 10 | Hoje: 1010.138.117.1 - - [08/May/2026 11:53:20] "[36mGET /database/index.html HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:53:20] "[36mGET /database/styles.css HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:53:20] "[36mGET /database/app.js HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:53:20] "[36mGET /src/js/main/rate-limiter.js HTTP/1.1[0m" 304 -
+📊 Visitas Total: 11 | Hoje: 1110.138.117.1 - - [08/May/2026 11:53:20] "[36mGET /file_structure.json HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:53:20] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+📊 Visitas Total: 12 | Hoje: 1210.138.117.1 - - [08/May/2026 11:53:48] "HEAD / HTTP/1.1" 200 -
+📊 Visitas Total: 13 | Hoje: 1310.138.117.1 - - [08/May/2026 11:53:48] "GET / HTTP/1.1" 200 -
+📊 Visitas Total: 14 | Hoje: 1410.138.117.1 - - [08/May/2026 11:53:48] "GET / HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:53:48] "GET /src/js/main/env-loader.js HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:53:48] "GET /src/js/main/factory.js HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:53:48] "GET /src/styles/modes.css HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:53:48] "GET /src/styles/fonts-manager.css HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:53:48] "GET /pages/suite/suite.css HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:53:48] "GET /pages/suite/weather/weather.css HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:53:48] "GET /src/app/update.css HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:53:48] "GET /src/app/update.js HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:53:48] "GET /src/js/main/rate-limiter.js HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:53:48] "GET /assets/dev/avatar/avatar.jpg HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:53:48] "GET /src/js/main/firebase-config.js HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:53:48] "GET /src/js/main/firebase-sync.js HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:53:48] "GET /pages/suite/suite.js HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:53:48] "GET /pages/suite/santo-do-dia.js HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:53:48] "GET /pages/suite/weather/weather.js HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:53:48] "GET /pages/suite/liturgy.js HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:53:48] "GET /assets/dev/templates/light_mode.jpg HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:53:48] "GET /src/js/main/colors.js HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:53:48] "GET /assets/dev/templates/dark_mode.jpg HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:53:48] "GET /database/assets/dev/DATA/calendario.json HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:53:48] "GET /assets/dev/icons/diversos/WEATHER/sun%20clouds-1.svg HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:53:48] "GET /assets/dev/TEMPLATES_WEATHER/Weather=Cloudy,%20Moment=Day.svg HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:53:49] "GET /assets/dev/favicon/Favicon.png HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:53:49] "GET /assets/dev/favicon/Favicon.ico HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:54:24] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+10.138.117.1 - - [08/May/2026 11:54:53] "GET /assets/skills/02_Modelagem_Relacional_Entidades_Atributos_e_Relacionamentos.md HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:54:58] "GET /assets/skills/01_Introducao_e_Conceitos.md HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:54:58] "GET /assets/skills/01_Introducao_e_Conceitos.md HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:54:58] "GET /assets/skills/02_Modelagem_Relacional_Entidades_Atributos_e_Relacionamentos.md HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:54:58] "GET /assets/skills/01_Database_Introducao_e_Sistemas_Gerenciadores_SGBD.md HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:55:02] "GET /assets/skills/02_Modelagem_Relacional_Entidades_Atributos_e_Relacionamentos.md HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:55:02] "GET /assets/skills/01_Introducao_e_Conceitos.md HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:55:02] "GET /assets/skills/01_Database_Introducao_e_Sistemas_Gerenciadores_SGBD.md HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:55:02] "GET /assets/skills/02_Service_Workers_e_Cache.md HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:55:07] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+10.138.117.1 - - [08/May/2026 11:55:14] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+10.138.117.1 - - [08/May/2026 11:55:17] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+10.138.117.1 - - [08/May/2026 11:55:17] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+10.138.117.1 - - [08/May/2026 11:55:18] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+10.138.117.1 - - [08/May/2026 11:55:23] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+10.138.117.1 - - [08/May/2026 11:55:23] "[36mGET /assets/dev/TEMPLATES_WEATHER/Weather=Cloudy,%20Moment=Day.svg HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:55:23] "GET /assets/dev/TEMPLATES_WEATHER/Weather=Clear,%20Moment=Day.svg HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:55:23] "GET /assets/dev/TEMPLATES_WEATHER/Weather=Storm,%20Moment=Night.svg HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:55:23] "GET /assets/dev/TEMPLATES_WEATHER/Weather=Clear,%20Moment=Night.svg HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:55:23] "GET /assets/dev/TEMPLATES_WEATHER/Weather=Rain,%20Moment=Day.svg HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:55:23] "GET /assets/dev/TEMPLATES_WEATHER/Weather=Few%20Clouds,%20Moment=Night.svg HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:55:23] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+10.138.117.1 - - [08/May/2026 11:55:23] "GET /assets/dev/TEMPLATES_WEATHER/Weather=Rain,%20Moment=Night.svg HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:55:23] "GET /assets/dev/TEMPLATES_WEATHER/Weather=Few%20Clouds,%20Moment=Day.svg HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:55:23] "GET /assets/dev/TEMPLATES_WEATHER/Weather=Storm,%20Moment=Day.svg HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:55:23] "GET /assets/dev/TEMPLATES_WEATHER/Weather=Cloudy,%20Moment=Night.svg HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:55:25] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+10.138.117.1 - - [08/May/2026 11:55:27] "[36mGET /assets/dev/favicon/Favicon.png HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:55:27] "GET /assets/dev/favicon/icon-192-maskable.png HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:55:27] "GET /assets/dev/favicon/icon-512.png HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:55:27] "GET /assets/dev/favicon/Favicon_R.png HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:55:27] "GET /assets/dev/favicon/icon-192.png HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:55:27] "GET /assets/dev/favicon/icon-512-maskable.png HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:55:27] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+10.138.117.1 - - [08/May/2026 11:55:27] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+10.138.117.1 - - [08/May/2026 11:55:28] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+10.138.117.1 - - [08/May/2026 11:55:28] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+10.138.117.1 - - [08/May/2026 11:55:29] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+10.138.117.1 - - [08/May/2026 11:56:12] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+10.138.117.1 - - [08/May/2026 11:56:13] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+10.138.117.1 - - [08/May/2026 11:56:13] "[36mGET /assets/dev/TEMPLATES_WEATHER/Weather=Storm,%20Moment=Night.svg HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:56:13] "[36mGET /assets/dev/TEMPLATES_WEATHER/Weather=Clear,%20Moment=Day.svg HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:56:13] "[36mGET /assets/dev/TEMPLATES_WEATHER/Weather=Cloudy,%20Moment=Night.svg HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:56:13] "[36mGET /assets/dev/TEMPLATES_WEATHER/Weather=Rain,%20Moment=Night.svg HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:56:13] "[36mGET /assets/dev/TEMPLATES_WEATHER/Weather=Storm,%20Moment=Day.svg HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:56:13] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+10.138.117.1 - - [08/May/2026 11:56:13] "[36mGET /assets/dev/TEMPLATES_WEATHER/Weather=Few%20Clouds,%20Moment=Night.svg HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:56:13] "[36mGET /assets/dev/TEMPLATES_WEATHER/Weather=Rain,%20Moment=Day.svg HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:56:13] "[36mGET /assets/dev/TEMPLATES_WEATHER/Weather=Few%20Clouds,%20Moment=Day.svg HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:56:14] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+10.138.117.1 - - [08/May/2026 11:56:14] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+10.138.117.1 - - [08/May/2026 11:56:15] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+10.138.117.1 - - [08/May/2026 11:56:15] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+10.138.117.1 - - [08/May/2026 11:56:16] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+10.138.117.1 - - [08/May/2026 11:56:18] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+10.138.117.1 - - [08/May/2026 11:56:19] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+10.138.117.1 - - [08/May/2026 11:56:20] "[36mGET /assets/dev/favicon/Favicon.png HTTP/1.1[0m" 304 -
+📊 Visitas Total: 15 | Hoje: 1510.138.117.1 - - [08/May/2026 11:56:21] "[33mGET /pages/calendar HTTP/1.1[0m" 404 -
+10.138.117.1 - - [08/May/2026 11:56:21] "[33mGET /pages/config.js HTTP/1.1[0m" 404 -
+10.138.117.1 - - [08/May/2026 11:56:21] "[33mGET /pages/suite.css HTTP/1.1[0m" 404 -
+10.138.117.1 - - [08/May/2026 11:56:21] "[33mGET /pages/rate-limiter.js HTTP/1.1[0m" 404 -
+10.138.117.1 - - [08/May/2026 11:56:21] "[33mGET /pages/error-pages.css HTTP/1.1[0m" 404 -
+10.138.117.1 - - [08/May/2026 11:56:21] "[33mGET /pages/factory.js HTTP/1.1[0m" 404 -
+10.138.117.1 - - [08/May/2026 11:56:21] "[33mGET /pages/background.jpg HTTP/1.1[0m" 404 -
+10.138.117.1 - - [08/May/2026 11:56:21] "[35m[1mGET /pages/favicon.png HTTP/1.1[0m" 204 -
+📊 Visitas Total: 16 | Hoje: 1610.138.117.1 - - [08/May/2026 11:56:22] "GET / HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:56:22] "[36mGET /src/js/main/env-loader.js HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:56:22] "[36mGET /pages/suite/suite.css HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:56:22] "[36mGET /src/js/main/factory.js HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:56:22] "[36mGET /pages/suite/weather/weather.css HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:56:23] "[36mGET /src/js/main/rate-limiter.js HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:56:23] "[36mGET /src/styles/modes.css HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:56:23] "[36mGET /src/styles/fonts-manager.css HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:56:23] "[36mGET /src/app/update.css HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:56:23] "[36mGET /src/app/update.js HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:56:23] "[36mGET /assets/dev/avatar/avatar.jpg HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:56:23] "[36mGET /src/js/main/firebase-config.js HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:56:23] "[36mGET /pages/suite/liturgy.js HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:56:23] "[36mGET /src/js/main/firebase-sync.js HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:56:23] "[36mGET /pages/suite/weather/weather.js HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:56:23] "[36mGET /src/js/main/colors.js HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:56:23] "[36mGET /assets/dev/templates/light_mode.jpg HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:56:23] "[36mGET /pages/suite/suite.js HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:56:23] "[36mGET /pages/suite/santo-do-dia.js HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:56:23] "[36mGET /assets/dev/icons/diversos/WEATHER/sun%20clouds-1.svg HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:56:23] "[36mGET /assets/dev/templates/dark_mode.jpg HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:56:23] "[36mGET /database/assets/dev/DATA/calendario.json HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:56:23] "[36mGET /assets/dev/TEMPLATES_WEATHER/Weather=Cloudy,%20Moment=Day.svg HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:56:23] "[36mGET /assets/dev/favicon/Favicon.png HTTP/1.1[0m" 304 -
+📊 Visitas Total: 17 | Hoje: 1710.138.117.1 - - [08/May/2026 11:56:24] "[33mGET /pages/calendar HTTP/1.1[0m" 404 -
+10.138.117.1 - - [08/May/2026 11:56:24] "[33mGET /pages/rate-limiter.js HTTP/1.1[0m" 404 -
+10.138.117.1 - - [08/May/2026 11:56:24] "[33mGET /pages/factory.js HTTP/1.1[0m" 404 -
+10.138.117.1 - - [08/May/2026 11:56:24] "[33mGET /pages/suite.css HTTP/1.1[0m" 404 -
+10.138.117.1 - - [08/May/2026 11:56:24] "[33mGET /pages/config.js HTTP/1.1[0m" 404 -
+10.138.117.1 - - [08/May/2026 11:56:24] "[33mGET /pages/error-pages.css HTTP/1.1[0m" 404 -
+10.138.117.1 - - [08/May/2026 11:56:24] "[33mGET /pages/background.jpg HTTP/1.1[0m" 404 -
+10.138.117.1 - - [08/May/2026 11:56:24] "[35m[1mGET /pages/favicon.png HTTP/1.1[0m" 204 -
+📊 Visitas Total: 18 | Hoje: 1810.138.117.1 - - [08/May/2026 11:57:00] "GET / HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:57:00] "[36mGET /src/js/main/env-loader.js HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:57:00] "[36mGET /src/styles/modes.css HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:57:00] "[36mGET /src/styles/fonts-manager.css HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:57:00] "[36mGET /pages/suite/weather/weather.css HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:57:00] "[36mGET /pages/suite/suite.css HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:57:00] "[36mGET /src/js/main/factory.js HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:57:00] "[36mGET /src/app/update.css HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:57:00] "[36mGET /assets/dev/avatar/avatar.jpg HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:57:00] "[36mGET /src/app/update.js HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:57:00] "[36mGET /src/js/main/rate-limiter.js HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:57:00] "[36mGET /src/js/main/firebase-config.js HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:57:00] "[36mGET /pages/suite/weather/weather.js HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:57:00] "[36mGET /src/js/main/firebase-sync.js HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:57:00] "[36mGET /pages/suite/liturgy.js HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:57:00] "[36mGET /src/js/main/colors.js HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:57:00] "[36mGET /pages/suite/suite.js HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:57:00] "[36mGET /pages/suite/santo-do-dia.js HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:57:00] "[36mGET /assets/dev/templates/light_mode.jpg HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:57:00] "[36mGET /database/assets/dev/DATA/calendario.json HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:57:00] "[36mGET /assets/dev/templates/dark_mode.jpg HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:57:00] "[36mGET /assets/dev/TEMPLATES_WEATHER/Weather=Cloudy,%20Moment=Day.svg HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:57:00] "[36mGET /assets/dev/icons/diversos/WEATHER/sun%20clouds-1.svg HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:57:00] "[36mGET /assets/dev/favicon/Favicon.png HTTP/1.1[0m" 304 -
+📊 Visitas Total: 19 | Hoje: 1910.138.117.1 - - [08/May/2026 11:57:07] "[33mGET /34 HTTP/1.1[0m" 404 -
+10.138.117.1 - - [08/May/2026 11:57:07] "[33mGET /rate-limiter.js HTTP/1.1[0m" 404 -
+10.138.117.1 - - [08/May/2026 11:57:07] "[33mGET /factory.js HTTP/1.1[0m" 404 -
+10.138.117.1 - - [08/May/2026 11:57:07] "[33mGET /error-pages.css HTTP/1.1[0m" 404 -
+10.138.117.1 - - [08/May/2026 11:57:07] "[33mGET /config.js HTTP/1.1[0m" 404 -
+10.138.117.1 - - [08/May/2026 11:57:07] "[33mGET /suite.css HTTP/1.1[0m" 404 -
+10.138.117.1 - - [08/May/2026 11:57:07] "[33mGET /background.jpg HTTP/1.1[0m" 404 -
+10.138.117.1 - - [08/May/2026 11:57:07] "[35m[1mGET /favicon.png HTTP/1.1[0m" 204 -
+📊 Visitas Total: 20 | Hoje: 2010.138.117.1 - - [08/May/2026 11:57:40] "GET / HTTP/1.1" 200 -
+10.138.117.1 - - [08/May/2026 11:57:41] "[36mGET /src/styles/fonts-manager.css HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:57:41] "[36mGET /src/js/main/factory.js HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:57:41] "[36mGET /src/js/main/rate-limiter.js HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:57:41] "[36mGET /src/app/update.js HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:57:41] "[36mGET /pages/suite/weather/weather.css HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:57:41] "[36mGET /src/js/main/env-loader.js HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:57:41] "[36mGET /assets/dev/avatar/avatar.jpg HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:57:41] "[36mGET /src/app/update.css HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:57:41] "[36mGET /pages/suite/suite.css HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:57:41] "[36mGET /src/styles/modes.css HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:57:41] "[36mGET /src/js/main/firebase-config.js HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:57:41] "[36mGET /src/js/main/firebase-sync.js HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:57:41] "[36mGET /pages/suite/suite.js HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:57:41] "[36mGET /assets/dev/templates/light_mode.jpg HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:57:41] "[36mGET /src/js/main/colors.js HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:57:41] "[36mGET /pages/suite/santo-do-dia.js HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:57:41] "[36mGET /pages/suite/weather/weather.js HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:57:41] "[36mGET /pages/suite/liturgy.js HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:57:41] "[36mGET /database/assets/dev/DATA/calendario.json HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:57:41] "[36mGET /assets/dev/icons/diversos/WEATHER/sun%20clouds-1.svg HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:57:41] "[36mGET /assets/dev/templates/dark_mode.jpg HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:57:41] "[36mGET /assets/dev/TEMPLATES_WEATHER/Weather=Cloudy,%20Moment=Day.svg HTTP/1.1[0m" 304 -
+10.138.117.1 - - [08/May/2026 11:57:41] "[36mGET /assets/dev/favicon/Favicon.png HTTP/1.1[0m" 304 -
+📊 Visitas Total: 21 | Hoje: 2110.138.117.1 - - [08/May/2026 11:59:50] "[33mGET /pages/calendar HTTP/1.1[0m" 404 -
+10.138.117.1 - - [08/May/2026 11:59:51] "[33mGET /maintenance/background.jpg HTTP/1.1[0m" 404 -
+10.138.117.1 - - [08/May/2026 11:59:51] "[33mGET /maintenance/error-pages.css HTTP/1.1[0m" 404 -
+10.138.117.1 - - [08/May/2026 11:59:51] "[36mGET /assets/dev/favicon/Favicon.png HTTP/1.1[0m" 304 -

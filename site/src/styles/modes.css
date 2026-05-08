@@ -36,7 +36,7 @@ body {
    Aplicado quando o body NÃO possui a classe .dark-mode.
    ============================================================ */
 body:not(.dark-mode) {
-    background-image: url("../../database/assets/dev/templates/light_mode.jpg");
+    background-image: url("/assets/dev/templates/light_mode.jpg");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -48,7 +48,7 @@ body:not(.dark-mode) {
    Aplicado quando o body possui a classe .dark-mode.
    ============================================================ */
 body.dark-mode {
-    background-image: url("../../database/assets/dev/templates/dark_mode.jpg");
+    background-image: url("/assets/dev/templates/dark_mode.jpg");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -77,11 +77,11 @@ body.dark-mode {
     }
     
     body:not(.dark-mode) {
-        background-image: url("../../database/assets/dev/templates/light_mode.jpg") !important;
+        background-image: url("/assets/dev/templates/light_mode.jpg") !important;
     }
     
     body.dark-mode {
-        background-image: url("../../database/assets/dev/templates/dark_mode.jpg") !important;
+        background-image: url("/assets/dev/templates/dark_mode.jpg") !important;
     }
 }
 
@@ -94,11 +94,11 @@ body.dark-mode {
     }
     
     body:not(.dark-mode) {
-        background-image: url("../../database/assets/dev/templates/light_mode.jpg") !important;
+        background-image: url("/assets/dev/templates/light_mode.jpg") !important;
     }
     
     body.dark-mode {
-        background-image: url("../../database/assets/dev/templates/dark_mode.jpg") !important;
+        background-image: url("/assets/dev/templates/dark_mode.jpg") !important;
     }
 }
 
@@ -111,19 +111,19 @@ body.dark-mode {
     }
     
     body:not(.dark-mode) {
-        background-image: url("../../database/assets/dev/templates/light_mode.jpg") !important;
+        background-image: url("/assets/dev/templates/light_mode.jpg") !important;
     }
     
     body.dark-mode {
-        background-image: url("../../database/assets/dev/templates/dark_mode.jpg") !important;
+        background-image: url("/assets/dev/templates/dark_mode.jpg") !important;
     }
 }
 
 /* Correção para navegadores mobile que ignoram background-image se background-color for definido depois */
 body.dark-mode {
-    background-image: url("../../database/assets/dev/templates/dark_mode.jpg") !important;
+    background-image: url("/assets/dev/templates/dark_mode.jpg") !important;
 }
 
 body:not(.dark-mode) {
-    background-image: url("../../database/assets/dev/templates/light_mode.jpg") !important;
+    background-image: url("/assets/dev/templates/light_mode.jpg") !important;
 }

@@ -16,6 +16,7 @@ const elements = {
     selectAllBtn: document.getElementById("select-all"),
     clearSelectionBtn: document.getElementById("clear-selection"),
     downloadSelectedBtn: document.getElementById("download-selected"),
+    shareSelectedBtn: document.getElementById("share-selected"),
     selectionInfo: document.getElementById("selection-info"),
     selectionCount: document.getElementById("selection-count"),
     selectionSize: document.getElementById("selection-size"),
@@ -44,6 +45,7 @@ function initializeEventListeners() {
     if (elements.selectAllBtn) elements.selectAllBtn.addEventListener("click", selectAll);
     if (elements.clearSelectionBtn) elements.clearSelectionBtn.addEventListener("click", clearSelection);
     if (elements.downloadSelectedBtn) elements.downloadSelectedBtn.addEventListener("click", downloadSelected);
+    if (elements.shareSelectedBtn) elements.shareSelectedBtn.addEventListener("click", shareSelected);
     if (elements.closePreview) elements.closePreview.addEventListener("click", closePreview);
 
     if (elements.previewModal) {
@@ -60,7 +62,7 @@ function getPathFromUrl() {
 
 async function loadAndRenderFileStructure() {
     try {
-        const response = await fetch("file_structure.json");
+        const response = await fetch("/file_structure.json");
         if (!response.ok) throw new Error("Erro ao carregar file_structure.json");
         
         fileStructure = await response.json();
@@ -351,9 +353,11 @@ function updateSelectionInfo() {
         elements.selectionInfo.style.display = "flex";
         elements.selectionCount.textContent = `${selectedFiles.length} item(s)`;
         elements.downloadSelectedBtn.style.display = "inline-block";
+        if (elements.shareSelectedBtn) elements.shareSelectedBtn.style.display = "inline-block";
     } else {
         elements.selectionInfo.style.display = "none";
         elements.downloadSelectedBtn.style.display = "none";
+        if (elements.shareSelectedBtn) elements.shareSelectedBtn.style.display = "none";
     }
 }
 
@@ -368,18 +372,56 @@ function formatFileSize(bytes) {
     return (bytes / Math.pow(1024, i)).toFixed(2) + " " + ["Bytes", "KB", "MB", "GB"][i];
 }
 
-function openPreview(file) {
+async function openPreview(file) {
     elements.previewTitle.textContent = file.name;
     elements.previewContent.innerHTML = ""; // Limpa conteúdo anterior
     
     if (file.type === "image") {
         const img = document.createElement("img");
-        img.src = file.path;
+        img.src = "/" + file.path;
         img.style.maxWidth = "100%";
         img.style.maxHeight = "70vh";
         img.style.display = "block";
         img.style.margin = "0 auto";
         elements.previewContent.appendChild(img);
+    } else if (file.extension === "md" || file.extension === "json") {
+        try {
+            const response = await fetch("/" + file.path);
+            if (!response.ok) throw new Error("Erro ao carregar arquivo");
+            const content = await response.text();
+            
+            const pre = document.createElement("pre");
+            pre.style.maxHeight = "70vh";
+            pre.style.overflowY = "auto";
+            pre.style.overflowX = "hidden";
+            pre.style.padding = "20px";
+            pre.style.backgroundColor = "rgba(0, 0, 0, 0.3)";
+            pre.style.borderRadius = "8px";
+            pre.style.fontSize = "12px";
+            pre.style.fontFamily = "monospace";
+            pre.style.color = "#e0e0e0";
+            pre.style.whiteSpace = "pre-wrap";
+            pre.style.wordWrap = "break-word";
+            pre.textContent = content.substring(0, 5000);
+            
+            if (content.length > 5000) {
+                const note = document.createElement("p");
+                note.style.fontSize = "12px";
+                note.style.color = "#999";
+                note.style.marginTop = "10px";
+                note.textContent = `(Mostrando primeiros 5000 caracteres de ${content.length})`;
+                elements.previewContent.appendChild(pre);
+                elements.previewContent.appendChild(note);
+            } else {
+                elements.previewContent.appendChild(pre);
+            }
+        } catch (error) {
+            const div = document.createElement("div");
+            div.style.textAlign = "center";
+            div.style.padding = "40px";
+            div.textContent = "Erro ao carregar o arquivo.";
+            elements.previewContent.appendChild(div);
+        }
     } else {
         const div = document.createElement("div");
         div.style.textAlign = "center";
@@ -390,7 +432,7 @@ function openPreview(file) {
         icon.textContent = "📄";
         
         const text = document.createElement("p");
-        text.textContent = "Sem pré-visualização.";
+        text.textContent = "Sem pré-visualização disponível.";
         
         div.appendChild(icon);
         div.appendChild(text);
@@ -403,4 +445,112 @@ function closePreview() {
     elements.previewModal.style.display = "none";
 }
 
-function downloadSelected() { alert("Download ZIP não disponível."); }
+async function downloadSelected() {
+    if (selectedFiles.length === 0) return;
+
+    const btn = elements.downloadSelectedBtn;
+    const originalText = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = "Preparando...";
+
+    try {
+        const filesToDownload = [];
+        
+        selectedFiles.forEach(id => {
+            const file = findFileById(id);
+            if (file && !file.isDirectory) {
+                filesToDownload.push(file);
+            }
+        });
+
+        if (filesToDownload.length === 0) {
+            alert("Nenhum arquivo válido para download selecionado.");
+            return;
+        }
+
+        if (filesToDownload.length <= 3) {
+            // Download individual para 3 ou menos arquivos
+            for (const file of filesToDownload) {
+                downloadFile("/" + file.path, file.name);
+            }
+        } else {
+            // Criar ZIP para mais de 3 arquivos
+            btn.textContent = "Criando ZIP...";
+            const zip = new JSZip();
+            
+            for (const file of filesToDownload) {
+                try {
+                    const response = await fetch("/" + file.path);
+                    const blob = await response.blob();
+                    zip.file(file.name, blob);
+                } catch (err) {
+                    console.error(`Erro ao baixar ${file.name}:`, err);
+                }
+            }
+            
+            const content = await zip.generateAsync({type:"blob"});
+            const zipName = `database_selection_${new Date().getTime()}.zip`;
+            const url = window.URL.createObjectURL(content);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = zipName;
+            document.body.appendChild(a);
+            a.click();
+            window.URL.revokeObjectURL(url);
+            document.body.removeChild(a);
+        }
+    } catch (error) {
+        console.error("Erro no download:", error);
+        alert("Ocorreu um erro ao processar o download.");
+    } finally {
+        btn.disabled = false;
+        btn.textContent = originalText;
+    }
+}
+
+function findFileById(id) {
+    for (const path in fileStructure) {
+        const entry = fileStructure[path];
+        const file = entry.files?.find(f => f.id === id);
+        if (file) return file;
+        const folder = entry.folders?.find(f => f.id === id);
+        if (folder) return { ...folder, isDirectory: true };
+    }
+    return null;
+}
+
+function downloadFile(url, name) {
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = name;
+    a.target = "_blank";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+}
+
+function shareSelected() {
+    if (selectedFiles.length === 0) {
+        alert("Selecione pelo menos um arquivo para compartilhar.");
+        return;
+    }
+    
+    // Cria uma URL com os IDs dos arquivos selecionados
+    const shareUrl = window.location.origin + window.location.pathname + "?share=" + selectedFiles.join(",");
+    
+    // Tenta usar a API de compartilhamento nativa do navegador
+    if (navigator.share) {
+        navigator.share({
+            title: "Compartilhamento de Arquivos",
+            text: `Compartilhando ${selectedFiles.length} arquivo(s) do Database",
+            url: shareUrl
+        }).catch(err => console.log("Erro ao compartilhar:", err));
+    } else {
+        // Fallback: copia a URL para a área de transferência
+        navigator.clipboard.writeText(shareUrl).then(() => {
+            alert("Link de compartilhamento copiado para a área de transferência!\n\n" + shareUrl);
+        }).catch(() => {
+            alert("Link de compartilhamento:\n\n" + shareUrl);
+        });
+    }
+}

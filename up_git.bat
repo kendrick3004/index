@@ -2,26 +2,20 @@
 cd /d %~dp0
 
 echo ============================================
-echo RESET DE ARQUIVOS - REENVIANDO MODIFICADOS
+echo Atualizacao de arquivos em andamento...
 echo ============================================
 
-:: Verifica se existe repo
-if not exist ".git" (
-    echo ERRO: Pasta nao e um repositorio Git.
-    pause
-    exit /b
-)
-
-:: Adiciona tudo novamente
 git add -A
 
-:: Commit forçado
-git commit -m "Rebuild completo dos arquivos"
-
-:: Envia pro GitHub
-git push
+git diff --cached --quiet
+IF %ERRORLEVEL%==0 (
+    echo Tudo atualizado e na ultima versao.
+) ELSE (
+    git commit -m "Auto update"
+    git push
+)
 
 echo ============================================
-echo FINALIZADO - ARQUIVOS LIMPOS E ATUALIZADOS
+echo FINALIZADO - Atualizacao de arquivos concluida.
 echo ============================================
 pause

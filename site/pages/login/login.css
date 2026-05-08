@@ -27,7 +27,7 @@ body {
     
     /* Configuração do fundo com imagem e overlay escuro (Caminho Corrigido) */
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-                url('../../database/assets/dev/templates/dark_mode.jpg');
+                url('/assets/dev/templates/dark_mode.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

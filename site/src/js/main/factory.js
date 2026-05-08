@@ -10,11 +10,11 @@ const SiteFactory = (function() {
 
     const CONFIG = {
         title: "Suite",
-        description: "Dashboard pessoal com informações de clima, calendário litúrgico e links úteis.",
+        description: "Dashboard pessoal com informações de clima, calendário lituárgico e links úteis.",
         author: "Kendrick Nicoleti",
         keywords: "Suite, Dashboard, Clima, Santo do Dia, Produtividade",
         themeColor: "#000000",
-        favicon: "/database/assets/dev/favicon/Favicon.png"
+        favicon: "/assets/dev/favicon/Favicon.png"
     };
 
     function injectMetadata() {

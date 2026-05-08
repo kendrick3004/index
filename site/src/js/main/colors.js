@@ -9,7 +9,7 @@ const ColorSystem = (function() {
     'use strict';
 
     // Caminho base atualizado para a nova estrutura
-    const BASE_PATH = 'database/assets/dev/dev/colors/';
+    const BASE_PATH = '/assets/dev/colors/';}
 
     /**
      * Converte HEX para o nome do arquivo de segmento (baseado no canal Red).
