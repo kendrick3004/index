@@ -108,7 +108,7 @@ def generate_structure(target_dir, project_root, is_database=False):
 
         for f in files:
             # Ignora o próprio script e o arquivo de saída se estiverem na pasta sendo escaneada
-            if f in ["generate_assets_structure.py", "file_structure.json"]:
+            if f in ["generate_assets_structure.py", "philistudies.json"]:
                 continue
                 
             file_path = os.path.join(root, f)
@@ -122,16 +122,16 @@ def generate_structure(target_dir, project_root, is_database=False):
 
 
 if __name__ == "__main__":
-    # O script agora está em site/database/
+    # O script agora está em /database/ na raiz
     current_script_dir = os.path.dirname(os.path.abspath(__file__))
-    site_dir = os.path.abspath(os.path.join(current_script_dir, ".."))
-    project_root = os.path.abspath(os.path.join(site_dir, ".."))
+    project_root = os.path.abspath(os.path.join(current_script_dir, ".."))
+    site_dir = os.path.join(project_root, "site")
     
     # Caminhos para escanear
     assets_path = os.path.join(site_dir, "assets")
-    database_path = os.path.join(project_root, "database")
+    database_path = current_script_dir # A própria pasta onde o script está (/database/)
     
-    # O arquivo philistudies.json (antigo file_structure.json) agora fica em site/database/
+    # O arquivo philistudies.json fica na mesma pasta do script (/database/)
     output_path = os.path.join(current_script_dir, "philistudies.json")
 
     start_time = time.time()

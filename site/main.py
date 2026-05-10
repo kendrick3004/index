@@ -110,12 +110,17 @@ def database():
 @app.route('/database/<path:filename>')
 def serve_database_files(filename):
     """Serve arquivos da pasta database na raiz do projeto e também arquivos estáticos do site/database"""
-    # Primeiro tenta servir da pasta 'site/database' (onde estão index.html, styles.css, app.js, philistudies.json)
+    # 1. Se for o arquivo philistudies.json, serve obrigatoriamente da pasta database na raiz
+    if filename == 'philistudies.json':
+        database_dir = os.path.join(BASE_DIR, 'database')
+        return send_from_directory(database_dir, filename)
+
+    # 2. Tenta servir da pasta 'site/database' (onde estão index.html, styles.css, app.js)
     site_database_dir = os.path.join(os.path.dirname(__file__), 'database')
     if os.path.exists(os.path.join(site_database_dir, filename)):
         return send_from_directory(site_database_dir, filename)
     
-    # Se não encontrar, serve da pasta 'database' na raiz do projeto
+    # 3. Se não encontrar, serve da pasta 'database' na raiz do projeto (files, etc)
     database_dir = os.path.join(BASE_DIR, 'database')
     return send_from_directory(database_dir, filename)
 
