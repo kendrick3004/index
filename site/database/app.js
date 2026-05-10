@@ -62,7 +62,7 @@ function getPathFromUrl() {
 
 async function loadAndRenderFileStructure() {
     try {
-        const response = await fetch("/file_structure.json?v=" + new Date().getTime());
+        const response = await fetch("/database/philistudies.json?v=" + new Date().getTime());
         if (!response.ok) throw new Error("Erro ao carregar file_structure.json");
         
         fileStructure = await response.json();

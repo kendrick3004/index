@@ -12,8 +12,7 @@ def get_file_info(path, project_root):
     try:
         stat = os.stat(path)
         # O rel_path será usado para download/preview no navegador.
-        # Como o Flask serve 'site' como root e também serve '/database' a partir da raiz do projeto,
-        # precisamos ajustar os caminhos.
+        # O Flask serve 'site' como root e também serve '/database' a partir da raiz do projeto.
         
         abs_path = os.path.abspath(path)
         site_dir = os.path.join(project_root, "site")
@@ -22,7 +21,7 @@ def get_file_info(path, project_root):
         if abs_path.startswith(site_dir):
             rel_path = os.path.relpath(abs_path, site_dir).replace("\\", "/")
         elif abs_path.startswith(database_dir):
-            # Para arquivos na pasta database, o caminho deve ser database/filename
+            # Para arquivos na pasta database na raiz, o caminho deve ser /database/filename
             rel_path = "database/" + os.path.relpath(abs_path, database_dir).replace("\\", "/")
         else:
             rel_path = os.path.relpath(abs_path, project_root).replace("\\", "/")
@@ -75,8 +74,11 @@ def generate_structure(target_dir, project_root, is_database=False):
         key_prefix = ""
 
     for root, dirs, files in os.walk(target_dir):
-        if "sets" in dirs:
-            dirs.remove("sets")
+        # Ignora pastas de cache e controle
+        if "__pycache__" in dirs:
+            dirs.remove("__pycache__")
+        if ".git" in dirs:
+            dirs.remove(".git")
 
         rel_from_target = os.path.relpath(root, target_dir).replace("\\", "/")
 
@@ -105,6 +107,10 @@ def generate_structure(target_dir, project_root, is_database=False):
                 pass
 
         for f in files:
+            # Ignora o próprio script e o arquivo de saída se estiverem na pasta sendo escaneada
+            if f in ["generate_assets_structure.py", "file_structure.json"]:
+                continue
+                
             file_path = os.path.join(root, f)
             file_info = get_file_info(file_path, project_root)
             if file_info:
@@ -116,12 +122,17 @@ def generate_structure(target_dir, project_root, is_database=False):
 
 
 if __name__ == "__main__":
-    site_dir = os.path.dirname(os.path.abspath(__file__))
+    # O script agora está em site/database/
+    current_script_dir = os.path.dirname(os.path.abspath(__file__))
+    site_dir = os.path.abspath(os.path.join(current_script_dir, ".."))
     project_root = os.path.abspath(os.path.join(site_dir, ".."))
     
+    # Caminhos para escanear
     assets_path = os.path.join(site_dir, "assets")
     database_path = os.path.join(project_root, "database")
-    output_path = os.path.join(site_dir, "file_structure.json")
+    
+    # O arquivo philistudies.json (antigo file_structure.json) agora fica em site/database/
+    output_path = os.path.join(current_script_dir, "philistudies.json")
 
     start_time = time.time()
 
@@ -133,7 +144,7 @@ if __name__ == "__main__":
             assets_structure = generate_structure(assets_path, project_root, is_database=False)
             structure.update(assets_structure)
         
-        # 2. Processa a pasta database na raiz
+        # 2. Processa a pasta database na raiz do projeto
         if os.path.isdir(database_path):
             database_structure = generate_structure(database_path, project_root, is_database=True)
             structure.update(database_structure)
@@ -141,7 +152,8 @@ if __name__ == "__main__":
         with open(output_path, "w", encoding="utf-8") as f:
             json.dump(structure, f, indent=4, ensure_ascii=False)
 
+        print(f"Estrutura gerada com sucesso em: {output_path}")
         sys.exit(0)
     except Exception as e:
-        print(f"Erro: {e}")
+        print(f"Erro ao gerar estrutura: {e}")
         sys.exit(1)
