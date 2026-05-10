@@ -62,14 +62,14 @@ function getPathFromUrl() {
 
 async function loadAndRenderFileStructure() {
     try {
-        const response = await fetch("/file_structure.json");
+        const response = await fetch("/file_structure.json?v=" + new Date().getTime());
         if (!response.ok) throw new Error("Erro ao carregar file_structure.json");
         
         fileStructure = await response.json();
         calculateFolderSizes();
         
-        // Define o caminho inicial baseado na URL ou 'root'
-        const initialPath = getPathFromUrl() || "root";
+        // Define o caminho inicial baseado na URL ou 'database_root' (dados do database)
+        const initialPath = getPathFromUrl() || "database_root";
         loadFilesFromPath(initialPath, false);
     } catch (error) {
         console.error("Erro:", error);
@@ -133,7 +133,7 @@ function loadFilesFromPath(path, pushState = true) {
 
     // Atualiza a URL sem recarregar a página
     if (pushState) {
-        const newUrl = path === "root" ? "/database" : `/database?path=${path}`;
+        const newUrl = path === "database_root" ? "/database" : `/database?path=${path}`;
         window.history.pushState({ path: path }, "", newUrl);
     }
 }
@@ -156,10 +156,10 @@ function updateBreadcrumb() {
     rootBtn.textContent = "database";
     rootBtn.style.cursor = "pointer";
     rootBtn.style.color = "#3b82f6";
-    rootBtn.onclick = () => loadFilesFromPath('root');
+    rootBtn.onclick = () => loadFilesFromPath('database_root');
     elements.breadcrumbPath.appendChild(rootBtn);
     
-    if (currentPath !== "root") {
+    if (currentPath !== "database_root") {
         const parts = currentPath.split("/");
         let pathBuild = "";
         parts.forEach(part => {

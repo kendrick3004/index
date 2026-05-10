@@ -1,0 +1,134 @@
+
+🚀 Servidor ONLINE na porta 5000
+📊 Visitas Total: 0 | Hoje: 0 * Serving Flask app 'main'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://169.254.0.21:5000
+[33mPress CTRL+C to quit[0m
+📊 Visitas Total: 1 | Hoje: 110.242.150.1 - - [09/May/2026 14:21:45] "HEAD / HTTP/1.1" 200 -
+📊 Visitas Total: 2 | Hoje: 210.242.150.1 - - [09/May/2026 14:21:45] "GET / HTTP/1.1" 200 -
+📊 Visitas Total: 3 | Hoje: 310.242.150.1 - - [09/May/2026 14:21:46] "GET / HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:21:46] "GET /src/js/main/env-loader.js HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:21:46] "GET /src/js/main/factory.js HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:21:46] "GET /pages/suite/suite.css HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:21:46] "GET /src/styles/modes.css HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:21:46] "GET /src/styles/fonts-manager.css HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:21:46] "GET /pages/suite/weather/weather.css HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:21:46] "GET /src/app/update.css HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:21:46] "GET /src/app/update.js HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:21:46] "GET /assets/dev/avatar/avatar.jpg HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:21:46] "GET /src/js/main/rate-limiter.js HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:21:46] "GET /src/js/main/firebase-config.js HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:21:46] "GET /src/js/main/firebase-sync.js HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:21:46] "GET /pages/suite/suite.js HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:21:46] "GET /pages/suite/santo-do-dia.js HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:21:46] "GET /pages/suite/weather/weather.js HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:21:46] "GET /pages/suite/liturgy.js HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:21:46] "GET /src/js/main/colors.js HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:21:46] "GET /assets/dev/templates/light_mode.jpg HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:21:46] "GET /database/assets/dev/DATA/calendario.json HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:21:46] "GET /assets/dev/templates/dark_mode.jpg HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:21:46] "GET /assets/dev/icons/diversos/WEATHER/sun%20rain.svg HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:21:46] "GET /assets/dev/TEMPLATES_WEATHER/Weather=Few%20Clouds,%20Moment=Day.svg HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:21:47] "GET /assets/dev/favicon/Favicon.png HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:21:47] "GET /assets/dev/favicon/Favicon.ico HTTP/1.1" 200 -
+📊 Visitas Total: 4 | Hoje: 410.242.150.1 - - [09/May/2026 14:22:07] "GET / HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:22:08] "GET /pages/suite/suite.css HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:22:08] "GET /src/js/main/env-loader.js HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:22:08] "GET /src/styles/modes.css HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:22:08] "GET /src/app/update.css HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:22:08] "GET /src/styles/fonts-manager.css HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:22:08] "GET /pages/suite/weather/weather.css HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:22:08] "GET /src/app/update.js HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:22:08] "GET /src/js/main/factory.js HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:22:08] "GET /assets/dev/avatar/avatar.jpg HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:22:08] "GET /src/js/main/rate-limiter.js HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:22:08] "GET /assets/dev/templates/light_mode.jpg HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:22:08] "GET /src/js/main/firebase-config.js HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:22:08] "GET /pages/suite/suite.js HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:22:08] "GET /src/js/main/firebase-sync.js HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:22:08] "GET /pages/suite/santo-do-dia.js HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:22:08] "GET /src/js/main/colors.js HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:22:08] "GET /pages/suite/liturgy.js HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:22:08] "GET /pages/suite/weather/weather.js HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:22:09] "GET /database/assets/dev/DATA/calendario.json HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:22:09] "GET /assets/dev/templates/dark_mode.jpg HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:22:10] "GET /assets/dev/icons/diversos/WEATHER/sun%20rain.svg HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:22:10] "GET /assets/dev/TEMPLATES_WEATHER/Weather=Few%20Clouds,%20Moment=Day.svg HTTP/1.1" 200 -
+📊 Visitas Total: 5 | Hoje: 510.242.150.1 - - [09/May/2026 14:22:11] "GET / HTTP/1.1" 200 -
+📊 Visitas Total: 6 | Hoje: 610.242.150.1 - - [09/May/2026 14:22:12] "GET / HTTP/1.1" 200 -
+📊 Visitas Total: 7 | Hoje: 710.242.150.1 - - [09/May/2026 14:22:12] "GET / HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:22:12] "GET /pages/suite/weather/weather.css HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:22:12] "GET /src/app/update.css HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:22:12] "GET /src/js/main/firebase-config.js HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:22:12] "GET /src/styles/fonts-manager.css HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:22:12] "GET /src/styles/modes.css HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:22:12] "GET /src/js/main/env-loader.js HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:22:12] "GET /src/app/update.css HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:22:12] "GET /src/js/main/rate-limiter.js HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:22:12] "GET /pages/suite/weather/weather.css HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:22:12] "GET /pages/suite/suite.css HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:22:12] "GET /src/styles/modes.css HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:22:12] "GET /src/js/main/firebase-sync.js HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:22:12] "GET /pages/suite/suite.js HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:22:12] "GET /src/js/main/factory.js HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:22:12] "GET /src/app/update.js HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:22:12] "GET /pages/suite/suite.css HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:22:12] "GET /pages/suite/santo-do-dia.js HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:22:12] "GET /src/styles/fonts-manager.css HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:22:12] "GET /pages/suite/weather/weather.js HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:22:12] "GET /pages/suite/liturgy.js HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:22:12] "GET /src/js/main/colors.js HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:22:12] "GET /database/assets/dev/DATA/calendario.json HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:22:15] "GET /assets/dev/favicon/Favicon.png HTTP/1.1" 200 -
+📊 Visitas Total: 8 | Hoje: 810.242.150.1 - - [09/May/2026 14:22:21] "GET /database HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:22:21] "[33mGET /styles.css HTTP/1.1[0m" 404 -
+10.242.150.1 - - [09/May/2026 14:22:21] "GET /database/app.js HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:22:21] "[36mGET /src/js/main/rate-limiter.js HTTP/1.1[0m" 304 -
+10.242.150.1 - - [09/May/2026 14:22:22] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+📊 Visitas Total: 9 | Hoje: 910.242.150.1 - - [09/May/2026 14:22:23] "GET /database HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:22:23] "[33mGET /styles.css HTTP/1.1[0m" 404 -
+10.242.150.1 - - [09/May/2026 14:22:23] "[36mGET /src/js/main/rate-limiter.js HTTP/1.1[0m" 304 -
+10.242.150.1 - - [09/May/2026 14:22:23] "[36mGET /database/app.js HTTP/1.1[0m" 304 -
+10.242.150.1 - - [09/May/2026 14:22:23] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+📊 Visitas Total: 10 | Hoje: 1010.242.150.1 - - [09/May/2026 14:23:30] "GET /database HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:23:30] "[33mGET /styles.css HTTP/1.1[0m" 404 -
+10.242.150.1 - - [09/May/2026 14:23:30] "GET /src/js/main/rate-limiter.js HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:23:30] "GET /database/app.js HTTP/1.1" 200 -
+
+🚀 Servidor ONLINE na porta 5000
+📊 Visitas Total: 0 | Hoje: 0 * Serving Flask app 'main'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://169.254.0.21:5000
+[33mPress CTRL+C to quit[0m
+📊 Visitas Total: 1 | Hoje: 110.242.150.1 - - [09/May/2026 14:25:27] "HEAD /database HTTP/1.1" 200 -
+📊 Visitas Total: 2 | Hoje: 210.242.150.1 - - [09/May/2026 14:25:27] "GET /database HTTP/1.1" 200 -
+📊 Visitas Total: 3 | Hoje: 310.242.150.1 - - [09/May/2026 14:25:28] "GET /database HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:25:28] "GET /database/styles.css?v=1.0.1 HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:25:28] "GET /src/js/main/rate-limiter.js HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:25:28] "GET /database/app.js?v=1.0.1 HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:25:28] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+📊 Visitas Total: 4 | Hoje: 410.242.150.1 - - [09/May/2026 14:25:32] "GET /database HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:25:32] "GET /database/styles.css?v=1.0.1 HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:25:32] "GET /database/app.js?v=1.0.1 HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:25:32] "[36mGET /src/js/main/rate-limiter.js HTTP/1.1[0m" 304 -
+10.242.150.1 - - [09/May/2026 14:25:33] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+📊 Visitas Total: 5 | Hoje: 510.242.150.1 - - [09/May/2026 14:25:36] "GET /database HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:25:36] "[36mGET /database/app.js?v=1.0.1 HTTP/1.1[0m" 304 -
+10.242.150.1 - - [09/May/2026 14:25:36] "[36mGET /src/js/main/rate-limiter.js HTTP/1.1[0m" 304 -
+10.242.150.1 - - [09/May/2026 14:25:36] "[36mGET /database/styles.css?v=1.0.1 HTTP/1.1[0m" 304 -
+10.242.150.1 - - [09/May/2026 14:25:36] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+📊 Visitas Total: 6 | Hoje: 610.242.150.1 - - [09/May/2026 14:25:41] "GET /database HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:25:41] "[36mGET /src/js/main/rate-limiter.js HTTP/1.1[0m" 304 -
+10.242.150.1 - - [09/May/2026 14:25:41] "[36mGET /database/styles.css?v=1.0.1 HTTP/1.1[0m" 304 -
+10.242.150.1 - - [09/May/2026 14:25:41] "[36mGET /database/app.js?v=1.0.1 HTTP/1.1[0m" 304 -
+10.242.150.1 - - [09/May/2026 14:25:41] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+📊 Visitas Total: 7 | Hoje: 710.242.150.1 - - [09/May/2026 14:26:11] "GET /database HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:26:11] "GET /database/styles.css?v=1.0.1 HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:26:11] "GET /src/js/main/rate-limiter.js HTTP/1.1" 200 -
+10.242.150.1 - - [09/May/2026 14:26:11] "GET /database/app.js?v=1.0.1 HTTP/1.1" 200 -

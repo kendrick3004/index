@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, send_file, redirect, url_for
+from flask import Flask, render_template, request, send_file, redirect, url_for, send_from_directory
 import sys
 import datetime
 import os
@@ -20,6 +20,7 @@ data_atual = datetime.date.today()
 # Como este arquivo está em index/site/main.py, subimos um nível para chegar em index/
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 LOG_BASE_DIR = os.path.join(BASE_DIR, 'logs')
+MAINTENANCE_DIR = os.path.join(BASE_DIR, 'maintenance')
 
 def get_log_file():
     """Garante a criação da pasta do dia e retorna o caminho do arquivo de log."""
@@ -50,14 +51,14 @@ def security_and_tracking():
     
     # 1. Lógica de Favicon
     if request.path.endswith(('favicon.ico', 'favicon.png')):
-        fav_path = 'assets/DEVS/favicon/Favicon.ico'
+        fav_path = os.path.join(os.path.dirname(__file__), 'assets/dev/favicon/Favicon.ico')
         if os.path.exists(fav_path):
             return send_file(fav_path)
         return '', 204
 
     # 2. Ignora arquivos estáticos (NÃO registra no log)
     extensoes_estaticas = ('.css', '.js', '.png', '.jpg', '.jpeg', '.gif', '.svg', '.woff', '.woff2', '.ttf', '.otf')
-    if request.path.startswith(('/assets', '/css', '/js', '/img', '/database/assets', '/src')) or request.path.endswith(extensoes_estaticas):
+    if request.path.startswith(('/assets', '/css', '/js', '/img', '/database', '/src')) or request.path.endswith(extensoes_estaticas):
         return
 
     # 3. Proteção contra ataques
@@ -70,7 +71,7 @@ def security_and_tracking():
 
     if request_counts[client_ip]['count'] > RATE_LIMIT_COUNT:
         registrar_log(f"⚠️ BLOQUEIO: IP {client_ip} excedeu o limite.")
-        return send_file('../maintenance/429.html'), 429
+        return send_error_file(os.path.join(MAINTENANCE_DIR, '429.html'), 429)
 
     # 4. Contagem de visitas (apenas para páginas reais, não arquivos estáticos)
     hoje = datetime.date.today()
@@ -106,9 +107,13 @@ def database():
     # Se não estiver logado, redireciona para o login
     return render_template('database/index.html')
 
-@app.route('/database/index.html')
-def database_old():
-    return redirect(url_for('database'))
+@app.route('/database/<path:filename>')
+def serve_database_files(filename):
+    """Serve arquivos da pasta database na raiz do projeto"""
+    database_dir = os.path.join(BASE_DIR, 'database')
+    return send_from_directory(database_dir, filename)
+
+# Removido redirecionamento antigo para evitar conflito com arquivos estáticos na nova pasta database
 
 # 🔥 Mapeamento de Erros para a pasta maintenance
 def send_error_file(path, code):
@@ -119,30 +124,55 @@ def send_error_file(path, code):
         return f"Erro {code}", code
 
 @app.errorhandler(400)
-def error_400(e): return send_error_file('maintenance/400.html', 400)
+def error_400(e): 
+    registrar_log(f"❌ 400: Requisição inválida (IP: {request.remote_addr})")
+    return send_error_file(os.path.join(MAINTENANCE_DIR, '400.html'), 400)
+
 @app.errorhandler(401)
-def error_401(e): return send_error_file('maintenance/401.html', 401)
+def error_401(e): 
+    registrar_log(f"❌ 401: Não autorizado (IP: {request.remote_addr})")
+    return send_error_file(os.path.join(MAINTENANCE_DIR, '401.html'), 401)
+
 @app.errorhandler(403)
-def error_403(e): return send_error_file('maintenance/403.html', 403)
+def error_403(e): 
+    registrar_log(f"❌ 403: Acesso proibido (IP: {request.remote_addr})")
+    return send_error_file(os.path.join(MAINTENANCE_DIR, '403.html'), 403)
+
 @app.errorhandler(404)
 def error_404(e): 
     registrar_log(f"❓ 404: {request.path} (IP: {request.remote_addr})")
-    return send_error_file('maintenance/404.html', 404)
+    return send_error_file(os.path.join(MAINTENANCE_DIR, '404.html'), 404)
+
 @app.errorhandler(405)
-def error_405(e): return send_error_file('maintenance/405.html', 405)
+def error_405(e): 
+    registrar_log(f"❌ 405: Método não permitido (IP: {request.remote_addr})")
+    return send_error_file(os.path.join(MAINTENANCE_DIR, '405.html'), 405)
+
 @app.errorhandler(429)
-def error_429(e): return send_error_file('maintenance/429.html', 429)
+def error_429(e): 
+    registrar_log(f"⚠️ 429: Muitas requisições (IP: {request.remote_addr})")
+    return send_error_file(os.path.join(MAINTENANCE_DIR, '429.html'), 429)
+
 @app.errorhandler(500)
 @app.errorhandler(Exception)
 def error_500(e): 
     registrar_log(f"❌ 500: {str(e)}")
-    return send_error_file('maintenance/500.html', 500)
+    return send_error_file(os.path.join(MAINTENANCE_DIR, '500.html'), 500)
+
 @app.errorhandler(502)
-def error_502(e): return send_error_file('maintenance/502.html', 502)
+def error_502(e): 
+    registrar_log(f"❌ 502: Bad Gateway (IP: {request.remote_addr})")
+    return send_error_file(os.path.join(MAINTENANCE_DIR, '502.html'), 502)
+
 @app.errorhandler(503)
-def error_503(e): return send_error_file('maintenance/503.html', 503)
+def error_503(e): 
+    registrar_log(f"❌ 503: Serviço indisponível (IP: {request.remote_addr})")
+    return send_error_file(os.path.join(MAINTENANCE_DIR, '503.html'), 503)
+
 @app.errorhandler(504)
-def error_504(e): return send_error_file('maintenance/504.html', 504)
+def error_504(e): 
+    registrar_log(f"❌ 504: Gateway Timeout (IP: {request.remote_addr})")
+    return send_error_file(os.path.join(MAINTENANCE_DIR, '504.html'), 504)
 
 if __name__ == '__main__':
     print("\n🚀 Servidor ONLINE na porta 5000")

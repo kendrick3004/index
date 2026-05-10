@@ -4,13 +4,29 @@ import sys
 import time
 
 
-def get_file_info(path, root_dir):
+def get_file_info(path, project_root):
     """
     Coleta informações de um arquivo individual.
+    O path no JSON deve ser relativo à raiz que o servidor serve.
     """
     try:
         stat = os.stat(path)
-        rel_path = os.path.relpath(path, root_dir).replace("\\", "/")
+        # O rel_path será usado para download/preview no navegador.
+        # Como o Flask serve 'site' como root e também serve '/database' a partir da raiz do projeto,
+        # precisamos ajustar os caminhos.
+        
+        abs_path = os.path.abspath(path)
+        site_dir = os.path.join(project_root, "site")
+        database_dir = os.path.join(project_root, "database")
+        
+        if abs_path.startswith(site_dir):
+            rel_path = os.path.relpath(abs_path, site_dir).replace("\\", "/")
+        elif abs_path.startswith(database_dir):
+            # Para arquivos na pasta database, o caminho deve ser database/filename
+            rel_path = "database/" + os.path.relpath(abs_path, database_dir).replace("\\", "/")
+        else:
+            rel_path = os.path.relpath(abs_path, project_root).replace("\\", "/")
+
         ext = os.path.splitext(path)[1][1:].lower()
 
         if ext in ["jpg", "jpeg", "png", "gif", "svg", "webp"]:
@@ -44,38 +60,42 @@ def get_file_info(path, root_dir):
         return None
 
 
-def generate_structure(assets_dir):
+def generate_structure(target_dir, project_root, is_database=False):
     """
-    Escaneia a pasta assets e gera uma estrutura de dicionário.
+    Escaneia um diretório e gera uma estrutura de dicionário.
     """
     structure = {}
-    project_root = os.path.dirname(assets_dir)
+    
+    # Define a base para as chaves do JSON
+    if is_database:
+        root_key_name = "database_root"
+        key_prefix = "database/"
+    else:
+        root_key_name = "root"
+        key_prefix = ""
 
-    for root, dirs, files in os.walk(assets_dir):
+    for root, dirs, files in os.walk(target_dir):
         if "sets" in dirs:
             dirs.remove("sets")
 
-        rel_root = os.path.relpath(root, project_root).replace("\\", "/")
+        rel_from_target = os.path.relpath(root, target_dir).replace("\\", "/")
 
-        if rel_root == "assets":
-            json_key = "root"
+        if rel_from_target == ".":
+            json_key = root_key_name
         else:
-            if rel_root.startswith("assets/"):
-                json_key = rel_root.replace("assets/", "", 1)
-            elif rel_root == "assets":
-                json_key = "root"
-            else:
-                json_key = rel_root
+            json_key = key_prefix + rel_from_target
 
         current_entry = {"files": [], "folders": []}
 
         for d in dirs:
             folder_path = os.path.join(root, d)
-            rel_folder_path = os.path.relpath(folder_path, assets_dir).replace("\\", "/")
+            rel_folder_path = os.path.relpath(folder_path, target_dir).replace("\\", "/")
+            
+            folder_id = key_prefix + rel_folder_path
             try:
                 current_entry["folders"].append(
                     {
-                        "id": rel_folder_path,
+                        "id": folder_id,
                         "name": d,
                         "path": rel_folder_path,
                         "modified": int(os.path.getmtime(folder_path) * 1000),
@@ -96,22 +116,32 @@ def generate_structure(assets_dir):
 
 
 if __name__ == "__main__":
-    current_dir = os.path.dirname(os.path.abspath(__file__))
-    assets_path = os.path.join(current_dir, "assets")
-    output_path = os.path.join(current_dir, "file_structure.json")
-
-    if not os.path.isdir(assets_path):
-        sys.exit(1)
+    site_dir = os.path.dirname(os.path.abspath(__file__))
+    project_root = os.path.abspath(os.path.join(site_dir, ".."))
+    
+    assets_path = os.path.join(site_dir, "assets")
+    database_path = os.path.join(project_root, "database")
+    output_path = os.path.join(site_dir, "file_structure.json")
 
     start_time = time.time()
 
     try:
-        structure = generate_structure(assets_path)
+        structure = {}
+        
+        # 1. Processa a pasta assets do site
+        if os.path.isdir(assets_path):
+            assets_structure = generate_structure(assets_path, project_root, is_database=False)
+            structure.update(assets_structure)
+        
+        # 2. Processa a pasta database na raiz
+        if os.path.isdir(database_path):
+            database_structure = generate_structure(database_path, project_root, is_database=True)
+            structure.update(database_structure)
 
         with open(output_path, "w", encoding="utf-8") as f:
             json.dump(structure, f, indent=4, ensure_ascii=False)
 
-        duration = time.time() - start_time
         sys.exit(0)
     except Exception as e:
+        print(f"Erro: {e}")
         sys.exit(1)

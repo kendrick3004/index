@@ -7,7 +7,7 @@
   Content-Security-Policy: default-src 'self'; script-src 'self' https://www.gstatic.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; connect-src 'self' https://suite-98ddf-default-rtdb.firebaseio.com https://api.weatherapi.com https://www.googleapis.com;
 
 /database/*
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age=0, must-revalidate
 
 /src/app/update.js
   Cache-Control: public, max-age=0, must-revalidate
