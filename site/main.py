@@ -56,9 +56,9 @@ def security_and_tracking():
             return send_file(fav_path)
         return '', 204
 
-    # 2. Ignora arquivos estáticos (NÃO registra no log)
+    # 2. Ignora arquivos estáticos (NÃO registra no log, exceto para debug temporário)
     extensoes_estaticas = ('.css', '.js', '.png', '.jpg', '.jpeg', '.gif', '.svg', '.woff', '.woff2', '.ttf', '.otf')
-    if request.path.startswith(('/assets', '/css', '/js', '/img', '/database', '/src')) or request.path.endswith(extensoes_estaticas):
+    if (request.path.startswith(('/assets', '/css', '/js', '/img', '/src')) or request.path.endswith(extensoes_estaticas)) and not request.path.startswith('/maintenance'):
         return
 
     # 3. Proteção contra ataques
@@ -110,19 +110,31 @@ def database():
 @app.route('/database/<path:filename>')
 def serve_database_files(filename):
     """Serve arquivos da pasta database na raiz do projeto e também arquivos estáticos do site/database"""
+    registrar_log(f"📂 Tentando servir arquivo do database: {filename}")
+    
     # 1. Se for o arquivo philistudies.json, serve obrigatoriamente da pasta database na raiz
     if filename == 'philistudies.json':
         database_dir = os.path.join(BASE_DIR, 'database')
+        registrar_log(f"✅ Servindo philistudies.json de: {database_dir}")
         return send_from_directory(database_dir, filename)
 
     # 2. Tenta servir da pasta 'site/database' (onde estão index.html, styles.css, app.js)
     site_database_dir = os.path.join(os.path.dirname(__file__), 'database')
-    if os.path.exists(os.path.join(site_database_dir, filename)):
+    target_path = os.path.join(site_database_dir, filename)
+    if os.path.exists(target_path):
+        registrar_log(f"✅ Servindo arquivo estático de: {site_database_dir}")
         return send_from_directory(site_database_dir, filename)
     
     # 3. Se não encontrar, serve da pasta 'database' na raiz do projeto (files, etc)
     database_dir = os.path.join(BASE_DIR, 'database')
+    registrar_log(f"🔍 Buscando na pasta database raiz: {database_dir}")
     return send_from_directory(database_dir, filename)
+
+@app.route('/maintenance/<path:filename>')
+def serve_maintenance_files(filename):
+    """Serve arquivos da pasta maintenance na raiz do projeto"""
+    registrar_log(f"🛠️ Servindo arquivo de manutenção: {filename}")
+    return send_from_directory(MAINTENANCE_DIR, filename)
 
 # Removido redirecionamento antigo para evitar conflito com arquivos estáticos na nova pasta database
 

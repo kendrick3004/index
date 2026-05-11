@@ -22,13 +22,13 @@ pkill -f main.py 2>/dev/null || true
 sleep 2
 
 # ------------------ MANUTENÇÃO ------------------
-# Comentado para agilizar o teste direto do site
-# if [ -d "$BASE_DIR/maintenance" ]; then
-#     log "🚧 Iniciando modo manutenção..."
-#     (nohup python3 "$BASE_DIR/maintenance/main.py" >> "$MAINTENANCE_LOG" 2>&1 &)
-#     sleep 2
-#     log "✅ Manutenção ativa na porta 5000"
-# fi
+ Comentado para agilizar o teste direto do site
+ if [ -d "$BASE_DIR/maintenance" ]; then
+     log "🚧 Iniciando modo manutenção..."
+     (nohup python3 "$BASE_DIR/maintenance/main.py" >> "$MAINTENANCE_LOG" 2>&1 &)
+     sleep 2
+     log "✅ Manutenção ativa na porta 5000"
+ fi
 
 # ------------------ LIMPA & DOWNLOAD (PULADO) ------------------
 log "⏭️  Pulando download do Git para preservar alterações locais..."
@@ -39,14 +39,15 @@ if [ -d "$BASE_DIR/site" ]; then
     log "🔎 Verificando funcionalidades de database..."
     cd "$BASE_DIR/site" || exit 1
 
-    if [ -f "generate_assets_structure.py" ]; then
-        if python3 generate_assets_structure.py 2>&1 | tee -a "$DATABASE_LOG"; then
+    # O script agora está na pasta database na raiz
+    if [ -f "$BASE_DIR/database/generate_assets_structure.py" ]; then
+        if python3 "$BASE_DIR/database/generate_assets_structure.py" 2>&1 | tee -a "$DATABASE_LOG"; then
             log "✅ Database configurado e estruturado com sucesso"
         else
             log "❌ Erro na geração do database (ver log em: $DATABASE_LOG)"
         fi
     else
-        log "⚠️ Script generate_assets_structure.py não encontrado"
+        log "⚠️ Script $BASE_DIR/database/generate_assets_structure.py não encontrado"
     fi
 else
     log "❌ Pasta site não encontrada em $BASE_DIR/site"
