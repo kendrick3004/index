@@ -17,59 +17,101 @@ log() {
     echo "[$(date '+%H:%M:%S')] $1"
 }
 
-log "🛑 Parando servidores de sites..."
-pkill -f main.py 2>/dev/null || true
-sleep 2
+# Função para verificar o Cloudflare Tunnel
+check_cloudflare() {
+    log "🔍 Verificando Cloudflare Tunnel..."
+    # Verifica se o serviço systemd do cloudflared está ativo
+    if systemctl is-active --quiet cloudflared; then
+        log "✅ Cloudflare Tunnel está rodando corretamente!"
+        return 0
+    else
+        # Tenta verificar se há algum processo cloudflared rodando caso não seja serviço
+        if pgrep -x "cloudflared" > /dev/null; then
+            log "✅ Cloudflare Tunnel (processo) está rodando!"
+            return 0
+        fi
+        log "❌ Cloudflare Tunnel NÃO está rodando!"
+        return 1
+    fi
+}
 
-# ------------------ MANUTENÇÃO ------------------
- Comentado para agilizar o teste direto do site
- if [ -d "$BASE_DIR/maintenance" ]; then
-     log "🚧 Iniciando modo manutenção..."
-     (nohup python3 "$BASE_DIR/maintenance/main.py" >> "$MAINTENANCE_LOG" 2>&1 &)
-     sleep 2
-     log "✅ Manutenção ativa na porta 5000"
- fi
+# Função para ativar manutenção
+start_maintenance() {
+    if [ -d "$BASE_DIR/maintenance" ]; then
+        log "🚧 Iniciando modo manutenção..."
+        (nohup python3 "$BASE_DIR/maintenance/main.py" >> "$MAINTENANCE_LOG" 2>&1 &)
+        sleep 2
+        log "✅ Manutenção ativa na porta 5000"
+    else
+        log "❌ Erro: pasta maintenance não encontrada em $BASE_DIR/maintenance"
+    fi
+}
 
-# ------------------ LIMPA & DOWNLOAD (PULADO) ------------------
-log "⏭️  Pulando download do Git para preservar alterações locais..."
+# Função para parar servidores
+stop_servers() {
+    log "🛑 Parando servidores de sites..."
+    pkill -f main.py 2>/dev/null || true
+    pkill -f "maintenance/main.py" 2>/dev/null || true
+    sleep 2
+}
+
+# --- INÍCIO DO PROCESSO ---
+
+log "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+log "🚀 INICIANDO PROCESSO DE DEPLOY"
+log "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+
+stop_servers
+start_maintenance
+
+# ------------------ DOWNLOAD (COMENTADO PARA PRESERVAR MELHORIAS) ------------------
+log "📥 Verificação de Atualizações (GitHub)..."
+log "⚠️ Função de download comentada para preservar melhorias manuais."
+# Aqui ficaria a lógica do git clone que você enviou, mas comentada conforme solicitado:
+# timeout 600 git clone ...
+# log "✅ Download concluído com sucesso"
 
 # ------------------ DATABASE ------------------
 log "🗄️ Verificando estrutura do database..."
-if [ -d "$BASE_DIR/site" ]; then
-    log "🔎 Verificando funcionalidades de database..."
-    cd "$BASE_DIR/site" || exit 1
-
-    # O script agora está na pasta database na raiz
+if [ -d "$BASE_DIR/database" ]; then
+    log "🔎 Gerando estrutura philistudies.json..."
+    # O script de geração agora está na pasta database raiz
     if [ -f "$BASE_DIR/database/generate_assets_structure.py" ]; then
-        if python3 "$BASE_DIR/database/generate_assets_structure.py" 2>&1 | tee -a "$DATABASE_LOG"; then
-            log "✅ Database configurado e estruturado com sucesso"
+        if python3 "$BASE_DIR/database/generate_assets_structure.py" >> "$DATABASE_LOG" 2>&1; then
+            log "✅ Database estruturado com sucesso!"
         else
             log "❌ Erro na geração do database (ver log em: $DATABASE_LOG)"
         fi
-    else
-        log "⚠️ Script $BASE_DIR/database/generate_assets_structure.py não encontrado"
     fi
 else
-    log "❌ Pasta site não encontrada em $BASE_DIR/site"
+    log "❌ Pasta database não encontrada!"
 fi
 
-# ------------------ FINALIZA ------------------
-log "🛑 Garantindo que o servidor de manutenção está parado..."
-pkill -f "maintenance/main.py" 2>/dev/null || true
-sleep 1
+# ------------------ VERIFICAÇÃO FINAL E START ------------------
 
-log "🚀 Iniciando servidor do site..."
-log "⏳ Aguardando inicialização (porta 5000)..."
-cd "$BASE_DIR/site" && nohup python3 main.py >> "$SITE_LOG" 2>&1 &
-sleep 3
-
-# Verifica se o processo está rodando
-if pgrep -f "python3 main.py" > /dev/null; then
-    log "✓ Servidor do site iniciado com sucesso"
+# Verifica o Cloudflare antes de subir o site
+if check_cloudflare; then
+    log "🛑 Encerrando servidor de manutenção..."
+    pkill -f "maintenance/main.py" 2>/dev/null || true
+    sleep 2
+    
+    log "🚀 Iniciando servidor do site..."
+    cd "$BASE_DIR/site" && nohup python3 main.py >> "$SITE_LOG" 2>&1 &
+    sleep 3
+    
+    if pgrep -f "python3 main.py" > /dev/null; then
+        log "✅ Servidor do site iniciado com sucesso!"
+        log "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+        log "✅ DEPLOY FINALIZADO COM SUCESSO!"
+        log "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+    else
+        log "❌ Falha ao iniciar o servidor do site. Ativando manutenção de emergência..."
+        start_maintenance
+    fi
 else
-    log "❌ Falha ao iniciar o servidor do site. Verifique $SITE_LOG"
+    log "⚠️ Cloudflare Tunnel falhou. Mantendo modo manutenção para segurança."
+    log "🔔 Por favor, verifique o serviço 'cloudflared' ou o token no setup.sh."
 fi
 
-log "✅ Deploy finalizado com sucesso!"
 log "📊 Logs salvos em: $LOG_DIR"
-log "🌐 Site disponível localmente na porta 5000"
+log "🌐 Site disponível através do túnel Cloudflare."

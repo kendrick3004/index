@@ -15,7 +15,6 @@ RATE_LIMIT_PERIOD = 10
 request_counts = defaultdict(lambda: {'count': 0, 'timestamp': 0})
 
 # Caminho para a pasta de logs na raiz do projeto (index/logs)
-# Como este arquivo está em index/maintenance/main.py, subimos um nível para chegar em index/
 PROJECT_DIR = os.path.abspath(os.path.join(SCRIPT_DIR, '..'))
 LOG_BASE_DIR = os.path.join(PROJECT_DIR, 'logs')
 
@@ -42,8 +41,9 @@ def maintenance_logic():
             return send_file(favicon_path)
         return '', 204
 
-    # Ignora arquivos estáticos
-    if request.path.endswith(('.css', '.js', '.png', '.jpg')):
+    # Ignora arquivos estáticos (CSS, JS, Imagens)
+    extensoes_estaticas = ('.css', '.js', '.png', '.jpg', '.jpeg', '.gif', '.svg', '.woff', '.woff2', '.ttf', '.otf')
+    if request.path.endswith(extensoes_estaticas):
         return
 
     # Proteção contra ataques
@@ -64,19 +64,24 @@ def maintenance_logic():
 def index():
     return send_from_directory(SCRIPT_DIR, '503.html')
 
+# Rota para servir arquivos estáticos da própria pasta de manutenção
+# Isso resolve o problema de carregar /maintenance/error-pages.css
+@app.route('/maintenance/<path:filename>')
+def serve_maintenance_files(filename):
+    return send_from_directory(SCRIPT_DIR, filename)
+
 # Mantém as rotas de API ativas (simulando ou redirecionando)
 @app.route('/api/<path:path>', methods=['GET', 'POST', 'PUT', 'DELETE'])
 def api_proxy(path):
-    # Aqui você pode implementar um proxy reverso real para o seu backend de API 
-    # se ele estiver rodando em outra porta, ou importar as rotas de API do site.
-    # Por padrão, retornamos um JSON informando que a API está ativa.
     return {"status": "success", "message": "API está funcionando normalmente durante a manutenção", "path": path}, 200
 
 @app.route('/<path:path>')
 def static_files(path):
+    # Se o arquivo existir na pasta de manutenção, serve ele
     file_path = os.path.join(SCRIPT_DIR, path)
     if os.path.exists(file_path):
         return send_from_directory(SCRIPT_DIR, path)
+    # Caso contrário, mostra a página de manutenção
     return send_from_directory(SCRIPT_DIR, '503.html')
 
 @app.errorhandler(404)

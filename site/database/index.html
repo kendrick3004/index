@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Database Viewer</title>
     <link rel="stylesheet" href="/database/styles.css?v=1.0.1">
+    <link rel="stylesheet" href="/database/database-mobile.css?v=1.0.0">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 </head>
 <body>
@@ -29,8 +30,18 @@
             </div>
 
             <div class="action-controls">
+                <select id="sort-select" class="btn btn-secondary" style="padding: 10px; border: 1px solid #d1d5db; border-radius: 8px; background: white; cursor: pointer; font-size: 0.9rem;">
+                    <option value="name-asc">Ordenar: A-Z</option>
+                    <option value="name-desc">Ordenar: Z-A</option>
+                    <option value="size-asc">Tamanho: Menor</option>
+                    <option value="size-desc">Tamanho: Maior</option>
+                    <option value="date-asc">Data: Mais Antigo</option>
+                    <option value="date-desc">Data: Mais Recente</option>
+                </select>
                 <button id="select-all" class="btn btn-secondary">Selecionar Todos</button>
                 <button id="clear-selection" class="btn btn-secondary">Limpar Seleção</button>
+                <button id="upload-trigger" class="btn btn-success">⬆ Upload</button>
+                <input type="file" id="file-input" multiple style="display: none;">
                 <button id="download-selected" class="btn btn-primary" style="display: none;">Baixar Selecionados</button>
                 <button id="share-selected" class="btn btn-secondary" style="display: none;" title="Compartilhar seleção">Compartilhar</button>
             </div>
@@ -41,8 +52,84 @@
             <span id="selection-size">0 Bytes</span>
         </div>
 
+        <!-- Indicador de Upload em Background -->
+        <div id="bg-upload-indicator" style="display: none; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 15px; margin-bottom: 20px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <span style="font-size: 1.2rem;">⬆️</span>
+                    <div>
+                        <div style="font-weight: 600; font-size: 0.9rem; color: #1e293b;">Enviando em segundo plano...</div>
+                        <div id="bg-upload-filename" style="font-size: 0.75rem; color: #64748b; max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">arquivo.zip</div>
+                    </div>
+                </div>
+                <div style="text-align: right;">
+                    <div id="bg-upload-percent" style="font-weight: 700; color: #3b82f6; font-size: 1.1rem;">0%</div>
+                    <div id="bg-upload-speed" style="font-size: 0.7rem; color: #94a3b8;">0 MB/s</div>
+                </div>
+            </div>
+            <div style="width: 100%; height: 6px; background: #e2e8f0; border-radius: 3px; overflow: hidden;">
+                <div id="bg-upload-bar" style="width: 0%; height: 100%; background: #3b82f6; transition: width 0.3s;"></div>
+            </div>
+            <div id="bg-upload-count" style="font-size: 0.7rem; color: #64748b; margin-top: 8px; text-align: center;">0 / 0 arquivos</div>
+        </div>
+
         <div id="file-container" class="file-container">
             <!-- Arquivos serão carregados aqui -->
+        </div>
+    </div>
+
+    <!-- Modal de Upload -->
+    <div id="upload-modal" class="modal" style="display: none;">
+        <div class="modal-content" style="max-width: 900px; width: 90%;">
+            <div class="modal-header" style="justify-content: space-between; align-items: center;">
+                <h3 style="margin: 0;">Upload de Arquivos</h3>
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <button id="upload-view-list" class="btn-icon active" title="Visualização em lista">
+                        <span>☰</span>
+                    </button>
+                    <button id="upload-view-grid" class="btn-icon" title="Visualização em grade">
+                        <span>⊞</span>
+                    </button>
+                    <button id="close-upload" class="btn btn-secondary">×</button>
+                </div>
+            </div>
+            <div class="modal-body" style="padding: 0;">
+                <div id="upload-list-container" style="max-height: 450px; overflow-y: auto; padding: 20px;">
+                    <!-- Visualização em lista (padrão) -->
+                    <table class="file-list" id="upload-table" style="width: 100%;">
+                        <thead>
+                            <tr>
+                                <th style="width: 40px;"><input type="checkbox" id="select-all-upload" checked></th>
+                                <th>Nome</th>
+                                <th style="width: 100px;">Tamanho</th>
+                                <th style="width: 100px;">Tipo</th>
+                            </tr>
+                        </thead>
+                        <tbody id="upload-list"></tbody>
+                    </table>
+                    <!-- Visualização em grade (oculta por padrão) -->
+                    <div id="upload-grid" style="display: none; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 15px;"></div>
+                </div>
+            </div>
+            <div class="modal-footer" style="flex-direction: column; align-items: stretch;">
+                <div id="upload-progress-container" style="display: none; margin-bottom: 15px;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 5px; font-size: 0.85rem;">
+                        <span id="upload-status-text">Enviando...</span>
+                        <span id="upload-percentage">0%</span>
+                    </div>
+                    <div style="width: 100%; height: 10px; background: #e2e8f0; border-radius: 5px; overflow: hidden;">
+                        <div id="upload-progress-bar" style="width: 0%; height: 100%; background: #3b82f6; transition: width 0.3s;"></div>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; margin-top: 5px; font-size: 0.75rem; color: #64748b;">
+                        <span id="upload-speed">0 MB/s</span>
+                        <span id="upload-count-info">0 / 0 arquivos</span>
+                    </div>
+                </div>
+                <div style="display: flex; justify-content: flex-end; gap: 10px;">
+                    <button id="cancel-upload" class="btn btn-secondary">Cancelar</button>
+                    <button id="start-upload" class="btn btn-primary">Fazer Upload</button>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -66,7 +153,25 @@
 
     <!-- Proteção contra Ataques de Negação de Serviço -->
     <script src="/src/js/main/rate-limiter.js"></script>
-    <script src="/database/app.js?v=1.0.1"></script>
+    
+    <!-- Módulos JavaScript Fracionados -->
+    <script src="/database/js/state.js?v=1.0.0"></script>
+    <script src="/database/js/file-loader.js?v=1.0.0"></script>
+    <script src="/database/js/selection.js?v=1.0.0"></script>
+    <script src="/database/js/preview.js?v=1.0.0"></script>
+    <script src="/database/js/upload.js?v=1.0.0"></script>
+    <script src="/database/js/init.js?v=1.0.0"></script>
+    
+    <!-- Registrar Service Worker para uploads em background -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/database/sw.js').then(reg => {
+                console.log('Service Worker registrado com sucesso');
+            }).catch(err => {
+                console.error('Erro ao registrar Service Worker:', err);
+            });
+        }
+    </script>
 
 </body>
 </html>

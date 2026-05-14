@@ -1,0 +1,307 @@
+[22:16:35] --- Servidor Iniciado ---
+[22:16:36] 📊 Visitas Total: 0 | Hoje: 0
+[22:16:47] --- Servidor Iniciado ---
+[22:16:47] 📊 Visitas Total: 0 | Hoje: 0
+[22:16:49] 👤 Acesso: 127.0.0.1 -> /database
+[22:16:49] 📊 Visitas Total: 1 | Hoje: 1
+[22:16:51] 👤 Acesso: 127.0.0.1 -> /database/philistudies.json
+[22:16:51] 📊 Visitas Total: 2 | Hoje: 2
+[22:16:52] 📂 Tentando servir arquivo do database: philistudies.json
+[22:16:53] ✅ Servindo arquivo estático de: /mnt/desktop/index/site/database
+[19:18:33] --- Servidor Iniciado ---
+[19:18:33] 📊 Visitas Total: 0 | Hoje: 0
+[19:18:39] 👤 Acesso: 172.25.112.1 -> /
+[19:18:39] 📊 Visitas Total: 1 | Hoje: 1
+[19:18:40] 👤 Acesso: 172.25.112.1 -> /database/files/dev/DATA/calendario.json
+[19:18:40] 📊 Visitas Total: 2 | Hoje: 2
+[19:18:40] 📂 Tentando servir arquivo do database: files/dev/DATA/calendario.json
+[19:18:40] 🔍 Buscando na pasta database raiz: /mnt/d/Github/index/database
+[19:18:41] 👤 Acesso: 172.25.112.1 -> /database
+[19:18:41] 📊 Visitas Total: 3 | Hoje: 3
+[19:18:41] 📂 Tentando servir arquivo do database: styles.css
+[19:18:41] ✅ Servindo arquivo estático de: /mnt/d/Github/index/site/database
+[19:18:41] 📂 Tentando servir arquivo do database: app.js
+[19:18:41] ✅ Servindo arquivo estático de: /mnt/d/Github/index/site/database
+[19:18:41] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:18:41] 📊 Visitas Total: 4 | Hoje: 4
+[19:18:41] 📂 Tentando servir arquivo do database: philistudies.json
+[19:18:41] ✅ Servindo arquivo estático de: /mnt/d/Github/index/site/database
+[19:20:02] 👤 Acesso: 172.25.112.1 -> /database
+[19:20:02] 📊 Visitas Total: 5 | Hoje: 5
+[19:20:02] 📂 Tentando servir arquivo do database: styles.css
+[19:20:02] ✅ Servindo arquivo estático de: /mnt/d/Github/index/site/database
+[19:20:02] 📂 Tentando servir arquivo do database: app.js
+[19:20:02] ✅ Servindo arquivo estático de: /mnt/d/Github/index/site/database
+[19:20:03] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:20:03] 📊 Visitas Total: 6 | Hoje: 6
+[19:20:03] 📂 Tentando servir arquivo do database: philistudies.json
+[19:20:03] ✅ Servindo arquivo estático de: /mnt/d/Github/index/site/database
+[19:20:03] 👤 Acesso: 172.25.112.1 -> /database
+[19:20:03] 📊 Visitas Total: 7 | Hoje: 7
+[19:20:04] 📂 Tentando servir arquivo do database: styles.css
+[19:20:04] ✅ Servindo arquivo estático de: /mnt/d/Github/index/site/database
+[19:20:04] 📂 Tentando servir arquivo do database: app.js
+[19:20:04] ✅ Servindo arquivo estático de: /mnt/d/Github/index/site/database
+[19:20:04] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:20:04] 📊 Visitas Total: 8 | Hoje: 8
+[19:20:04] 📂 Tentando servir arquivo do database: philistudies.json
+[19:20:04] ✅ Servindo arquivo estático de: /mnt/d/Github/index/site/database
+[22:22:09] --- Servidor Iniciado ---
+[22:22:10] 📊 Visitas Total: 0 | Hoje: 0
+[22:22:11] 👤 Acesso: 127.0.0.1 -> /database
+[22:22:12] 📊 Visitas Total: 1 | Hoje: 1
+[19:23:15] --- Servidor Iniciado ---
+[19:23:15] 📊 Visitas Total: 0 | Hoje: 0
+[19:23:18] 👤 Acesso: 172.25.112.1 -> /database
+[19:23:18] 📊 Visitas Total: 1 | Hoje: 1
+[19:23:18] 📂 Tentando servir arquivo do database: styles.css
+[19:23:18] ✅ Servindo arquivo estático de: /mnt/d/Github/index/site/database
+[19:23:18] 📂 Tentando servir arquivo do database: app.js
+[19:23:18] ✅ Servindo arquivo estático de: /mnt/d/Github/index/site/database
+[19:23:19] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:23:19] 📊 Visitas Total: 2 | Hoje: 2
+[19:23:19] 📂 Tentando servir arquivo do database: philistudies.json
+[19:23:19] ✅ Servindo arquivo estático de: /mnt/d/Github/index/site/database
+[19:32:30] ✅ Estrutura JSON atualizada com sucesso.
+[19:32:40] 👤 Acesso: 172.25.112.1 -> /database
+[19:32:40] 📊 Visitas Total: 1 | Hoje: 1
+[19:32:41] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:32:41] 📊 Visitas Total: 2 | Hoje: 2
+[19:32:44] 👤 Acesso: 172.25.112.1 -> /database/upload
+[19:32:44] 📊 Visitas Total: 3 | Hoje: 3
+[19:32:45] 👤 Acesso: 172.25.112.1 -> /database/generate-structure
+[19:32:45] 📊 Visitas Total: 4 | Hoje: 4
+[19:32:52] ✅ Estrutura JSON atualizada com sucesso.
+[19:32:52] 👤 Acesso: 172.25.112.1 -> /database/upload
+[19:32:52] 📊 Visitas Total: 5 | Hoje: 5
+[19:32:53] ✅ Estrutura JSON atualizada com sucesso.
+[19:32:54] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:32:54] 📊 Visitas Total: 6 | Hoje: 6
+[19:33:11] 👤 Acesso: 172.25.112.1 -> /database/generate-structure
+[19:33:11] 📊 Visitas Total: 7 | Hoje: 7
+[19:33:16] ✅ Estrutura JSON atualizada com sucesso.
+[19:33:18] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:33:18] 📊 Visitas Total: 8 | Hoje: 8
+[19:33:15] ✅ Estrutura JSON atualizada com sucesso.
+[19:33:15] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:33:15] 📊 Visitas Total: 9 | Hoje: 9
+[19:33:15] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:33:15] 📊 Visitas Total: 10 | Hoje: 10
+[19:33:30] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:33:30] 📊 Visitas Total: 11 | Hoje: 11
+[19:33:45] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:33:45] 📊 Visitas Total: 12 | Hoje: 12
+[19:34:00] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:34:00] 📊 Visitas Total: 13 | Hoje: 13
+[19:34:26] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:34:26] 📊 Visitas Total: 14 | Hoje: 14
+[19:34:30] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:34:30] 📊 Visitas Total: 15 | Hoje: 15
+[19:34:45] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:34:45] 📊 Visitas Total: 16 | Hoje: 16
+[19:35:00] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:35:00] 📊 Visitas Total: 17 | Hoje: 17
+[19:35:26] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:35:26] 📊 Visitas Total: 18 | Hoje: 18
+[19:35:29] 👤 Acesso: 172.25.112.1 -> /database/files/skills_geradas/informa├º├úo do projeto/02_Modulo_Clima_WeatherModule.md
+[19:35:29] 📊 Visitas Total: 19 | Hoje: 19
+[19:35:30] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:35:30] 📊 Visitas Total: 20 | Hoje: 20
+[19:35:45] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:35:45] 📊 Visitas Total: 21 | Hoje: 21
+[19:36:00] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:36:00] 📊 Visitas Total: 22 | Hoje: 22
+[19:36:50] 👤 Acesso: 172.25.112.1 -> /database
+[19:36:50] 📊 Visitas Total: 23 | Hoje: 23
+[19:36:51] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:36:51] 📊 Visitas Total: 24 | Hoje: 24
+[19:36:59] 👤 Acesso: 172.25.112.1 -> /45
+[19:36:59] 📊 Visitas Total: 25 | Hoje: 25
+[19:36:59] 👤 Acesso: 172.25.112.1 -> /maintenance/error-pages.css
+[19:36:59] 📊 Visitas Total: 26 | Hoje: 26
+[19:36:59] 👤 Acesso: 172.25.112.1 -> /maintenance/background.jpg
+[19:36:59] 📊 Visitas Total: 27 | Hoje: 27
+[19:37:50] 👤 Acesso: 172.25.112.1 -> /calendar
+[19:37:50] 📊 Visitas Total: 28 | Hoje: 28
+[19:38:16] 👤 Acesso: 172.25.112.1 -> /database
+[19:38:16] 📊 Visitas Total: 29 | Hoje: 29
+[19:38:17] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:38:17] 📊 Visitas Total: 30 | Hoje: 30
+[19:38:12] 👤 Acesso: 172.25.112.1 -> /database
+[19:38:12] 📊 Visitas Total: 31 | Hoje: 31
+[19:38:13] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:38:13] 📊 Visitas Total: 32 | Hoje: 32
+[19:38:20] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:38:20] 📊 Visitas Total: 33 | Hoje: 33
+[19:38:28] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:38:28] 📊 Visitas Total: 34 | Hoje: 34
+[19:38:35] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:38:35] 📊 Visitas Total: 35 | Hoje: 35
+[19:38:54] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:38:54] 📊 Visitas Total: 36 | Hoje: 36
+[19:39:01] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:39:01] 📊 Visitas Total: 37 | Hoje: 37
+[19:38:58] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:38:58] 📊 Visitas Total: 38 | Hoje: 38
+[19:39:05] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:39:05] 📊 Visitas Total: 39 | Hoje: 39
+[19:39:13] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:39:13] 📊 Visitas Total: 40 | Hoje: 40
+[19:39:20] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:39:20] 📊 Visitas Total: 41 | Hoje: 41
+[19:39:28] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:39:28] 📊 Visitas Total: 42 | Hoje: 42
+[19:39:35] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:39:35] 📊 Visitas Total: 43 | Hoje: 43
+[19:39:43] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:39:43] 📊 Visitas Total: 44 | Hoje: 44
+[19:39:50] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:39:50] 📊 Visitas Total: 45 | Hoje: 45
+[19:39:58] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:39:58] 📊 Visitas Total: 46 | Hoje: 46
+[19:40:05] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:40:05] 📊 Visitas Total: 47 | Hoje: 47
+[19:40:13] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:40:13] 📊 Visitas Total: 48 | Hoje: 48
+[19:40:21] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:40:21] 📊 Visitas Total: 49 | Hoje: 49
+[19:40:28] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:40:28] 📊 Visitas Total: 50 | Hoje: 50
+[19:40:36] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:40:36] 📊 Visitas Total: 51 | Hoje: 51
+[19:40:43] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:40:43] 📊 Visitas Total: 52 | Hoje: 52
+[19:40:51] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:40:51] 📊 Visitas Total: 53 | Hoje: 53
+[19:40:58] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:40:58] 📊 Visitas Total: 54 | Hoje: 54
+[19:41:06] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:41:06] 📊 Visitas Total: 55 | Hoje: 55
+[19:41:13] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:41:13] 📊 Visitas Total: 56 | Hoje: 56
+[19:41:21] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:41:21] 📊 Visitas Total: 57 | Hoje: 57
+[19:41:28] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:41:28] 📊 Visitas Total: 58 | Hoje: 58
+[19:41:36] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:41:36] 📊 Visitas Total: 59 | Hoje: 59
+[19:41:43] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:41:43] 📊 Visitas Total: 60 | Hoje: 60
+[19:41:51] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:41:51] 📊 Visitas Total: 61 | Hoje: 61
+[19:41:58] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:41:58] 📊 Visitas Total: 62 | Hoje: 62
+[19:42:06] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:42:06] 📊 Visitas Total: 63 | Hoje: 63
+[19:42:13] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:42:13] 📊 Visitas Total: 64 | Hoje: 64
+[19:42:21] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:42:21] 📊 Visitas Total: 65 | Hoje: 65
+[19:42:28] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:42:28] 📊 Visitas Total: 66 | Hoje: 66
+[19:42:35] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:42:35] 📊 Visitas Total: 67 | Hoje: 67
+[19:42:54] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:42:54] 📊 Visitas Total: 68 | Hoje: 68
+[19:43:01] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:43:01] 📊 Visitas Total: 69 | Hoje: 69
+[19:42:58] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:42:58] 📊 Visitas Total: 70 | Hoje: 70
+[19:43:05] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:43:05] 📊 Visitas Total: 71 | Hoje: 71
+[19:43:13] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:43:13] 📊 Visitas Total: 72 | Hoje: 72
+[19:43:20] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:43:20] 📊 Visitas Total: 73 | Hoje: 73
+[19:43:28] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:43:28] 📊 Visitas Total: 74 | Hoje: 74
+[19:43:35] 👤 Acesso: 172.25.112.1 -> /database/philistudies.json
+[19:43:35] 📊 Visitas Total: 75 | Hoje: 75
+[19:47:00] 👤 Acesso: 127.0.0.1 -> /index.html
+[19:47:00] 📊 Visitas Total: 15 | Hoje: 15
+[20:07:02] 👤 Acesso: 172.25.112.1 -> /
+[20:07:02] 📊 Visitas Total: 1 | Hoje: 1
+[20:07:06] 👤 Acesso: 127.0.0.1 -> /
+[20:07:06] 📊 Visitas Total: 2 | Hoje: 2
+[20:10:21] 👤 Acesso: 172.25.112.1 -> /
+[20:10:21] 📊 Visitas Total: 1 | Hoje: 1
+[20:10:24] 👤 Acesso: 127.0.0.1 -> /
+[20:10:24] 📊 Visitas Total: 2 | Hoje: 2
+[20:11:49] 👤 Acesso: 172.25.112.1 -> /
+[20:11:49] 📊 Visitas Total: 1 | Hoje: 1
+[20:11:53] 👤 Acesso: 127.0.0.1 -> /
+[20:11:53] 📊 Visitas Total: 2 | Hoje: 2
+[20:11:54] 👤 Acesso: 127.0.0.1 -> /
+[20:11:54] 📊 Visitas Total: 3 | Hoje: 3
+[20:12:22] 👤 Acesso: 127.0.0.1 -> /
+[20:12:22] 📊 Visitas Total: 4 | Hoje: 4
+[20:12:24] 👤 Acesso: 127.0.0.1 -> /
+[20:12:24] 📊 Visitas Total: 5 | Hoje: 5
+[20:12:30] 👤 Acesso: 127.0.0.1 -> /calendar
+[20:12:30] 📊 Visitas Total: 7 | Hoje: 7
+[20:13:35] 👤 Acesso: 172.25.112.1 -> /
+[20:13:35] 📊 Visitas Total: 1 | Hoje: 1
+[20:14:00] 👤 Acesso: 172.25.112.1 -> /
+[20:14:00] 📊 Visitas Total: 2 | Hoje: 2
+[20:14:49] 👤 Acesso: 172.25.112.1 -> /
+[20:14:49] 📊 Visitas Total: 1 | Hoje: 1
+[20:14:49] 👤 Acesso: 127.0.0.1 -> /
+[20:14:49] 📊 Visitas Total: 2 | Hoje: 2
+[20:19:53] 👤 Acesso: 127.0.0.1 -> /
+[20:19:53] 📊 Visitas Total: 27 | Hoje: 27
+[20:20:04] 👤 Acesso: 127.0.0.1 -> /
+[20:20:04] 📊 Visitas Total: 28 | Hoje: 28
+[20:20:35] 👤 Acesso: 127.0.0.1 -> /
+[20:20:35] 📊 Visitas Total: 29 | Hoje: 29
+[20:21:14] 👤 Acesso: 127.0.0.1 -> /
+[20:21:14] 📊 Visitas Total: 30 | Hoje: 30
+[20:21:23] 👤 Acesso: 127.0.0.1 -> /
+[20:21:23] 📊 Visitas Total: 31 | Hoje: 31
+[20:37:44] 👤 Acesso: 172.25.112.1 -> /
+[20:37:44] 📊 Visitas Total: 18 | Hoje: 18
+[20:38:43] 👤 Acesso: 172.25.112.1 -> /
+[20:38:43] 📊 Visitas Total: 22 | Hoje: 22
+[20:39:00] 👤 Acesso: 172.25.112.1 -> /
+[20:39:00] 📊 Visitas Total: 23 | Hoje: 23
+[21:01:45] 👤 Acesso: 172.25.112.1 -> /
+[21:01:45] 📊 Visitas Total: 1 | Hoje: 1
+[21:09:46] 👤 Acesso: 172.25.112.1 -> /
+[21:09:46] 📊 Visitas Total: 1 | Hoje: 1
+[21:09:50] 👤 Acesso: 172.25.112.1 -> /
+[21:09:50] 📊 Visitas Total: 2 | Hoje: 2
+[21:11:11] 👤 Acesso: 172.25.112.1 -> /429.html
+[21:11:11] 📊 Visitas Total: 43 | Hoje: 43
+[21:11:13] 👤 Acesso: 172.25.112.1 -> /
+[21:11:13] 📊 Visitas Total: 44 | Hoje: 44
+[21:11:15] 👤 Acesso: 172.25.112.1 -> /429.html
+[21:11:15] 📊 Visitas Total: 45 | Hoje: 45
+[21:11:19] 👤 Acesso: 172.25.112.1 -> /
+[21:11:19] 📊 Visitas Total: 46 | Hoje: 46
+[21:11:31] 👤 Acesso: 172.25.112.1 -> /429.html
+[21:11:31] 📊 Visitas Total: 47 | Hoje: 47
+[21:11:25] 👤 Acesso: 172.25.112.1 -> /
+[21:11:25] 📊 Visitas Total: 48 | Hoje: 48
+[21:11:29] 👤 Acesso: 172.25.112.1 -> /429.html
+[21:11:29] 📊 Visitas Total: 49 | Hoje: 49
+[21:11:55] 👤 Acesso: 127.0.0.1 -> /index.html
+[21:11:55] 📊 Visitas Total: 51 | Hoje: 51
+[21:12:10] 👤 Acesso: 127.0.0.1 -> /
+[21:12:10] 📊 Visitas Total: 54 | Hoje: 54
+[21:13:02] 👤 Acesso: 127.0.0.1 -> /
+[21:13:02] 📊 Visitas Total: 1 | Hoje: 1
+[21:14:03] 👤 Acesso: 127.0.0.1 -> /
+[21:14:03] 📊 Visitas Total: 3 | Hoje: 3
+[21:15:35] 👤 Acesso: 127.0.0.1 -> /
+[21:15:35] 📊 Visitas Total: 1 | Hoje: 1
+[21:15:44] 👤 Acesso: 127.0.0.1 -> /
+[21:15:44] 📊 Visitas Total: 2 | Hoje: 2
+[21:15:46] 👤 Acesso: 127.0.0.1 -> /
+[21:15:46] 📊 Visitas Total: 3 | Hoje: 3
+[21:16:34] 👤 Acesso: 127.0.0.1 -> /
+[21:16:34] 📊 Visitas Total: 1 | Hoje: 1
+[21:18:22] 👤 Acesso: 127.0.0.1 -> /
+[21:18:22] 📊 Visitas Total: 3 | Hoje: 3
+[21:18:25] 👤 Acesso: 127.0.0.1 -> /calendar
+[21:18:25] 📊 Visitas Total: 4 | Hoje: 4
+[21:19:32] 👤 Acesso: 127.0.0.1 -> /
+[21:19:32] 📊 Visitas Total: 9 | Hoje: 9

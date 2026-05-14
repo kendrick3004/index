@@ -1,0 +1,589 @@
+/* ═══════════════════════════════════════════════════════════════════════════════
+   DATABASE MOBILE OPTIMIZATION
+   Otimizações responsivas para dispositivos móveis, mantendo design consistente
+   ═══════════════════════════════════════════════════════════════════════════════ */
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Tablets (768px - 1024px)
+   ───────────────────────────────────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+    .container {
+        padding: 15px;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .controls {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .view-controls,
+    .action-controls {
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .action-controls {
+        justify-content: space-between;
+    }
+
+    .btn {
+        padding: 9px 14px;
+        font-size: 0.85rem;
+    }
+
+    .file-grid {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 12px;
+    }
+
+    .file-card {
+        padding: 12px;
+    }
+
+    .file-icon {
+        width: 40px;
+        height: 40px;
+        margin: 0 auto 8px;
+    }
+
+    .file-preview {
+        height: 100px;
+        margin: 0 auto 8px;
+    }
+
+    .file-name {
+        font-size: 0.85rem;
+    }
+
+    .file-info {
+        font-size: 0.75rem;
+    }
+
+    .file-list th,
+    .file-list td {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .selection-info {
+        flex-direction: column;
+        gap: 8px;
+        padding: 10px 12px;
+    }
+
+    .modal-content {
+        max-width: 95%;
+        max-height: 95vh;
+    }
+
+    .modal-body {
+        max-height: 65vh;
+    }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Smartphones Grandes (480px - 768px)
+   ───────────────────────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+    .container {
+        padding: 12px;
+        max-width: 100%;
+    }
+
+    .header {
+        margin-bottom: 20px;
+        padding: 15px 0;
+    }
+
+    .header h1 {
+        font-size: 1.6rem;
+        margin-bottom: 6px;
+    }
+
+    .header p {
+        font-size: 0.95rem;
+    }
+
+    .breadcrumb {
+        margin-bottom: 12px;
+        padding: 8px 12px;
+        font-size: 0.8rem;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .controls {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 15px;
+        gap: 10px;
+        border-radius: 10px;
+    }
+
+    .view-controls {
+        width: 100%;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .action-controls {
+        width: 100%;
+        flex-direction: column;
+        gap: 8px;
+        align-items: stretch;
+    }
+
+    .btn {
+        padding: 10px 12px;
+        font-size: 0.85rem;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .btn-icon {
+        padding: 8px 10px;
+        width: auto;
+        flex: 1;
+    }
+
+    .btn-secondary {
+        width: 100%;
+    }
+
+    .file-container {
+        padding: 15px;
+        min-height: 300px;
+        border-radius: 10px;
+    }
+
+    .file-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 10px;
+    }
+
+    .file-card {
+        padding: 10px;
+        border-radius: 10px;
+        border-width: 1px;
+    }
+
+    .file-icon {
+        width: 36px;
+        height: 36px;
+        margin: 0 auto 6px;
+        border-radius: 10px;
+    }
+
+    .file-preview {
+        width: 100%;
+        height: 90px;
+        margin: 0 auto 6px;
+        border-radius: 10px;
+    }
+
+    .file-name {
+        font-size: 0.8rem;
+        margin-bottom: 4px;
+        line-height: 1.3;
+    }
+
+    .file-info {
+        font-size: 0.7rem;
+    }
+
+    .file-checkbox {
+        width: 18px;
+        height: 18px;
+        top: 6px;
+        right: 6px;
+    }
+
+    .file-list {
+        font-size: 0.85rem;
+    }
+
+    .file-list th,
+    .file-list td {
+        padding: 8px;
+        font-size: 0.8rem;
+    }
+
+    .file-list th {
+        font-size: 0.75rem;
+    }
+
+    .selection-info {
+        flex-direction: column;
+        gap: 8px;
+        padding: 10px;
+        margin-bottom: 15px;
+        border-radius: 10px;
+        font-size: 0.85rem;
+    }
+
+    .selection-info span {
+        display: block;
+        text-align: center;
+    }
+
+    /* Upload Modal */
+    .modal-content {
+        max-width: 95vw;
+        width: 95%;
+        max-height: 90vh;
+        border-radius: 14px;
+    }
+
+    .modal-header {
+        padding: 15px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .modal-header h3 {
+        font-size: 1rem;
+        flex: 1;
+        min-width: 100%;
+    }
+
+    .modal-body {
+        padding: 0;
+        max-height: 55vh;
+    }
+
+    .modal-footer {
+        padding: 12px;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .modal-footer .btn {
+        width: 100%;
+        font-size: 0.85rem;
+    }
+
+    #upload-list-container {
+        max-height: 400px;
+        padding: 15px;
+    }
+
+    #upload-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 10px;
+        padding: 15px;
+    }
+
+    /* Preview Modal */
+    #preview-modal .modal-content {
+        max-height: 95vh;
+    }
+
+    #preview-content {
+        max-height: 65vh;
+        padding: 15px;
+    }
+
+    #preview-content img {
+        max-width: 100%;
+        max-height: 60vh;
+    }
+
+    #preview-content video,
+    #preview-content audio {
+        width: 100%;
+    }
+
+    #preview-content pre {
+        font-size: 0.75rem !important;
+        padding: 12px !important;
+        max-height: 60vh !important;
+    }
+
+    /* Background Upload Indicator */
+    #bg-upload-indicator {
+        margin-bottom: 15px;
+        padding: 12px;
+        border-radius: 10px;
+    }
+
+    #bg-upload-indicator > div:first-child {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    #bg-upload-filename {
+        max-width: 100%;
+    }
+
+    /* Notification */
+    .notification {
+        top: 10px;
+        right: 10px;
+        left: 10px;
+        font-size: 0.85rem;
+        padding: 10px 15px;
+        border-radius: 8px;
+    }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Smartphones Pequenos (320px - 480px)
+   ───────────────────────────────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    .header {
+        margin-bottom: 15px;
+        padding: 12px 0;
+        border-bottom-width: 1px;
+    }
+
+    .header h1 {
+        font-size: 1.3rem;
+        margin-bottom: 4px;
+    }
+
+    .header p {
+        font-size: 0.85rem;
+    }
+
+    .breadcrumb {
+        margin-bottom: 10px;
+        padding: 6px 10px;
+        font-size: 0.75rem;
+        border-radius: 6px;
+    }
+
+    .controls {
+        padding: 12px;
+        gap: 8px;
+        border-radius: 8px;
+    }
+
+    .view-controls {
+        gap: 6px;
+    }
+
+    .btn {
+        padding: 8px 10px;
+        font-size: 0.8rem;
+        border-radius: 6px;
+    }
+
+    .btn-icon {
+        padding: 6px 8px;
+        font-size: 0.9rem;
+    }
+
+    .file-container {
+        padding: 12px;
+        min-height: 250px;
+        border-radius: 8px;
+    }
+
+    .file-grid {
+        grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+        gap: 8px;
+    }
+
+    .file-card {
+        padding: 8px;
+        border-radius: 8px;
+    }
+
+    .file-icon {
+        width: 32px;
+        height: 32px;
+        margin: 0 auto 5px;
+    }
+
+    .file-preview {
+        height: 80px;
+        margin: 0 auto 5px;
+    }
+
+    .file-name {
+        font-size: 0.75rem;
+        margin-bottom: 3px;
+    }
+
+    .file-info {
+        font-size: 0.65rem;
+    }
+
+    .file-checkbox {
+        width: 16px;
+        height: 16px;
+        top: 5px;
+        right: 5px;
+    }
+
+    .file-list {
+        font-size: 0.75rem;
+    }
+
+    .file-list th,
+    .file-list td {
+        padding: 6px;
+        font-size: 0.7rem;
+    }
+
+    .selection-info {
+        padding: 8px;
+        margin-bottom: 12px;
+        font-size: 0.8rem;
+        gap: 6px;
+    }
+
+    .modal-content {
+        max-width: 98vw;
+        width: 98%;
+        max-height: 92vh;
+        border-radius: 12px;
+    }
+
+    .modal-header {
+        padding: 12px;
+    }
+
+    .modal-header h3 {
+        font-size: 0.95rem;
+    }
+
+    .modal-body {
+        max-height: 50vh;
+        padding: 0;
+    }
+
+    .modal-footer {
+        padding: 10px;
+        gap: 6px;
+    }
+
+    #upload-list-container {
+        max-height: 350px;
+        padding: 12px;
+    }
+
+    #upload-grid {
+        grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+        gap: 8px;
+        padding: 12px;
+    }
+
+    #preview-content {
+        max-height: 60vh;
+        padding: 12px;
+    }
+
+    #preview-content img {
+        max-height: 55vh;
+    }
+
+    #preview-content pre {
+        font-size: 0.7rem !important;
+        padding: 10px !important;
+        max-height: 55vh !important;
+    }
+
+    #bg-upload-indicator {
+        margin-bottom: 12px;
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    .notification {
+        top: 8px;
+        right: 8px;
+        left: 8px;
+        font-size: 0.8rem;
+        padding: 8px 12px;
+    }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Alinhamento Vertical Melhorado: Pasta + Arquivo
+   Quando pastas e arquivos estão juntos, descer um pouco o ícone da pasta
+   para melhor alinhamento visual
+   ───────────────────────────────────────────────────────────────────────────── */
+.file-card.directory .file-icon {
+    margin-top: 2px;
+}
+
+.file-card.directory .file-preview {
+    margin-top: 2px;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Melhorias de Acessibilidade e Usabilidade Mobile
+   ───────────────────────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+    /* Aumentar área de toque dos botões */
+    .btn,
+    .btn-icon {
+        min-height: 44px;
+        min-width: 44px;
+    }
+
+    /* Melhorar espaçamento entre elementos interativos */
+    .file-checkbox {
+        min-width: 24px;
+        min-height: 24px;
+    }
+
+    /* Melhorar legibilidade do texto */
+    body {
+        font-size: 16px;
+    }
+
+    /* Evitar zoom ao focar em inputs */
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+        font-size: 16px;
+    }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Orientação Landscape (Smartphones em modo horizontal)
+   ───────────────────────────────────────────────────────────────────────────── */
+@media (max-width: 768px) and (orientation: landscape) {
+    .header {
+        margin-bottom: 10px;
+        padding: 8px 0;
+    }
+
+    .header h1 {
+        font-size: 1.2rem;
+    }
+
+    .controls {
+        padding: 10px;
+        gap: 6px;
+    }
+
+    .file-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+
+    .file-container {
+        min-height: 300px;
+    }
+
+    .modal-body {
+        max-height: 50vh;
+    }
+
+    #preview-content {
+        max-height: 50vh;
+    }
+}

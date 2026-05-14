@@ -64,3 +64,145 @@ Press CTRL+C to quit
 172.25.112.1 - - [11/May/2026 14:01:04] "GET /503 HTTP/1.1" 304 -
 172.25.112.1 - - [11/May/2026 14:01:04] "GET /maintenance/error-pages.css HTTP/1.1" 304 -
 172.25.112.1 - - [11/May/2026 14:01:04] "GET /maintenance/background.jpg HTTP/1.1" 304 -
+[14:12:33] --- Modo Manutenção Iniciado ---
+🚧 Modo Manutenção ATIVO na porta 5000
+ * Serving Flask app 'main'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.25.118.129:5000
+Press CTRL+C to quit
+[14:14:41] --- Modo Manutenção Iniciado ---
+🚧 Modo Manutenção ATIVO na porta 5000
+ * Serving Flask app 'main'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.25.118.129:5000
+Press CTRL+C to quit
+[14:14:53] 🚧 Acesso em Manutenção: 172.25.112.1 -> /
+172.25.112.1 - - [11/May/2026 14:14:53] "GET / HTTP/1.1" 200 -
+172.25.112.1 - - [11/May/2026 14:14:53] "GET /maintenance/error-pages.css HTTP/1.1" 304 -
+172.25.112.1 - - [11/May/2026 14:14:53] "GET /maintenance/background.jpg HTTP/1.1" 304 -
+[14:14:46] 🚧 Acesso em Manutenção: 172.25.112.1 -> /
+172.25.112.1 - - [11/May/2026 14:14:46] "GET / HTTP/1.1" 304 -
+172.25.112.1 - - [11/May/2026 14:14:46] "GET /maintenance/error-pages.css HTTP/1.1" 304 -
+172.25.112.1 - - [11/May/2026 14:14:46] "GET /maintenance/background.jpg HTTP/1.1" 304 -
+[14:14:47] 🚧 Acesso em Manutenção: 172.25.112.1 -> /
+172.25.112.1 - - [11/May/2026 14:14:47] "GET / HTTP/1.1" 304 -
+172.25.112.1 - - [11/May/2026 14:14:47] "GET /maintenance/error-pages.css HTTP/1.1" 304 -
+172.25.112.1 - - [11/May/2026 14:14:47] "GET /maintenance/background.jpg HTTP/1.1" 304 -
+[14:14:47] 🚧 Acesso em Manutenção: 172.25.112.1 -> /
+172.25.112.1 - - [11/May/2026 14:14:47] "GET / HTTP/1.1" 304 -
+172.25.112.1 - - [11/May/2026 14:14:47] "GET /maintenance/error-pages.css HTTP/1.1" 304 -
+172.25.112.1 - - [11/May/2026 14:14:47] "GET /maintenance/background.jpg HTTP/1.1" 304 -
+[14:14:48] 🚧 Acesso em Manutenção: 172.25.112.1 -> /
+172.25.112.1 - - [11/May/2026 14:14:48] "GET / HTTP/1.1" 304 -
+172.25.112.1 - - [11/May/2026 14:14:48] "GET /maintenance/error-pages.css HTTP/1.1" 304 -
+172.25.112.1 - - [11/May/2026 14:14:48] "GET /maintenance/background.jpg HTTP/1.1" 304 -
+[14:14:49] 🚧 Acesso em Manutenção: 172.25.112.1 -> /
+172.25.112.1 - - [11/May/2026 14:14:49] "GET / HTTP/1.1" 304 -
+172.25.112.1 - - [11/May/2026 14:14:49] "GET /maintenance/error-pages.css HTTP/1.1" 304 -
+172.25.112.1 - - [11/May/2026 14:14:49] "GET /maintenance/background.jpg HTTP/1.1" 304 -
+[14:14:49] 🚧 Acesso em Manutenção: 172.25.112.1 -> /
+172.25.112.1 - - [11/May/2026 14:14:49] "GET / HTTP/1.1" 304 -
+172.25.112.1 - - [11/May/2026 14:14:49] "GET /maintenance/error-pages.css HTTP/1.1" 304 -
+172.25.112.1 - - [11/May/2026 14:14:49] "GET /maintenance/background.jpg HTTP/1.1" 304 -
+[14:14:49] 🚧 Acesso em Manutenção: 172.25.112.1 -> /
+172.25.112.1 - - [11/May/2026 14:14:49] "GET / HTTP/1.1" 304 -
+172.25.112.1 - - [11/May/2026 14:14:50] "GET /maintenance/error-pages.css HTTP/1.1" 304 -
+172.25.112.1 - - [11/May/2026 14:14:50] "GET /maintenance/background.jpg HTTP/1.1" 304 -
+[14:14:50] 🚧 Acesso em Manutenção: 172.25.112.1 -> /
+172.25.112.1 - - [11/May/2026 14:14:50] "GET / HTTP/1.1" 304 -
+172.25.112.1 - - [11/May/2026 14:14:50] "GET /maintenance/error-pages.css HTTP/1.1" 304 -
+172.25.112.1 - - [11/May/2026 14:14:50] "GET /maintenance/background.jpg HTTP/1.1" 304 -
+[14:14:50] 🚧 Acesso em Manutenção: 172.25.112.1 -> /
+172.25.112.1 - - [11/May/2026 14:14:50] "GET / HTTP/1.1" 304 -
+172.25.112.1 - - [11/May/2026 14:14:50] "GET /maintenance/error-pages.css HTTP/1.1" 304 -
+172.25.112.1 - - [11/May/2026 14:14:50] "GET /maintenance/background.jpg HTTP/1.1" 304 -
+[14:14:58] ⚠️ BLOQUEIO (Manutenção): IP 172.25.112.1
+172.25.112.1 - - [11/May/2026 14:14:58] "GET / HTTP/1.1" 429 -
+172.25.112.1 - - [11/May/2026 14:14:58] "GET /maintenance/background.jpg HTTP/1.1" 304 -
+[14:14:51] ⚠️ BLOQUEIO (Manutenção): IP 172.25.112.1
+172.25.112.1 - - [11/May/2026 14:14:51] "GET / HTTP/1.1" 429 -
+172.25.112.1 - - [11/May/2026 14:14:51] "GET /maintenance/background.jpg HTTP/1.1" 304 -
+[14:14:52] ⚠️ BLOQUEIO (Manutenção): IP 172.25.112.1
+172.25.112.1 - - [11/May/2026 14:14:52] "GET / HTTP/1.1" 429 -
+172.25.112.1 - - [11/May/2026 14:14:52] "GET /maintenance/background.jpg HTTP/1.1" 304 -
+[14:15:07] 🚧 Acesso em Manutenção: 172.25.112.1 -> /
+172.25.112.1 - - [11/May/2026 14:15:07] "GET / HTTP/1.1" 200 -
+172.25.112.1 - - [11/May/2026 14:15:07] "GET /maintenance/error-pages.css HTTP/1.1" 304 -
+172.25.112.1 - - [11/May/2026 14:15:07] "GET /maintenance/background.jpg HTTP/1.1" 304 -
+[14:56:08] --- Modo Manutenção Iniciado ---
+🚧 Modo Manutenção ATIVO na porta 5000
+ * Serving Flask app 'main'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.25.118.129:5000
+Press CTRL+C to quit
+[14:56:15] 🚧 Acesso em Manutenção: 172.25.112.1 -> /
+172.25.112.1 - - [11/May/2026 14:56:15] "GET / HTTP/1.1" 200 -
+172.25.112.1 - - [11/May/2026 14:56:15] "GET /maintenance/error-pages.css HTTP/1.1" 304 -
+172.25.112.1 - - [11/May/2026 14:56:15] "GET /maintenance/background.jpg HTTP/1.1" 304 -
+172.25.112.1 - - [11/May/2026 14:56:15] "GET /assets/dev/favicon/Favicon.png HTTP/1.1" 200 -
+[14:56:16] 🚧 Acesso em Manutenção: 172.25.112.1 -> /
+172.25.112.1 - - [11/May/2026 14:56:16] "GET / HTTP/1.1" 304 -
+172.25.112.1 - - [11/May/2026 14:56:16] "GET /maintenance/error-pages.css HTTP/1.1" 304 -
+172.25.112.1 - - [11/May/2026 14:56:16] "GET /maintenance/background.jpg HTTP/1.1" 304 -
+172.25.112.1 - - [11/May/2026 14:56:16] "GET /assets/dev/favicon/Favicon.png HTTP/1.1" 304 -
+[14:57:38] --- Modo Manutenção Iniciado ---
+🚧 Modo Manutenção ATIVO na porta 5000
+ * Serving Flask app 'main'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.25.118.129:5000
+Press CTRL+C to quit
+[14:57:45] 🚧 Acesso em Manutenção: 172.25.112.1 -> /
+172.25.112.1 - - [11/May/2026 14:57:45] "GET / HTTP/1.1" 200 -
+172.25.112.1 - - [11/May/2026 14:57:45] "GET /maintenance/error-pages.css HTTP/1.1" 304 -
+172.25.112.1 - - [11/May/2026 14:57:45] "GET /maintenance/background.jpg HTTP/1.1" 304 -
+172.25.112.1 - - [11/May/2026 14:57:45] "GET /assets/dev/favicon/Favicon.png HTTP/1.1" 200 -
+[14:57:45] 🚧 Acesso em Manutenção: 172.25.112.1 -> /
+172.25.112.1 - - [11/May/2026 14:57:45] "GET / HTTP/1.1" 304 -
+172.25.112.1 - - [11/May/2026 14:57:45] "GET /maintenance/error-pages.css HTTP/1.1" 304 -
+172.25.112.1 - - [11/May/2026 14:57:45] "GET /maintenance/background.jpg HTTP/1.1" 304 -
+172.25.112.1 - - [11/May/2026 14:57:46] "GET /assets/dev/favicon/Favicon.png HTTP/1.1" 304 -
+[14:57:47] 🚧 Acesso em Manutenção: 172.25.112.1 -> /
+172.25.112.1 - - [11/May/2026 14:57:47] "GET / HTTP/1.1" 304 -
+172.25.112.1 - - [11/May/2026 14:57:47] "GET /maintenance/error-pages.css HTTP/1.1" 304 -
+172.25.112.1 - - [11/May/2026 14:57:47] "GET /maintenance/background.jpg HTTP/1.1" 304 -
+172.25.112.1 - - [11/May/2026 14:57:47] "GET /assets/dev/favicon/Favicon.png HTTP/1.1" 304 -
+[18:18:30] --- Modo Manutenção Iniciado ---
+🚧 Modo Manutenção ATIVO na porta 5000
+ * Serving Flask app 'main'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.25.118.129:5000
+Press CTRL+C to quit
+[18:18:42] 🚧 Acesso em Manutenção: 172.25.112.1 -> /database/philistudies.json
+172.25.112.1 - - [11/May/2026 18:18:42] "GET /database/philistudies.json HTTP/1.1" 200 -
+172.25.112.1 - - [11/May/2026 18:18:42] "GET /maintenance/error-pages.css HTTP/1.1" 200 -
+172.25.112.1 - - [11/May/2026 18:18:42] "GET /assets/dev/favicon/Favicon.png HTTP/1.1" 200 -
+172.25.112.1 - - [11/May/2026 18:18:49] "GET /maintenance/background.jpg HTTP/1.1" 200 -
+[18:18:53] 🚧 Acesso em Manutenção: 172.25.112.1 -> /database
+172.25.112.1 - - [11/May/2026 18:18:53] "GET /database HTTP/1.1" 200 -
+172.25.112.1 - - [11/May/2026 18:18:53] "GET /maintenance/error-pages.css HTTP/1.1" 304 -
+172.25.112.1 - - [11/May/2026 18:18:54] "GET /maintenance/background.jpg HTTP/1.1" 304 -
+172.25.112.1 - - [11/May/2026 18:18:54] "GET /assets/dev/favicon/Favicon.png HTTP/1.1" 304 -
+[18:36:36] --- Modo Manutenção Iniciado ---
+🚧 Modo Manutenção ATIVO na porta 5000
+ * Serving Flask app 'main'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.25.118.129:5000
+Press CTRL+C to quit
