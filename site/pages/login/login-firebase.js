@@ -49,7 +49,7 @@ window.addEventListener('DOMContentLoaded', () => {
             const redirectUrl = urlParams.get('redirect');
             setTimeout(() => {
                 // Padrão: redireciona para o calendário (sem .html)
-                window.location.href = redirectUrl ? decodeURIComponent(redirectUrl) : "/pages/calendar";
+                window.location.href = redirectUrl ? decodeURIComponent(redirectUrl) : "/calendar";
             }, 1000);
 
         } catch (error) {

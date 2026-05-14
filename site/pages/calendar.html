@@ -167,7 +167,7 @@
             loginBtn.onclick = function() {
                 console.log("Botão Conectar clicado!");
                 // Redireciona para login sem .html, com redirect para o calendário
-                window.location.href = '/pages/login?redirect=' + encodeURIComponent('/pages/calendar');
+                window.location.href = '/login?redirect=' + encodeURIComponent('/calendar');
             };
 
             logoutBtn.onclick = async function() {

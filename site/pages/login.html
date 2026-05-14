@@ -116,7 +116,7 @@
                 localStorage.setItem('auth_timestamp', Date.now().toString());
                 
                 // Redireciona para o calendário de orações (sem .html)
-                window.location.href = "/pages/calendar";
+                window.location.href = "/calendar";
             } catch (error) {
                 console.error("Erro no login Google:", error);
                 document.getElementById('loginError').textContent = "Erro ao entrar com Google.";

@@ -1712,3 +1712,1021 @@ Press CTRL+C to quit
 127.0.0.1 - - [13/May/2026 21:16:50] "GET /database/philistudies.json?v=1778717810235 HTTP/1.1" 200 -
 127.0.0.1 - - [13/May/2026 21:16:51] "GET /database/philistudies.json?v=1778717811419 HTTP/1.1" 200 -
 127.0.0.1 - - [13/May/2026 21:16:51] "GET /database/philistudies.json?v=1778717822076 HTTP/1.1" 200 -
+
+🚀 Servidor ONLINE na porta 5000
+ * Serving Flask app 'main'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.25.118.129:5000
+Press CTRL+C to quit
+127.0.0.1 - - [13/May/2026 21:17:18] "GET /database/philistudies.json?v=1778717849069 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:17:21] "GET /database/philistudies.json?v=1778717852072 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:17:24] "GET /database/philistudies.json?v=1778717855072 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:17:27] "GET /database/philistudies.json?v=1778717858082 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:17:31] "GET /database/philistudies.json?v=1778717861080 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:17:33] "GET /database/philistudies.json?v=1778717864078 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:17:36] "GET /database/philistudies.json?v=1778717867080 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:17:39] "GET /database/philistudies.json?v=1778717870072 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:17:42] "GET /database/philistudies.json?v=1778717873077 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:17:46] "GET /database/philistudies.json?v=1778717876074 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:17:48] "GET /database/philistudies.json?v=1778717879073 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:17:51] "GET /database/philistudies.json?v=1778717882080 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:18:06] "GET /database/philistudies.json?v=1778717886799 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:17:57] "GET /database/philistudies.json?v=1778717888075 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:18:00] "GET /database/philistudies.json?v=1778717891069 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:18:02] "GET /database/philistudies.json?v=1778717882289 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:18:03] "GET /database/philistudies.json?v=1778717894078 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:18:04] "GET /database/files/skills_geradas/design/02_Design_de_Banco_de_Dados_Suite.md HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:18:05] "GET /database/philistudies.json?v=1778717885293 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:18:06] "GET /database/philistudies.json?v=1778717897078 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:18:08] "GET /database/philistudies.json?v=1778717888296 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:18:09] "GET /database/philistudies.json?v=1778717900078 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:18:12] "GET /database/philistudies.json?v=1778717903079 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:18:16] "GET /database/philistudies.json?v=1778717906084 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:18:18] "GET /database HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:18:18] "GET /database/philistudies.json?v=1778717908471 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:18:21] "GET /database/philistudies.json?v=1778717911477 HTTP/1.1" 200 -
+📊 Visitas Total: 3 | Hoje: 3127.0.0.1 - - [13/May/2026 21:18:22] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:18:22] "GET /database/files/dev/DATA/calendario.json HTTP/1.1" 304 -
+📊 Visitas Total: 4 | Hoje: 4127.0.0.1 - - [13/May/2026 21:18:25] "GET /calendar HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:18:25] "GET /pages/calendar/calendar.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:18:25] "GET /pages/calendar/calendar.css HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:18:25] "GET /src/js/main/config.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:18:26] "GET /database HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:18:26] "GET /database/philistudies.json?v=1778717916640 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:18:29] "GET /database/philistudies.json?v=1778717919645 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:18:31] "GET /database/files/dev/favicon/Favicon.png HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:18:31] "GET /database/files/dev/favicon/icon-512-maskable.png HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:18:31] "GET /database/files/dev/favicon/icon-192-maskable.png HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:18:31] "GET /database/files/dev/favicon/Favicon_R.png HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:18:31] "GET /database/files/dev/favicon/icon-192.png HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:18:31] "GET /database/files/dev/favicon/icon-512.png HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:18:32] "GET /database/philistudies.json?v=1778717922640 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:18:34] "GET /database/files/dev/TEMPLATES_WEATHER/Weather=Storm,%20Moment=Day.svg HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:18:34] "GET /database/files/dev/TEMPLATES_WEATHER/Weather=Rain,%20Moment=Night.svg HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:18:34] "GET /database/files/dev/TEMPLATES_WEATHER/Weather=Few%20Clouds,%20Moment=Night.svg HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:18:34] "GET /database/files/dev/TEMPLATES_WEATHER/Weather=Cloudy,%20Moment=Night.svg HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:18:34] "GET /database/files/dev/TEMPLATES_WEATHER/Weather=Cloudy,%20Moment=Day.svg HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:18:34] "GET /database/files/dev/TEMPLATES_WEATHER/Weather=Rain,%20Moment=Day.svg HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:18:34] "GET /database/files/dev/TEMPLATES_WEATHER/Weather=Few%20Clouds,%20Moment=Day.svg HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:18:34] "GET /database/files/dev/TEMPLATES_WEATHER/Weather=Clear,%20Moment=Day.svg HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:18:34] "GET /database/files/dev/TEMPLATES_WEATHER/Weather=Clear,%20Moment=Night.svg HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:18:34] "GET /database/files/dev/TEMPLATES_WEATHER/Weather=Storm,%20Moment=Night.svg HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:18:35] "GET /database/philistudies.json?v=1778717925646 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:18:38] "GET /database/philistudies.json?v=1778717928646 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:18:39] "GET /database HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:18:39] "GET /database/philistudies.json?v=1778717930081 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:18:41] "GET /database/files/dev/avatar/avatar.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:18:42] "GET /database/philistudies.json?v=1778717933091 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:18:43] "GET /database/files/dev/DATA/calendario.json HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:18:46] "GET /database/philistudies.json?v=1778717936083 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:19:26] "GET /database?path=database/files/skills_geradas/design HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:19:26] "GET /database/js/state.js?v=1.0.0 HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:19:26] "GET /database/js/preview.js?v=1.0.0 HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:19:26] "GET /database/styles.css?v=1.0.1 HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:19:26] "GET /database/js/selection.js?v=1.0.0 HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:19:26] "GET /database/js/init.js?v=1.0.0 HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:19:26] "GET /src/js/main/rate-limiter.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:19:26] "GET /database/js/upload.js?v=1.0.0 HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:19:26] "GET /database/database-mobile.css?v=1.0.0 HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:19:26] "GET /database/js/file-loader.js?v=1.0.0 HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:19:26] "GET /database/philistudies.json?v=1778717966122 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:19:26] "GET /database/sw.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:19:29] "GET /database/philistudies.json?v=1778717969129 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:19:32] "GET /database/files/skills_geradas/design/01_Design_de_Sistema_Suite.md HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:19:32] "GET /database/philistudies.json?v=1778717972125 HTTP/1.1" 200 -
+📊 Visitas Total: 9 | Hoje: 9127.0.0.1 - - [13/May/2026 21:19:32] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:19:33] "GET /database/files/dev/DATA/calendario.json HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:19:35] "GET /database/philistudies.json?v=1778717975126 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:19:37] "GET /database HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:19:38] "GET /database/philistudies.json?v=1778717978126 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:19:38] "GET /database/philistudies.json?v=1778717978126 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:19:41] "GET /database/philistudies.json?v=1778717981127 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:19:44] "GET /database/philistudies.json?v=1778717984127 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:19:47] "GET /database/philistudies.json?v=1778717987127 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:19:50] "GET /database/philistudies.json?v=1778717990127 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:19:53] "GET /database/philistudies.json?v=1778717993126 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:19:56] "GET /database/philistudies.json?v=1778717996126 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:19:59] "GET /database/philistudies.json?v=1778717999127 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:20:02] "GET /database/philistudies.json?v=1778718002126 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:20:37] "GET /database HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:20:37] "GET /database/philistudies.json?v=1778718047803 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:20:40] "GET /database/philistudies.json?v=1778718050808 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:20:43] "GET /database/philistudies.json?v=1778718053804 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:20:46] "GET /database/philistudies.json?v=1778718056815 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:20:49] "GET /database/philistudies.json?v=1778718059810 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:20:52] "GET /database/philistudies.json?v=1778718062820 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:20:54] "GET /database?path=database/files/skills_geradas/design HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:20:54] "GET /database/js/selection.js?v=1.0.0 HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:20:54] "GET /database/js/preview.js?v=1.0.0 HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:20:54] "GET /database/styles.css?v=1.0.1 HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:20:54] "GET /database/database-mobile.css?v=1.0.0 HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:20:54] "GET /database/js/init.js?v=1.0.0 HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:20:54] "GET /database/js/state.js?v=1.0.0 HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:20:55] "GET /database/js/file-loader.js?v=1.0.0 HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:20:55] "GET /database/philistudies.json?v=1778718065805 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:20:55] "GET /src/js/main/rate-limiter.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:20:55] "GET /database/js/upload.js?v=1.0.0 HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:20:56] "GET /database/philistudies.json?v=1778718056010 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:20:57] "GET /database/files/skills_geradas/design/01_Design_de_Sistema_Suite.md HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:20:57] "GET /database/sw.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:20:58] "GET /database/philistudies.json?v=1778718068813 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:20:59] "GET /database/philistudies.json?v=1778718059012 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:21:01] "GET /database/philistudies.json?v=1778718071806 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:21:02] "GET /database/philistudies.json?v=1778718062013 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:21:04] "GET /database/philistudies.json?v=1778718074808 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:21:05] "GET /database/philistudies.json?v=1778718065014 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:21:07] "GET /database/philistudies.json?v=1778718077815 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:21:08] "GET /database/philistudies.json?v=1778718068015 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:21:10] "GET /database/philistudies.json?v=1778718080815 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:21:10] "GET /database/files/skills_geradas/design/04_Design_de_API_e_Integracao_Suite.md HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:21:11] "GET /database/philistudies.json?v=1778718071015 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:21:13] "GET /database/philistudies.json?v=1778718083814 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:21:14] "GET /database/philistudies.json?v=1778718074019 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:21:16] "GET /database/philistudies.json?v=1778718086809 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:21:19] "GET /database/philistudies.json?v=1778718089806 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:21:22] "GET /database/philistudies.json?v=1778718092819 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:21:25] "GET /database/philistudies.json?v=1778718095813 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:21:28] "GET /database/philistudies.json?v=1778718098813 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:21:31] "GET /database/philistudies.json?v=1778718101810 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:21:31] "GET /database/philistudies.json?v=1778718091279 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:21:34] "GET /database/philistudies.json?v=1778718094282 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:21:34] "GET /database/philistudies.json?v=1778718104807 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:21:37] "GET /database/philistudies.json?v=1778718097287 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:21:37] "GET /database/philistudies.json?v=1778718107817 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:21:40] "GET /database/philistudies.json?v=1778718110818 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:21:43] "GET /database/philistudies.json?v=1778718113806 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:21:46] "GET /database/philistudies.json?v=1778718116814 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:21:49] "GET /database/philistudies.json?v=1778718119813 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:21:52] "GET /database/philistudies.json?v=1778718122815 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:21:55] "GET /database/philistudies.json?v=1778718125820 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:21:58] "GET /database/philistudies.json?v=1778718128809 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:22:01] "GET /database/philistudies.json?v=1778718131806 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:22:04] "GET /database/philistudies.json?v=1778718134805 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:22:07] "GET /database/philistudies.json?v=1778718137816 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:22:10] "GET /database/philistudies.json?v=1778718140816 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:22:13] "GET /database/philistudies.json?v=1778718143808 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:22:16] "GET /database/philistudies.json?v=1778718146809 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:22:19] "GET /database/philistudies.json?v=1778718149813 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:22:22] "GET /database/philistudies.json?v=1778718152812 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:22:25] "GET /database/philistudies.json?v=1778718155814 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:22:28] "GET /database/philistudies.json?v=1778718158815 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:22:31] "GET /database/philistudies.json?v=1778718161818 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:22:34] "GET /database/philistudies.json?v=1778718164818 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:22:37] "GET /database/philistudies.json?v=1778718167808 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:22:40] "GET /database/philistudies.json?v=1778718170812 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:22:43] "GET /database/philistudies.json?v=1778718173807 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:22:46] "GET /database/philistudies.json?v=1778718176812 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:22:49] "GET /database/philistudies.json?v=1778718179811 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:22:52] "GET /database/philistudies.json?v=1778718171329 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:22:52] "GET /database/philistudies.json?v=1778718182806 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:22:54] "GET /database/philistudies.json?v=1778718174329 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:22:55] "GET /database/philistudies.json?v=1778718185805 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:22:57] "GET /database/philistudies.json?v=1778718177334 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:22:58] "GET /database/philistudies.json?v=1778718188815 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:23:00] "GET /database/philistudies.json?v=1778718180338 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:23:01] "GET /database/philistudies.json?v=1778718191814 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:23:03] "GET /database/philistudies.json?v=1778718183341 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:23:04] "GET /database/philistudies.json?v=1778718194808 HTTP/1.1" 200 -
+📊 Visitas Total: 15 | Hoje: 15127.0.0.1 - - [13/May/2026 21:23:05] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:23:05] "GET /src/js/main/env-loader.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:23:05] "GET /src/app/update.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:23:05] "GET /src/js/main/factory.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:23:05] "GET /pages/suite/suite.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:23:05] "GET /pages/suite/weather/weather.css HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:23:05] "GET /pages/suite/liturgy.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:23:05] "GET /src/styles/fonts-manager.css HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:23:05] "GET /src/js/main/firebase-sync.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:23:05] "GET /src/styles/modes.css HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:23:05] "GET /src/app/update.css HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:23:05] "GET /pages/suite/weather/weather.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:23:05] "GET /src/js/main/colors.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:23:06] "GET /pages/suite/suite.css HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:23:06] "GET /pages/suite/santo-do-dia.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:23:06] "GET /assets/dev/avatar/avatar.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:23:07] "GET /database/philistudies.json?v=1778718197812 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:23:07] "GET /src/js/main/firebase-config.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:23:08] "GET /assets/dev/templates/light_mode.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:23:10] "GET /database/philistudies.json?v=1778718200816 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:23:13] "GET /database/philistudies.json?v=1778718203810 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:23:16] "GET /database/philistudies.json?v=1778718206809 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:23:19] "GET /database/philistudies.json?v=1778718209808 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:23:22] "GET /database/philistudies.json?v=1778718212814 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:23:25] "GET /database/philistudies.json?v=1778718215815 HTTP/1.1" 200 -
+📊 Visitas Total: 16 | Hoje: 16127.0.0.1 - - [13/May/2026 21:23:25] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:23:25] "GET /src/js/main/env-loader.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:23:25] "GET /src/app/update.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:23:25] "GET /pages/suite/suite.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:23:25] "GET /pages/suite/liturgy.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:23:25] "GET /pages/suite/santo-do-dia.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:23:25] "GET /pages/suite/weather/weather.css HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:23:25] "GET /src/js/main/factory.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:23:25] "GET /src/js/main/firebase-sync.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:23:25] "GET /src/js/main/firebase-config.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:23:25] "GET /src/styles/fonts-manager.css HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:23:25] "GET /pages/suite/suite.css HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:23:25] "GET /pages/suite/weather/weather.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:23:25] "GET /src/app/update.css HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:23:25] "GET /src/js/main/colors.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:23:25] "GET /src/js/main/rate-limiter.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:23:25] "GET /assets/dev/avatar/avatar.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:23:25] "GET /src/styles/modes.css HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:23:26] "GET /database/files/dev/DATA/calendario.json HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:23:26] "GET /assets/dev/templates/dark_mode.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:23:26] "GET /assets/dev/icons/diversos/WEATHER/Moon.svg HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:23:27] "GET /assets/dev/TEMPLATES_WEATHER/Weather=Clear,%20Moment=Night.svg HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:23:28] "GET /database/philistudies.json?v=1778718218815 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:23:28] "GET /assets/dev/favicon/icon-192.png HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:23:31] "GET /database/philistudies.json?v=1778718221806 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:23:34] "GET /database/philistudies.json?v=1778718008431 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:23:34] "GET /database/philistudies.json?v=1778718005430 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:23:34] "GET /database/philistudies.json?v=1778718011433 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:23:34] "GET /database/philistudies.json?v=1778718014432 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:23:34] "GET /database/philistudies.json?v=1778718026433 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:23:34] "GET /database/philistudies.json?v=1778718032430 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:23:34] "GET /database/philistudies.json?v=1778718020433 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:23:34] "GET /database/philistudies.json?v=1778718053431 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:23:34] "GET /database/philistudies.json?v=1778718029434 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:23:34] "GET /database/philistudies.json?v=1778718023431 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:23:34] "GET /database/philistudies.json?v=1778718059434 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:23:34] "GET /database/philistudies.json?v=1778718050433 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:23:34] "GET /database/philistudies.json?v=1778718047433 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:23:34] "GET /database/philistudies.json?v=1778718035433 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:23:34] "GET /database/philistudies.json?v=1778718044432 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:23:34] "GET /database/philistudies.json?v=1778718017431 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:23:34] "GET /database/philistudies.json?v=1778718041434 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:23:34] "GET /database/philistudies.json?v=1778718038432 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:23:34] "GET /database/philistudies.json?v=1778718214197 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:23:34] "GET /database/philistudies.json?v=1778718056433 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:23:34] "GET /database/philistudies.json?v=1778718224814 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:23:35] "GET /database/philistudies.json?v=1778718215126 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:23:37] "GET /database/philistudies.json?v=1778718227806 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:23:37] "GET /database/philistudies.json?v=1778718218126 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:23:40] "GET /database/philistudies.json?v=1778718230807 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:23:40] "GET /database/philistudies.json?v=1778718221126 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:23:42] "GET /database HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:23:42] "GET /database/js/upload.js?v=1.0.0 HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:23:42] "GET /database/js/selection.js?v=1.0.0 HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:23:42] "GET /database/database-mobile.css?v=1.0.0 HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:23:42] "GET /database/styles.css?v=1.0.1 HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:23:42] "GET /database/js/file-loader.js?v=1.0.0 HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:23:43] "GET /database/js/state.js?v=1.0.0 HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:23:43] "GET /database/js/preview.js?v=1.0.0 HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:23:43] "GET /database/philistudies.json?v=1778718233804 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:23:43] "GET /database/js/init.js?v=1.0.0 HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:23:43] "GET /database/philistudies.json?v=1778718224128 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:23:44] "GET /database/sw.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:23:45] "GET /database/philistudies.json?v=1778718223728 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:23:46] "GET /database/philistudies.json?v=1778718236805 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:23:57] "GET /database/philistudies.json?v=1778718226731 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:23:46] "GET /database/philistudies.json?v=1778718227127 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:23:49] "GET /database/philistudies.json?v=1778718239806 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:23:49] "GET /database/philistudies.json?v=1778718229732 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:23:49] "GET /database/philistudies.json?v=1778718230127 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:23:52] "GET /database/philistudies.json?v=1778718242812 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:23:52] "GET /database/philistudies.json?v=1778718232733 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:23:53] "GET /database/philistudies.json?v=1778718233127 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:23:55] "GET /database/philistudies.json?v=1778718245816 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:23:55] "GET /database/philistudies.json?v=1778718235734 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:23:56] "GET /database/philistudies.json?v=1778718236127 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:23:58] "GET /database/philistudies.json?v=1778718248815 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:23:58] "GET /database/philistudies.json?v=1778718238734 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:23:58] "GET /database/philistudies.json?v=1778718239127 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:24:01] "GET /database/philistudies.json?v=1778718251815 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:24:12] "GET /database/philistudies.json?v=1778718241737 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:24:01] "GET /database/philistudies.json?v=1778718242126 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:24:04] "GET /database/philistudies.json?v=1778718254815 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:24:05] "GET /database/philistudies.json?v=1778718245126 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:24:05] "GET /database/philistudies.json?v=1778718244740 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:24:07] "GET /database/philistudies.json?v=1778718257813 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:24:07] "GET /database/philistudies.json?v=1778718247744 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:24:07] "GET /database/philistudies.json?v=1778718248126 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:24:10] "GET /database/philistudies.json?v=1778718260812 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:24:10] "GET /database/philistudies.json?v=1778718250750 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:24:11] "GET /database/philistudies.json?v=1778718251126 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:24:13] "GET /database/philistudies.json?v=1778718263815 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:24:13] "GET /database/philistudies.json?v=1778718254127 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:24:14] "GET /database/philistudies.json?v=1778718253752 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:24:16] "GET /database/philistudies.json?v=1778718266816 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:24:19] "GET /database/philistudies.json?v=1778718269807 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:24:32] "GET /database/philistudies.json?v=1778718261809 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:24:22] "GET /database/philistudies.json?v=1778718272818 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:24:25] "GET /database/philistudies.json?v=1778718275816 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:24:28] "GET /database/philistudies.json?v=1778718278818 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:24:31] "GET /database/philistudies.json?v=1778718281817 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:24:34] "GET /database/philistudies.json?v=1778718284816 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:24:37] "GET /database/philistudies.json?v=1778718287818 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:24:40] "GET /database/philistudies.json?v=1778718290815 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:24:43] "GET /database/philistudies.json?v=1778718293819 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:24:46] "GET /database/philistudies.json?v=1778718296807 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:24:47] "GET /database/philistudies.json?v=1778718287439 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:24:49] "GET /database/philistudies.json?v=1778718299813 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:24:50] "GET /database/philistudies.json?v=1778718290444 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:24:52] "GET /database/philistudies.json?v=1778718302816 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:24:55] "GET /database/philistudies.json?v=1778718305814 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:24:58] "GET /database/philistudies.json?v=1778718308809 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:25:01] "GET /database/philistudies.json?v=1778718311814 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:25:04] "GET /database/philistudies.json?v=1778718314818 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:25:07] "GET /database/philistudies.json?v=1778718317811 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:25:10] "GET /database/philistudies.json?v=1778718320812 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:25:13] "GET /database/philistudies.json?v=1778718323814 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:25:13] "GET /database/philistudies.json?v=1778718313447 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:25:15] "GET /database/files/dev/favicon/Favicon.png HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:25:15] "GET /database/files/dev/favicon/Favicon_R.png HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:25:15] "GET /database/files/dev/favicon/icon-512.png HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:25:16] "GET /database/files/dev/favicon/icon-512-maskable.png HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:25:16] "GET /database/files/dev/favicon/icon-192.png HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:25:16] "GET /database/files/dev/favicon/icon-192-maskable.png HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:25:16] "GET /database/philistudies.json?v=1778718326812 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:25:16] "GET /database/philistudies.json?v=1778718316450 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:25:19] "GET /database/philistudies.json?v=1778718329812 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:25:19] "GET /database/philistudies.json?v=1778718319455 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:25:22] "GET /database/philistudies.json?v=1778718332805 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:25:24] "GET /database/philistudies.json?v=1778718324770 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:25:25] "GET /database/philistudies.json?v=1778718335806 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:25:27] "GET /database/philistudies.json?v=1778718327771 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:25:28] "GET /database/philistudies.json?v=1778718338815 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:25:30] "GET /database/philistudies.json?v=1778718330775 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:25:31] "GET /database/philistudies.json?v=1778718341819 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:25:33] "GET /database/philistudies.json?v=1778718333778 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:25:34] "GET /database/philistudies.json?v=1778718344814 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:25:37] "GET /database/philistudies.json?v=1778718347814 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:25:40] "GET /database/philistudies.json?v=1778718350814 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:25:42] "GET /database/philistudies.json?v=1778718342094 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:25:43] "GET /database/philistudies.json?v=1778718353818 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:25:45] "GET /database/philistudies.json?v=1778718345095 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:25:46] "GET /database/philistudies.json?v=1778718356817 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:25:48] "GET /database/philistudies.json?v=1778718348098 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:25:49] "GET /database/philistudies.json?v=1778718359816 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:25:52] "GET /database/philistudies.json?v=1778718362806 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:25:55] "GET /database/philistudies.json?v=1778718365818 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:25:55] "GET /database/philistudies.json?v=1778718355236 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:25:58] "GET /database/philistudies.json?v=1778718358238 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:25:58] "GET /database/philistudies.json?v=1778718369323 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:26:01] "GET /database/philistudies.json?v=1778718361242 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:26:01] "GET /database/philistudies.json?v=1778718371816 HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "/mnt/d/Github/index/site/main.py", line 10, in <module>
+    from routes import register_routes
+  File "/mnt/d/Github/index/site/routes.py", line 32
+    def calendar():
+IndentationError: unexpected unindent
+
+🚀 Servidor ONLINE na porta 5000
+ * Serving Flask app 'main'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.25.118.129:5000
+Press CTRL+C to quit
+📊 Visitas Total: 1 | Hoje: 1127.0.0.1 - - [13/May/2026 21:31:56] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:31:56] "GET /database/files/dev/DATA/calendario.json HTTP/1.1" 200 -
+📊 Visitas Total: 2 | Hoje: 2127.0.0.1 - - [13/May/2026 21:31:57] "GET /calendar HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:32:00] "GET /database HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:32:00] "GET /database/philistudies.json?v=1778718730555 HTTP/1.1" 200 -
+📊 Visitas Total: 4 | Hoje: 4127.0.0.1 - - [13/May/2026 21:33:45] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:33:46] "GET /database/files/dev/DATA/calendario.json HTTP/1.1" 304 -
+📊 Visitas Total: 5 | Hoje: 5127.0.0.1 - - [13/May/2026 21:33:47] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:33:47] "GET /database/files/dev/DATA/calendario.json HTTP/1.1" 304 -
+📊 Visitas Total: 6 | Hoje: 6127.0.0.1 - - [13/May/2026 21:33:56] "GET /index.html HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:33:56] "GET /database/files/dev/DATA/calendario.json HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:33:59] "GET /database HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:33:59] "GET /database/philistudies.json?v=1778718849617 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:34:02] "GET /database/philistudies.json?v=1778718852619 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:34:12] "GET /database HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:34:23] "GET /database/philistudies.json?v=1778718863130 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:34:15] "GET /database/philistudies.json?v=1778718866139 HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "/mnt/d/Github/index/site/main.py", line 125, in <module>
+    register_routes(app, config)
+  File "/mnt/d/Github/index/site/routes.py", line 31, in register_routes
+    @app.route('/calendar')
+     ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kendrick/.local/lib/python3.12/site-packages/flask/sansio/scaffold.py", line 362, in decorator
+    self.add_url_rule(rule, endpoint, f, **options)
+  File "/home/kendrick/.local/lib/python3.12/site-packages/flask/sansio/scaffold.py", line 47, in wrapper_func
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kendrick/.local/lib/python3.12/site-packages/flask/sansio/app.py", line 657, in add_url_rule
+    raise AssertionError(
+AssertionError: View function mapping is overwriting an existing endpoint function: calendar
+
+🚀 Servidor ONLINE na porta 5000
+ * Serving Flask app 'main'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.25.118.129:5000
+Press CTRL+C to quit
+📊 Visitas Total: 1 | Hoje: 1127.0.0.1 - - [13/May/2026 21:35:39] "GET /go-site HTTP/1.1" 302 -
+📊 Visitas Total: 2 | Hoje: 2127.0.0.1 - - [13/May/2026 21:35:39] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:35:39] "GET /database/files/dev/DATA/calendario.json HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:35:40] "GET /database HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:35:40] "GET /database/philistudies.json?v=1778718951276 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:35:43] "GET /database/philistudies.json?v=1778718954292 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:35:46] "GET /database/philistudies.json?v=1778718957292 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:35:49] "GET /database/philistudies.json?v=1778718960286 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:36:03] "GET /database/philistudies.json?v=1778718963284 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:35:53] "GET /database HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:35:53] "GET /database/philistudies.json?v=1778718963635 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:35:56] "GET /database/philistudies.json?v=1778718966649 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:35:59] "GET /database/philistudies.json?v=1778718969647 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:36:02] "GET /database/philistudies.json?v=1778718972643 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:36:05] "GET /database/philistudies.json?v=1778718975643 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:36:08] "GET /database/philistudies.json?v=1778718978644 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:36:11] "GET /database/philistudies.json?v=1778718981646 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:36:14] "GET /database/philistudies.json?v=1778718984642 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:36:17] "GET /database/philistudies.json?v=1778718987638 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:36:20] "GET /database/philistudies.json?v=1778718990640 HTTP/1.1" 200 -
+📊 Visitas Total: 5 | Hoje: 5127.0.0.1 - - [13/May/2026 21:36:21] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:36:21] "GET /src/js/main/firebase-sync.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:36:21] "GET /pages/suite/weather/weather.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:36:21] "GET /src/js/main/firebase-config.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:36:21] "GET /src/js/main/factory.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:36:21] "GET /src/app/update.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:36:21] "GET /pages/suite/weather/weather.css HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:36:21] "GET /src/app/update.css HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:36:21] "GET /pages/suite/suite.css HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:36:21] "GET /src/styles/fonts-manager.css HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:36:21] "GET /src/js/main/env-loader.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:36:21] "GET /src/js/main/colors.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:36:21] "GET /src/js/main/rate-limiter.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:36:21] "GET /src/styles/modes.css HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:36:22] "GET /pages/suite/liturgy.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:36:22] "GET /pages/suite/suite.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:36:22] "GET /assets/dev/avatar/avatar.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:36:23] "GET /database/philistudies.json?v=1778718993650 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:36:23] "GET /assets/dev/templates/light_mode.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:36:23] "GET /pages/suite/santo-do-dia.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:36:23] "GET /database/files/dev/DATA/calendario.json HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:36:24] "GET /assets/dev/icons/diversos/WEATHER/Moon.svg HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:36:24] "GET /assets/dev/TEMPLATES_WEATHER/Weather=Clear,%20Moment=Night.svg HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:36:24] "GET /assets/dev/templates/dark_mode.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:36:25] "GET /assets/dev/favicon/icon-192.png HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:36:26] "GET /database/philistudies.json?v=1778718996639 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:36:27] "GET /database HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:36:27] "GET /database/styles.css?v=1.0.1 HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:36:27] "GET /database/js/selection.js?v=1.0.0 HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:36:27] "GET /database/database-mobile.css?v=1.0.0 HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:36:27] "GET /database/js/init.js?v=1.0.0 HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:36:27] "GET /database/js/upload.js?v=1.0.0 HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:36:27] "GET /database/js/preview.js?v=1.0.0 HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:36:27] "GET /database/js/file-loader.js?v=1.0.0 HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:36:28] "GET /database/js/state.js?v=1.0.0 HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:36:28] "GET /database/philistudies.json?v=1778718988268 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:36:29] "GET /database/philistudies.json?v=1778718999641 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:36:30] "GET /database/sw.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:36:31] "GET /database/philistudies.json?v=1778718991271 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:36:32] "GET /database/philistudies.json?v=1778719002643 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:36:35] "GET /database/philistudies.json?v=1778719005648 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:36:38] "GET /database/philistudies.json?v=1778719008647 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:36:41] "GET /database/philistudies.json?v=1778719011644 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:36:42] "GET /database/philistudies.json?v=1778719002493 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:36:44] "GET /database/philistudies.json?v=1778719014643 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:36:45] "GET /database/philistudies.json?v=1778719005493 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:36:47] "GET /database/philistudies.json?v=1778719017638 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:36:48] "GET /database/philistudies.json?v=1778719008495 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:36:50] "GET /database/files/dev/DATA/calendario.json HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:36:50] "GET /database/philistudies.json?v=1778719020644 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:36:51] "GET /database/philistudies.json?v=1778719011495 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:36:53] "GET /database/philistudies.json?v=1778719023642 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:36:54] "GET /database/philistudies.json?v=1778719014497 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:36:56] "GET /database/philistudies.json?v=1778719026647 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:36:59] "GET /database/philistudies.json?v=1778719029643 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:37:02] "GET /database/philistudies.json?v=1778719032641 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:37:05] "GET /database/philistudies.json?v=1778719035639 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:37:08] "GET /database/philistudies.json?v=1778719038640 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:37:11] "GET /database/philistudies.json?v=1778719041638 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:37:14] "GET /database/philistudies.json?v=1778719044639 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:37:17] "GET /database/philistudies.json?v=1778719047643 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:37:20] "GET /database/philistudies.json?v=1778719050644 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:37:23] "GET /database/philistudies.json?v=1778719053642 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:37:26] "GET /database/philistudies.json?v=1778719056637 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:37:29] "GET /database/philistudies.json?v=1778719059636 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:37:32] "GET /database/philistudies.json?v=1778719062642 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:37:35] "GET /database/philistudies.json?v=1778719065637 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:37:38] "GET /database/philistudies.json?v=1778719068647 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:37:41] "GET /database/philistudies.json?v=1778719071646 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:37:53] "GET /database/philistudies.json?v=1778719061856 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:37:44] "GET /database/philistudies.json?v=1778719074635 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:37:44] "GET /database/philistudies.json?v=1778719064860 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:37:47] "GET /database/philistudies.json?v=1778719077639 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:37:47] "GET /database/philistudies.json?v=1778719067866 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:37:58] "GET /database/files/dev/favicon/Favicon_R.png HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:37:58] "GET /database/files/dev/favicon/icon-512-maskable.png HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:37:58] "GET /database/files/dev/favicon/icon-192-maskable.png HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:37:58] "GET /database/files/dev/favicon/icon-512.png HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:37:58] "GET /database/files/dev/favicon/icon-192.png HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:37:58] "GET /database/files/dev/favicon/Favicon.png HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:37:50] "GET /database/philistudies.json?v=1778719080645 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:37:50] "GET /database/philistudies.json?v=1778719070867 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:37:52] "GET /database/files/dev/templates/light_mode.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:37:52] "GET /database/files/dev/templates/dark_mode.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:38:03] "GET /database/philistudies.json?v=1778719083641 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:37:53] "GET /database/philistudies.json?v=1778719073872 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:37:56] "GET /database/philistudies.json?v=1778719086637 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:37:56] "GET /database/philistudies.json?v=1778719076876 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:37:59] "GET /database/philistudies.json?v=1778719089639 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:37:59] "GET /database/philistudies.json?v=1778719079880 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:38:02] "GET /database/philistudies.json?v=1778719092636 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:38:02] "GET /database/philistudies.json?v=1778719082883 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:38:05] "GET /database/philistudies.json?v=1778719095646 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:38:05] "GET /database/philistudies.json?v=1778719085890 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:38:06] "GET /database/files/dev/avatar/avatar.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:38:18] "GET /database/philistudies.json?v=1778719098642 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:38:08] "GET /database/philistudies.json?v=1778719088892 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:38:11] "GET /database/philistudies.json?v=1778719101643 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:38:11] "GET /database/philistudies.json?v=1778719091895 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:38:14] "GET /database/philistudies.json?v=1778719104640 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:38:14] "GET /database/philistudies.json?v=1778719094900 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:38:17] "GET /database/philistudies.json?v=1778719107640 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:38:18] "GET /database/philistudies.json?v=1778719097903 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:38:20] "GET /database/philistudies.json?v=1778719110640 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:38:20] "GET /database/philistudies.json?v=1778719100908 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:38:33] "GET /database/philistudies.json?v=1778719113637 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:38:23] "GET /database/philistudies.json?v=1778719103911 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:38:26] "GET /database/philistudies.json?v=1778719116641 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:38:26] "GET /database/philistudies.json?v=1778719106916 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:38:29] "GET /database/philistudies.json?v=1778719119642 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:38:29] "GET /database/philistudies.json?v=1778719109919 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:38:32] "GET /database/philistudies.json?v=1778719122644 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:38:32] "GET /database/philistudies.json?v=1778719112923 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:38:35] "GET /database/files/skills/01_Database_Introducao_e_Sistemas_Gerenciadores_SGBD.md HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:38:35] "GET /database/philistudies.json?v=1778719125643 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:38:36] "GET /database/philistudies.json?v=1778719115927 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:38:48] "GET /database/philistudies.json?v=1778719128638 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:38:49] "GET /database/philistudies.json?v=1778719118930 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:38:51] "GET /database/philistudies.json?v=1778719131640 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:38:52] "GET /database/philistudies.json?v=1778719121934 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:38:54] "GET /database/philistudies.json?v=1778719134642 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:38:55] "GET /database/philistudies.json?v=1778719124939 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:38:57] "GET /database/philistudies.json?v=1778719137641 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:38:58] "GET /database/philistudies.json?v=1778719127943 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:39:00] "GET /database/philistudies.json?v=1778719140640 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:39:01] "GET /database/philistudies.json?v=1778719130947 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:39:03] "GET /database/philistudies.json?v=1778719143644 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:38:54] "GET /database/philistudies.json?v=1778719133956 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:38:56] "GET /database/philistudies.json?v=1778719146638 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:38:57] "GET /database/philistudies.json?v=1778719136955 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:38:59] "GET /database/philistudies.json?v=1778719149637 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:39:00] "GET /database/philistudies.json?v=1778719139959 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:39:02] "GET /database/philistudies.json?v=1778719152635 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:39:03] "GET /database/philistudies.json?v=1778719142963 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:39:05] "GET /database/philistudies.json?v=1778719155646 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:39:06] "GET /database/philistudies.json?v=1778719145968 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:39:18] "GET /database/philistudies.json?v=1778719158651 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:39:11] "GET /database/philistudies.json?v=1778719161647 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:39:14] "GET /database/philistudies.json?v=1778719164648 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:39:17] "GET /database/philistudies.json?v=1778719167646 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:39:28] "GET /database/philistudies.json?v=1778719158098 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:39:20] "GET /database/philistudies.json?v=1778719170648 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:39:21] "GET /database/philistudies.json?v=1778719161098 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:39:33] "GET /database/philistudies.json?v=1778719173644 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:39:34] "GET /database/philistudies.json?v=1778719164102 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:39:36] "GET /database/philistudies.json?v=1778719176643 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:39:37] "GET /database/philistudies.json?v=1778719167106 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:39:39] "GET /database/philistudies.json?v=1778719179636 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:39:40] "GET /database/philistudies.json?v=1778719170110 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:39:42] "GET /database/philistudies.json?v=1778719182641 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:39:43] "GET /database/philistudies.json?v=1778719173114 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:39:45] "GET /database/philistudies.json?v=1778719185644 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:39:48] "GET /database/philistudies.json?v=1778719188649 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:39:51] "GET /database/philistudies.json?v=1778719191649 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:39:54] "GET /database/philistudies.json?v=1778719194641 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:39:57] "GET /database/philistudies.json?v=1778719197646 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:40:00] "GET /database/philistudies.json?v=1778719200640 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:40:04] "GET /database/philistudies.json?v=1778719203640 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:40:07] "GET /database/philistudies.json?v=1778719206643 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:39:59] "GET /database/philistudies.json?v=1778719209642 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:40:01] "GET /database/philistudies.json?v=1778719200677 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:40:02] "GET /database/philistudies.json?v=1778719212651 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:40:03] "GET /database/philistudies.json?v=1778719203678 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:40:05] "GET /database/philistudies.json?v=1778719215636 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:40:06] "GET /database/philistudies.json?v=1778719206682 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:40:08] "GET /database/philistudies.json?v=1778719218640 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:40:20] "GET /database/philistudies.json?v=1778719209686 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:40:21] "GET /database/philistudies.json?v=1778719221637 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:40:23] "GET /database/philistudies.json?v=1778719212689 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:40:24] "GET /database/philistudies.json?v=1778719224637 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:40:26] "GET /database/philistudies.json?v=1778719215693 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:40:27] "GET /database/philistudies.json?v=1778719227638 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:40:29] "GET /database/philistudies.json?v=1778719218698 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:40:30] "GET /database/philistudies.json?v=1778719230639 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:40:32] "GET /database/philistudies.json?v=1778719221702 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:40:33] "GET /database/philistudies.json?v=1778719233643 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:40:26] "GET /database/philistudies.json?v=1778719236651 HTTP/1.1" 200 -
+📊 Visitas Total: 8 | Hoje: 8127.0.0.1 - - [13/May/2026 21:40:27] "GET /robots.txt HTTP/1.1" 404 -
+📊 Visitas Total: 9 | Hoje: 9127.0.0.1 - - [13/May/2026 21:40:27] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:40:29] "GET /database/philistudies.json?v=1778719239643 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:40:29] "GET /src/styles/fonts-manager.css HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:40:30] "GET /pages/suite/weather/weather.css HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:40:30] "GET /src/js/main/firebase-config.js HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:40:31] "GET /src/app/update.css HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:40:31] "GET /src/js/main/rate-limiter.js HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:40:31] "GET /src/styles/modes.css HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:40:31] "GET /src/app/update.js HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:40:32] "GET /pages/suite/suite.css HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:40:32] "GET /database/philistudies.json?v=1778719242644 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:40:32] "GET /src/js/main/factory.js HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:40:32] "GET /src/js/main/env-loader.js HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:40:32] "GET /pages/suite/suite.js HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:40:33] "GET /src/js/main/firebase-sync.js HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:40:33] "GET /pages/suite/santo-do-dia.js HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:40:33] "GET /pages/suite/weather/weather.js HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:40:33] "GET /pages/suite/liturgy.js HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:40:34] "GET /src/js/main/colors.js HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:40:34] "GET /database/files/dev/DATA/calendario.json HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:40:34] "GET /assets/dev/icons/diversos/WEATHER/Sun.svg HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:40:35] "GET /database/philistudies.json?v=1778719235014 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:40:35] "GET /database/philistudies.json?v=1778719245646 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:40:35] "GET /assets/dev/TEMPLATES_WEATHER/Weather=Clear,%20Moment=Day.svg HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:40:38] "GET /database/philistudies.json?v=1778719248636 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:40:48] "GET /database/philistudies.json?v=1778719238018 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:40:41] "GET /database/philistudies.json?v=1778719241021 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:40:41] "GET /database/philistudies.json?v=1778719251647 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:40:44] "GET /database/philistudies.json?v=1778719244026 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:40:44] "GET /database/philistudies.json?v=1778719254641 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:40:47] "GET /database/philistudies.json?v=1778719247029 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:40:47] "GET /database/philistudies.json?v=1778719257641 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:40:49] "POST /database/upload HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:40:49] "GET /database/philistudies.json?v=1778719249448 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:40:50] "GET /database/philistudies.json?v=1778719260650 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:40:50] "GET /database/philistudies.json?v=1778719250034 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:40:53] "GET /database/philistudies.json?v=1778719263648 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:41:03] "GET /database/philistudies.json?v=1778719253037 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:40:56] "GET /database/philistudies.json?v=1778719256041 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:40:56] "GET /database/philistudies.json?v=1778719266637 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:40:59] "GET /database/philistudies.json?v=1778719259045 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:40:59] "GET /database/philistudies.json?v=1778719269649 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:41:02] "GET /database/philistudies.json?v=1778719262049 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:41:02] "GET /database/philistudies.json?v=1778719272645 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:41:05] "GET /database/philistudies.json?v=1778719265053 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:41:05] "GET /database/philistudies.json?v=1778719275646 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:41:08] "GET /database/philistudies.json?v=1778719268057 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:41:08] "GET /database/philistudies.json?v=1778719278643 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:41:10] "POST /database/upload HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:41:10] "GET /database/philistudies.json?v=1778719270847 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:41:11] "GET /database/philistudies.json?v=1778719281638 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:41:11] "GET /database/philistudies.json?v=1778719271061 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:41:14] "GET /database/philistudies.json?v=1778719284640 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:41:14] "GET /database/philistudies.json?v=1778719274064 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:41:17] "GET /database/philistudies.json?v=1778719287639 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:41:20] "GET /database/philistudies.json?v=1778719290646 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:41:23] "GET /database/philistudies.json?v=1778719293644 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:41:26] "GET /database/philistudies.json?v=1778719296645 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:41:29] "GET /database/philistudies.json?v=1778719299649 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:41:32] "GET /database/philistudies.json?v=1778719302647 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:41:35] "GET /database/philistudies.json?v=1778719305638 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:41:38] "GET /database/philistudies.json?v=1778719308648 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:41:41] "GET /database/philistudies.json?v=1778719311641 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:41:44] "GET /database/philistudies.json?v=1778719314640 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:41:44] "GET /database HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:41:44] "GET /database/js/state.js?v=1.0.0 HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:41:44] "GET /database/js/file-loader.js?v=1.0.0 HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:41:44] "GET /src/js/main/rate-limiter.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:41:44] "GET /database/js/upload.js?v=1.0.0 HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:41:44] "GET /database/js/init.js?v=1.0.0 HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:41:44] "GET /database/js/selection.js?v=1.0.0 HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:41:44] "GET /database/js/preview.js?v=1.0.0 HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:41:45] "GET /database/database-mobile.css?v=1.0.0 HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:41:45] "GET /database/styles.css?v=1.0.1 HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:41:45] "GET /database/philistudies.json?v=1778719305505 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:41:45] "GET /database/sw.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:41:47] "GET /database/philistudies.json?v=1778719317635 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:41:58] "GET /database/philistudies.json?v=1778719308506 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:41:50] "GET /database/philistudies.json?v=1778719320648 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:41:53] "GET /database/philistudies.json?v=1778719323644 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:41:56] "GET /database/philistudies.json?v=1778719326643 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:41:59] "GET /database/philistudies.json?v=1778719329637 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:42:02] "GET /database/philistudies.json?v=1778719332649 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:42:05] "GET /database/philistudies.json?v=1778719335642 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:42:08] "GET /database/philistudies.json?v=1778719338640 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:42:09] "GET /database/philistudies.json?v=1778719329274 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:42:11] "GET /database/philistudies.json?v=1778719341651 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:42:12] "GET /database/philistudies.json?v=1778719332275 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:42:14] "GET /database/philistudies.json?v=1778719344650 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:42:15] "GET /database/philistudies.json?v=1778719335276 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:42:17] "GET /database/philistudies.json?v=1778719347646 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:42:18] "GET /database/philistudies.json?v=1778719338277 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:42:20] "GET /database/philistudies.json?v=1778719351325 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:42:21] "GET /database/philistudies.json?v=1778719341278 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:42:23] "GET /database/philistudies.json?v=1778719354327 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:42:24] "GET /database/philistudies.json?v=1778719344282 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:42:26] "GET /database/philistudies.json?v=1778719357324 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:42:27] "GET /database/philistudies.json?v=1778719347286 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:42:29] "GET /database/philistudies.json?v=1778719360331 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:42:30] "GET /database/philistudies.json?v=1778719350289 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:42:32] "GET /database/philistudies.json?v=1778719363325 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:42:33] "GET /database/philistudies.json?v=1778719353294 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:42:35] "GET /database/philistudies.json?v=1778719366323 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:42:36] "GET /database/philistudies.json?v=1778719356297 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:42:38] "GET /database/philistudies.json?v=1778719369321 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:42:39] "GET /database/philistudies.json?v=1778719359302 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:42:41] "GET /database/philistudies.json?v=1778719372327 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:42:42] "GET /database/philistudies.json?v=1778719362306 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:42:44] "GET /database/philistudies.json?v=1778719375327 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:42:45] "GET /database/philistudies.json?v=1778719365310 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:42:45] "POST /database/upload HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:42:45] "GET /database/philistudies.json?v=1778719365847 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:42:47] "GET /database/philistudies.json?v=1778719378320 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:42:48] "GET /database/philistudies.json?v=1778719368314 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:42:50] "GET /database/philistudies.json?v=1778719381323 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:42:51] "GET /database/philistudies.json?v=1778719371318 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:42:53] "GET /database/philistudies.json?v=1778719384329 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:42:56] "GET /database/philistudies.json?v=1778719387319 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:42:59] "GET /database/philistudies.json?v=1778719390324 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:43:02] "GET /database/philistudies.json?v=1778719393324 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:43:05] "GET /database/philistudies.json?v=1778719396321 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:43:08] "GET /database/philistudies.json?v=1778719399327 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:43:11] "GET /database/philistudies.json?v=1778719402327 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:43:14] "GET /database/philistudies.json?v=1778719405329 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:43:17] "GET /database/philistudies.json?v=1778719408330 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:43:24] "GET /database/philistudies.json?v=1778719404189 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:43:26] "GET /database/philistudies.json?v=1778719417318 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:43:27] "GET /database/philistudies.json?v=1778719407190 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:43:30] "GET /database/philistudies.json?v=1778719410193 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:44:26] "GET /database/philistudies.json?v=1778719477326 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:45:26] "GET /database/philistudies.json?v=1778719537326 HTTP/1.1" 200 -
+📊 Visitas Total: 14 | Hoje: 14127.0.0.1 - - [13/May/2026 21:45:27] "GET / HTTP/1.1" 200 -
+📊 Visitas Total: 15 | Hoje: 15127.0.0.1 - - [13/May/2026 21:45:27] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:45:28] "GET /src/js/main/factory.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:45:28] "GET /pages/suite/suite.css HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:45:39] "GET /src/app/update.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:45:29] "GET /src/styles/modes.css HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:45:29] "GET /src/js/main/env-loader.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:45:29] "GET /src/styles/modes.css HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:45:29] "GET /pages/suite/weather/weather.css HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:45:29] "GET /src/js/main/firebase-config.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:45:30] "GET /src/app/update.css HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:45:30] "GET /src/app/update.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:45:30] "GET /src/js/main/rate-limiter.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:45:30] "GET /src/app/update.css HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:45:31] "GET /src/js/main/firebase-config.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:45:31] "GET /src/styles/fonts-manager.css HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:45:31] "GET /src/js/main/factory.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:45:31] "GET /pages/suite/suite.css HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:45:32] "GET /src/js/main/env-loader.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:45:32] "GET /src/styles/fonts-manager.css HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:45:32] "GET /pages/suite/weather/weather.css HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:45:32] "GET /src/js/main/rate-limiter.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:45:32] "GET /src/js/main/firebase-sync.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:45:32] "GET /pages/suite/suite.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:45:33] "GET /pages/suite/weather/weather.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:45:33] "GET /pages/suite/santo-do-dia.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:45:44] "GET /pages/suite/weather/weather.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:45:34] "GET /pages/suite/liturgy.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:45:34] "GET /src/js/main/colors.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:45:34] "GET /database/files/dev/DATA/calendario.json HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:45:34] "GET /src/js/main/colors.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:45:34] "GET /database/files/dev/DATA/calendario.json HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:45:35] "GET /assets/dev/icons/diversos/WEATHER/Sun.svg HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:45:35] "GET /assets/dev/TEMPLATES_WEATHER/Weather=Clear,%20Moment=Day.svg HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:45:36] "GET /favicon.ico HTTP/1.1" 204 -
+127.0.0.1 - - [13/May/2026 21:45:36] "GET /assets/dev/favicon/icon-192.png HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:46:26] "GET /database/philistudies.json?v=1778719597331 HTTP/1.1" 200 -
+
+🚀 Servidor ONLINE na porta 5000
+ * Serving Flask app 'main'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.25.118.129:5000
+Press CTRL+C to quit
+127.0.0.1 - - [13/May/2026 21:47:27] "GET /database/philistudies.json?v=1778719657329 HTTP/1.1" 200 -
+📊 Visitas Total: 1 | Hoje: 1127.0.0.1 - - [13/May/2026 21:47:28] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:47:29] "GET /database/files/dev/DATA/calendario.json HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:47:29] "GET /database HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:47:29] "GET /database/philistudies.json?v=1778719660157 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:47:33] "GET /database/philistudies.json?v=1778719663161 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:47:35] "GET /database/philistudies.json?v=1778719666167 HTTP/1.1" 200 -
+
+🚀 Servidor ONLINE na porta 5000
+ * Serving Flask app 'main'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.25.118.129:5000
+Press CTRL+C to quit
+127.0.0.1 - - [13/May/2026 21:48:05] "GET /database/philistudies.json?v=1778719696162 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:48:09] "GET /database/philistudies.json?v=1778719699165 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:48:12] "GET /database/philistudies.json?v=1778719702158 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:48:14] "GET /database/philistudies.json?v=1778719705163 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:48:18] "GET /database/philistudies.json?v=1778719708172 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:48:20] "GET /database/philistudies.json?v=1778719711171 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:48:24] "GET /database/philistudies.json?v=1778719714165 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:48:27] "GET /database/philistudies.json?v=1778719717172 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:48:27] "GET /database HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:48:27] "GET /database/philistudies.json?v=1778719717330 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:48:27] "GET /database/philistudies.json?v=1778719717363 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:48:30] "GET /database/philistudies.json?v=1778719720371 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:48:33] "GET /database/philistudies.json?v=1778719723374 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:48:34] "POST /database/upload HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:48:34] "GET /database/philistudies.json?v=1778719725072 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:48:36] "GET /database/philistudies.json?v=1778719726376 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:48:39] "GET /database/philistudies.json?v=1778719729367 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:48:49] "GET /database HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:48:39] "GET /database/js/upload.js?v=1.0.0 HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:48:39] "GET /database/js/preview.js?v=1.0.0 HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:48:39] "GET /database/js/init.js?v=1.0.0 HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:48:39] "GET /database/js/file-loader.js?v=1.0.0 HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:48:39] "GET /src/js/main/rate-limiter.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:48:39] "GET /database/js/state.js?v=1.0.0 HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:48:39] "GET /database/js/selection.js?v=1.0.0 HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:48:39] "GET /database/database-mobile.css?v=1.0.0 HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:48:39] "GET /database/styles.css?v=1.0.1 HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:48:39] "GET /database/philistudies.json?v=1778719719691 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:48:40] "GET /database/sw.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:48:42] "GET /database/philistudies.json?v=1778719732368 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:48:43] "GET /database/philistudies.json?v=1778719722692 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:48:45] "GET /database/philistudies.json?v=1778719735379 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:48:46] "GET /database/philistudies.json?v=1778719725693 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:48:48] "GET /database/philistudies.json?v=1778719738372 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:48:49] "GET /database/philistudies.json?v=1778719728693 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:48:49] "POST /database/upload HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:48:59] "GET /database/philistudies.json?v=1778719728940 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:48:51] "GET /database/philistudies.json?v=1778719741378 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:48:52] "GET /database/philistudies.json?v=1778719731693 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:48:53] "GET /database HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:48:53] "GET /database/philistudies.json?v=1778719733183 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:48:54] "GET /database/philistudies.json?v=1778719744378 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:48:56] "GET /database/philistudies.json?v=1778719736185 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:48:57] "GET /database/philistudies.json?v=1778719747368 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:49:09] "GET /database/philistudies.json?v=1778719739186 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:49:00] "GET /database/philistudies.json?v=1778719750373 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:49:03] "GET /database/philistudies.json?v=1778719753366 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:49:06] "GET /database/philistudies.json?v=1778719756369 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:49:09] "GET /database/philistudies.json?v=1778719759367 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:49:12] "GET /database/philistudies.json?v=1778719762366 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:49:15] "GET /database/philistudies.json?v=1778719765364 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:49:18] "GET /database/philistudies.json?v=1778719768366 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:49:21] "GET /database/philistudies.json?v=1778719771370 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:49:24] "GET /database/philistudies.json?v=1778719774377 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:49:27] "GET /database/philistudies.json?v=1778719777318 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:49:27] "GET /database/philistudies.json?v=1778719777365 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:49:30] "GET /database/philistudies.json?v=1778719780369 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:49:33] "GET /database/philistudies.json?v=1778719783369 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:49:36] "GET /database/philistudies.json?v=1778719786372 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:49:39] "GET /database/philistudies.json?v=1778719789365 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:49:42] "GET /database/philistudies.json?v=1778719792372 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:49:45] "GET /database/philistudies.json?v=1778719795375 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:49:48] "GET /database/philistudies.json?v=1778719798377 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:49:51] "GET /database/philistudies.json?v=1778719801368 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:49:54] "GET /database/philistudies.json?v=1778719804375 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:49:57] "GET /database/philistudies.json?v=1778719807375 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:50:00] "GET /database/philistudies.json?v=1778719810379 HTTP/1.1" 200 -
+📊 Visitas Total: 6 | Hoje: 6127.0.0.1 - - [13/May/2026 21:50:00] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:50:00] "GET /src/js/main/factory.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:50:00] "GET /src/app/update.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:50:00] "GET /src/js/main/env-loader.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:50:00] "GET /pages/suite/suite.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:50:00] "GET /pages/suite/weather/weather.css HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:50:00] "GET /src/js/main/firebase-sync.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:50:00] "GET /src/styles/modes.css HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:50:00] "GET /src/styles/fonts-manager.css HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:50:00] "GET /pages/suite/suite.css HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:50:00] "GET /pages/suite/weather/weather.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:50:00] "GET /src/js/main/firebase-config.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:50:00] "GET /pages/suite/liturgy.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:50:00] "GET /src/js/main/colors.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:50:00] "GET /pages/suite/santo-do-dia.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:50:01] "GET /src/js/main/rate-limiter.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:50:01] "GET /src/app/update.css HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:50:01] "GET /assets/dev/avatar/avatar.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:50:01] "GET /database/files/dev/DATA/calendario.json HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:50:01] "GET /assets/dev/templates/dark_mode.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:50:02] "GET /assets/dev/icons/diversos/WEATHER/Moon.svg HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:50:02] "GET /assets/dev/TEMPLATES_WEATHER/Weather=Clear,%20Moment=Night.svg HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:50:03] "GET /database/philistudies.json?v=1778719813364 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:50:05] "GET /assets/dev/favicon/icon-192.png HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:50:06] "GET /database/philistudies.json?v=1778719816378 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:50:09] "GET /database/philistudies.json?v=1778719819373 HTTP/1.1" 200 -
+📊 Visitas Total: 7 | Hoje: 7127.0.0.1 - - [13/May/2026 21:50:09] "GET /calendar HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:50:10] "GET /pages/calendar/calendar.js HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:50:10] "GET /src/js/main/config.js HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:50:10] "GET /pages/calendar/calendar.css HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:50:10] "GET /assets/dev/favicon/Favicon.png HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:50:12] "GET /database/philistudies.json?v=1778719822373 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:50:15] "GET /database/philistudies.json?v=1778719825376 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:50:18] "GET /database/philistudies.json?v=1778719828366 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:50:21] "GET /database/philistudies.json?v=1778719831379 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:50:24] "GET /database/philistudies.json?v=1778719834364 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:50:27] "GET /database/philistudies.json?v=1778719837329 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:50:27] "GET /database/philistudies.json?v=1778719837377 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:50:30] "GET /database/philistudies.json?v=1778719840372 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:50:33] "GET /database/philistudies.json?v=1778719843372 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:50:36] "GET /database/philistudies.json?v=1778719846371 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:50:39] "GET /database/philistudies.json?v=1778719849371 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:50:42] "GET /database/philistudies.json?v=1778719852366 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:50:45] "GET /database/philistudies.json?v=1778719855364 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:50:48] "GET /database/philistudies.json?v=1778719858365 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:50:51] "GET /database/philistudies.json?v=1778719861378 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:50:54] "GET /database/philistudies.json?v=1778719864377 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:50:57] "GET /database/philistudies.json?v=1778719867367 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:51:00] "GET /database/philistudies.json?v=1778719870368 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:51:03] "GET /database/philistudies.json?v=1778719873370 HTTP/1.1" 200 -
+📊 Visitas Total: 8 | Hoje: 8127.0.0.1 - - [13/May/2026 21:51:07] "GET /calendar HTTP/1.1" 200 -
+📊 Visitas Total: 9 | Hoje: 9127.0.0.1 - - [13/May/2026 21:51:09] "GET /pages/login?redirect=/pages/calendar HTTP/1.1" 404 -
+📊 Visitas Total: 10 | Hoje: 10127.0.0.1 - - [13/May/2026 21:51:11] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:51:11] "GET /database/files/dev/DATA/calendario.json HTTP/1.1" 304 -
+📊 Visitas Total: 11 | Hoje: 11127.0.0.1 - - [13/May/2026 21:51:18] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:51:19] "GET /database/files/dev/DATA/calendario.json HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:51:19] "GET /assets/dev/TEMPLATES_WEATHER/Weather=Clear,%20Moment=Night.svg HTTP/1.1" 304 -
+📊 Visitas Total: 12 | Hoje: 12127.0.0.1 - - [13/May/2026 21:51:22] "GET /calendar HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:51:22] "GET /assets/dev/favicon/Favicon.png HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:51:26] "GET /database/philistudies.json?v=1778719897321 HTTP/1.1" 200 -
+📊 Visitas Total: 13 | Hoje: 13127.0.0.1 - - [13/May/2026 21:52:04] "GET /robots.txt HTTP/1.1" 404 -
+📊 Visitas Total: 14 | Hoje: 14127.0.0.1 - - [13/May/2026 21:52:07] "GET /calendar HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:52:26] "GET /database/philistudies.json?v=1778719957328 HTTP/1.1" 200 -
+
+🚀 Servidor ONLINE na porta 5000
+ * Serving Flask app 'main'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.25.118.129:5000
+Press CTRL+C to quit
+📊 Visitas Total: 1 | Hoje: 1127.0.0.1 - - [13/May/2026 21:56:35] "GET /calendar HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:56:35] "GET /src/app/update.css HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:56:35] "GET /src/js/main/rate-limiter.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:56:35] "GET /pages/suite/liturgy.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:56:35] "GET /src/js/main/firebase-sync.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:56:35] "GET /src/js/main/firebase-config.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:56:35] "GET /pages/suite/suite.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:56:35] "GET /src/styles/modes.css HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:56:35] "GET /src/app/update.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:56:35] "GET /pages/calendar/calendar.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:56:35] "GET /pages/calendar/calendar.css HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:56:35] "GET /src/js/main/env-loader.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:56:35] "GET /src/js/main/config.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:56:36] "GET /src/styles/fonts-manager.css HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:56:36] "GET /assets/dev/templates/dark_mode.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:56:37] "GET /assets/dev/favicon/icon-192.png HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:56:37] "GET /assets/dev/favicon/Favicon.png HTTP/1.1" 304 -
+📊 Visitas Total: 2 | Hoje: 2127.0.0.1 - - [13/May/2026 21:56:43] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:56:43] "GET /pages/suite/santo-do-dia.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:56:43] "GET /pages/suite/weather/weather.css HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:56:43] "GET /pages/suite/suite.css HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:56:43] "GET /pages/suite/weather/weather.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:56:44] "GET /assets/dev/avatar/avatar.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:56:44] "GET /src/js/main/factory.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:56:55] "GET /database/files/dev/DATA/calendario.json HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:56:45] "GET /src/js/main/colors.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:56:45] "GET /assets/dev/TEMPLATES_WEATHER/Weather=Clear,%20Moment=Night.svg HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:56:46] "GET /assets/dev/icons/diversos/WEATHER/Moon.svg HTTP/1.1" 304 -
+📊 Visitas Total: 3 | Hoje: 3127.0.0.1 - - [13/May/2026 21:58:24] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:58:24] "GET /src/styles/fonts-manager.css HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:58:24] "GET /src/app/update.css HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:58:24] "GET /src/js/main/rate-limiter.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:58:24] "GET /pages/suite/suite.css HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:58:24] "GET /pages/suite/suite.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:58:24] "GET /pages/suite/liturgy.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:58:24] "GET /pages/suite/weather/weather.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:58:24] "GET /src/js/main/firebase-config.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:58:24] "GET /src/app/update.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:58:24] "GET /src/js/main/firebase-sync.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:58:24] "GET /src/styles/modes.css HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:58:24] "GET /pages/suite/santo-do-dia.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:58:24] "GET /pages/suite/weather/weather.css HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:58:24] "GET /src/js/main/env-loader.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:58:24] "GET /assets/dev/avatar/avatar.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:58:26] "GET /src/js/main/factory.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:58:26] "GET /database/files/dev/DATA/calendario.json HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:58:26] "GET /assets/dev/templates/dark_mode.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:58:26] "GET /assets/dev/icons/diversos/WEATHER/Moon.svg HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:58:26] "GET /assets/dev/TEMPLATES_WEATHER/Weather=Clear,%20Moment=Night.svg HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:58:27] "GET /src/js/main/colors.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:58:27] "GET /assets/dev/favicon/icon-192.png HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:58:45] "GET /database HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:58:35] "GET /database/js/selection.js?v=1.0.0 HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:58:35] "GET /database/js/state.js?v=1.0.0 HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:58:35] "GET /database/js/init.js?v=1.0.0 HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:58:35] "GET /database/database-mobile.css?v=1.0.0 HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:58:35] "GET /database/js/upload.js?v=1.0.0 HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:58:36] "GET /database/styles.css?v=1.0.1 HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:58:37] "GET /database/js/file-loader.js?v=1.0.0 HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:58:37] "GET /database/js/preview.js?v=1.0.0 HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:58:37] "GET /database/sw.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:58:37] "GET /database/philistudies.json?v=1778720317300 HTTP/1.1" 200 -
+📊 Visitas Total: 5 | Hoje: 5127.0.0.1 - - [13/May/2026 21:58:41] "GET /calendar HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:58:42] "GET /pages/calendar/calendar.css HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:58:42] "GET /pages/calendar/calendar.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:58:42] "GET /src/js/main/config.js HTTP/1.1" 304 -
+127.0.0.1 - - [13/May/2026 21:58:42] "GET /assets/dev/favicon/Favicon.png HTTP/1.1" 304 -
+📊 Visitas Total: 6 | Hoje: 6127.0.0.1 - - [13/May/2026 21:58:59] "GET /calendar HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:59:09] "GET /database HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 21:59:09] "GET /database/philistudies.json?v=1778720348948 HTTP/1.1" 200 -
+📊 Visitas Total: 8 | Hoje: 8127.0.0.1 - - [13/May/2026 22:08:13] "GET /calendar HTTP/1.1" 200 -
+📊 Visitas Total: 9 | Hoje: 9127.0.0.1 - - [13/May/2026 22:08:14] "GET /login?redirect=/calendar HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 22:08:14] "GET /pages/login/login-firebase.js HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 22:08:14] "GET /pages/login/login.css HTTP/1.1" 200 -
+📊 Visitas Total: 10 | Hoje: 10127.0.0.1 - - [13/May/2026 22:08:41] "GET /calendar HTTP/1.1" 200 -
+📊 Visitas Total: 11 | Hoje: 11127.0.0.1 - - [13/May/2026 22:08:45] "GET /calendar HTTP/1.1" 200 -
+📊 Visitas Total: 12 | Hoje: 12127.0.0.1 - - [13/May/2026 22:08:50] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 22:08:50] "GET /database/files/dev/DATA/calendario.json HTTP/1.1" 304 -

@@ -701,8 +701,15 @@ async function startUploadProcess() {
 
                 xhr.upload.onprogress = (e) => {
                     if (e.lengthComputable) {
-                        const currentUploaded = uploadedBytes + e.loaded;
-                        const percent = Math.round((currentUploaded / totalBytes) * 100);
+                        // e.loaded é o progresso do arquivo ATUAL. 
+                        // uploadedBytes é a soma dos tamanhos dos arquivos JÁ COMPLETADOS.
+                        let currentUploaded = uploadedBytes + e.loaded;
+                        
+                        // Garantir que não ultrapasse o totalBytes por arredondamento ou problemas de stream
+                        if (currentUploaded > totalBytes) currentUploaded = totalBytes;
+                        
+                        let percent = Math.round((currentUploaded / totalBytes) * 100);
+                        if (percent > 100) percent = 100;
                         const elapsed = (Date.now() - startTime) / 1000;
                         const speed = currentUploaded / elapsed;
 

@@ -36,3 +36,21 @@ Estrutura gerada com sucesso em: /mnt/d/Github/index/database/philistudies.json
 Estrutura gerada com sucesso em: /mnt/d/Github/index/database/philistudies.json
 Estrutura gerada com sucesso em: /mnt/d/Github/index/database/philistudies.json
 Estrutura gerada com sucesso em: /mnt/d/Github/index/database/philistudies.json
+Traceback (most recent call last):
+  File "/mnt/d/Github/index/database/generate_assets_structure.py", line 118, in <module>
+    structure = generate_structure(files_path, project_root)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Github/index/database/generate_assets_structure.py", line 97, in generate_structure
+    file_info = get_file_info(file_path, project_root)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Github/index/database/generate_assets_structure.py", line 11, in get_file_info
+    stat = os.stat(path)
+           ^^^^^^^^^^^^^
+KeyboardInterrupt
+Estrutura gerada com sucesso em: /mnt/d/Github/index/database/philistudies.json
+Estrutura gerada com sucesso em: /mnt/d/Github/index/database/philistudies.json
+Estrutura gerada com sucesso em: /mnt/d/Github/index/database/philistudies.json
+Estrutura gerada com sucesso em: /mnt/d/Github/index/database/philistudies.json
+Estrutura gerada com sucesso em: /mnt/d/Github/index/database/philistudies.json
+Estrutura gerada com sucesso em: /mnt/d/Github/index/database/philistudies.json
+Estrutura gerada com sucesso em: /mnt/d/Github/index/database/philistudies.json
